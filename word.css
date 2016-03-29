@@ -89,12 +89,12 @@ header {
 
 /*	make header looked in center.	
 main h1, h2, h3, h5, h2, h4, h6 { margin-left: 4rem; } */
-main h1 { margin-left: 2rem; }
-main h2 { margin-left: 3rem; }
-main h3 { margin-left: 4rem; }
-main h4 { margin-left: 5rem; }
-main h5 { margin-left: 6rem; }
-main h6 { margin-left: 7rem; }
+main h1 { margin-left: 2rem; margin-top: 2em; }
+main h2 { margin-left: 3rem; margin-top: 2em; }
+main h3 { margin-left: 4rem; margin-top: 2em; }
+main h4 { margin-left: 5rem; margin-top: 2em; }
+main h5 { margin-left: 6rem; margin-top: 2em; }
+main h6 { margin-left: 7rem; margin-top: 2em; }
 
 /*	muti-column
 main {
@@ -123,10 +123,13 @@ q {
 
 dt {
 	font-weight: 200; 
-	font-size: 110%; 
+	/*border: solid; 
+	border-width:  1px 0 0 0 ;*/
+	display: table; 
 	}
 
 .inline dt {
+	/*border: 0; */
 	float: left; 
 	}
 
@@ -146,10 +149,43 @@ dt {
 
 #markdown { display: none; }
 
-img { max-width: 90%; }
+img { 
+	max-width: 80%; 
+	display: block; 
+	box-shadow: 0 0 0.3ex black ;
+	margin: auto; 
+	}
+
+img.inline {
+	display: inline; 
+	box-shadow: none; 
+	} 
 
 ol { list-style: cjk-ideographic; }
 
 ol ol { list-style: decimal; }
 
 ol ol ol { list-style: lower-roman ; }
+
+
+figure { /*	display table made box adjust element inside. */
+	display: table; 
+	margin: 1em auto; 
+	overflow: auto; 
+	max-width: 100%; 
+	text-align: center; 
+	}
+
+figure img , figure pre , figure iframe {
+	box-shadow: 0 0 0.3ex black ;
+	}
+
+figcaption { /*	remove box shadow. */
+	color: #333;
+	font-size: 110%;
+	box-shadow: none; 
+	margin: 0.5ex; 
+	text-align: center;
+	}
+
+.hide { display: none; }

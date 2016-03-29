@@ -21,9 +21,10 @@
 
 </head>
 
-<style>
+<!--style>
 
-/*body, html{ height: 100%; }
+body, html{ height: 100%; }
+/*
 header { 
 	height: 100%; 
 	text-align: center; 
@@ -33,11 +34,13 @@ header {
 aside{ text-align: left; }
 
 hr{ 
-	margin-bottom: 30%; 
-	margin-top: 30%; 
+	margin-bottom: 50%; 
+	margin-top: 50%; 
 	visibility: hidden; 
 	}
-</style>
+
+header{ height: 0; }
+</style-->
 
 <body id="blog">
 
@@ -67,9 +70,7 @@ Moodle之作業繳交平台。</p>
 
 </header>
 
-<hr>
-
-<section class="hide">
+<section>
 <h2>第十章 導線及控制測量</h2>
 <i>滿分3分(第4題為額外加分題)</i>
 
@@ -242,7 +243,7 @@ P = W<sub>T</sub> / &Sigma;S = 0.00002394
 </code></pre></li>
 <li><p>填導線計算表</p>
 
-<img src="traverse-table.jpg" alt="traverse-table-image" title="" /></li>
+<img src="traverse-table.jpg" alt="traverse-table-image" /></li>
 </ol></li>
 <li><p>承上題，請以國土測繪中心導線計算軟體計算出結果，
 並與上題手算的結果比較之。（1分）</p>
@@ -318,7 +319,7 @@ P = W<sub>T</sub> / &Sigma;S = 0.00002394
 <ol>
 <li><p>若某一平面坐標 <code>(x, y) = (345.64, 2378.15)</code> ，
 依序經過旋轉 <code>(θ = 135°49′36″)</code> 、 尺度 <code>(S = 1.00045)</code> 
-及平移 <code>(T&lt;sub&gt;x&lt;/sub&gt; , T&lt;sub&gt;y&lt;/sub&gt;) = (35.82, 23.21)</code> 轉換後，
+及平移 <code>(T<sub>x</sub> , T<sub>y</sub>) = (35.82, 23.21)</code> 轉換後，
 得轉換後坐標 <code>(x', y')</code> ，請列出此坐標轉換的線性關係如下式，
 其中a, b, c及d參數請以數字表示，並計算轉換後坐標(x', y')。（1分）</p>
 
@@ -513,7 +514,7 @@ e633b10426ec5698684f5c08e1b97af9
 
 
 <figure>
-<img src="ellipsoid-and-geoid.png" alt="ellipsoid-and-geoid" title="" />
+<img src="ellipsoid-and-geoid.png" alt="ellipsoid-and-geoid" />
 <figcaption>
 大地座標系統為根據某一參考橢球所定義的座標系。
 </figcaption>
@@ -616,7 +617,7 @@ N = 6381963.1291
 <ol>
 <li>在台灣八處觀測 GPS ，得到八個 WGS84 座標。</li>
 <li>與 WGS84 同。</li>
-<li><img src="tm2d.png" alt="TWD97-2_TM2度分帶" title="" /></li>
+<li><img src="tm2deg-taiwan.png" alt="TWD97-2_TM2度分帶" /></li>
 </ol></li>
 <li><p>國內現行之高程控制系統的中英文名稱為何? 
 此系統的參考依據 (或稱水準原點) 為何? 
@@ -631,7 +632,7 @@ N = 6381963.1291
 
 
 <figure>
-<img src="norm-height.png" alt="正高與橢球高的意義" title="" />
+<img src="norm-heigh.png" alt="正高與橢球高的意義" />
 <figcaption>
 正高為到大地水準面的高度。
 </figcaption>
@@ -642,7 +643,7 @@ N = 6381963.1291
 並以數學式說明這三者之關係。</p>
 
 <figure>
-<img src="high.png" alt="severeal-heigh" title="" />
+<img src="high.png" alt="severeal-heigh" />
 <figcaption>
 橢球高 = 正高 + 大地基準面高
 </figcaption>
@@ -1202,7 +1203,7 @@ N = 6381963.1291
 
 	 1. 在台灣八處觀測 GPS ，得到八個 WGS84 座標。
 	 2. 與 WGS84 同。
-	 3. ![TWD97-2_TM2度分帶](tm2d.png)
+	 3. ![TWD97-2_TM2度分帶](tm2deg-taiwan.png)
 
 
  6. 國內現行之高程控制系統的中英文名稱為何? 
@@ -1216,7 +1217,7 @@ N = 6381963.1291
 
 	****
 	
-	 + ![正高與橢球高的意義](norm-height.png)
+	 + ![正高與橢球高的意義](norm-heigh.png)
 	 + 正高為到大地水準面的高度。
 
  7. 請繪圖並加註文字說明正高 (Orthometric Height)、
