@@ -1,0 +1,155 @@
+
+/****************************************************************
+* - file: word.css                                              *
+* - title: 適合文件閱讀的樣式表                                 *
+* - author: c34031328                                           *
+* - date: 2015-11-10                                            *
+* - tag: word, css, writer, document,                           *
+* - link: http://myweb.ncku.edu.tw/~c34031328/study/word.css    *
+****************************************************************/
+
+/*************************************************************
+* this css is to make a document look like M$ word or other  *
+* official software. i want it be as simply as possible.     *
+* ***********************************************************/
+
+
+/*	neccesserily, make document with margin outside, 
+	so look comfortablily.  */
+
+/*
+header dt {
+	float: left;
+	clear: left; 
+	margin-right: 0.5ex; 
+	}
+
+header dt:after {
+	content: ": "; 
+	}
+
+header dd {
+	display: table; 
+	margin-bottom: 0.5em; 
+	}
+
+body { display: table; }*/
+
+dt { font-weight: 500; }
+header dt { display: inline; }
+header dt:after { content: ":"; }
+header dd { display: inline; }
+header { font-style: italic; }
+
+/* table ***********************************/
+
+caption {
+	font-size: larger ; 
+	color: grey; 
+	}
+
+table { 
+	margin: auto; 
+	border: 1px solid; 
+	text-align: center; 
+	/*text-align: justify; 
+	text-justify: inter-word; */
+	}
+
+th, td {
+	border: 1px solid; 
+	}
+
+td {
+	padding: 0 0.5ex 0 0.5ex; 
+	/*width: 8em; */
+	}
+
+pre {
+	margin: 1em; 
+	}
+
+blockquote, q {
+	color: #666; 
+	}
+
+body {
+	margin:2em;
+	font-family: "DFKai-SB" "標楷體" "宋體" "明體"; 
+}
+
+/*	make header beheave like document header, as title.
+	and the sub title should. 	*/
+header {
+	display:block;
+	text-align:center;
+	font-size:larger;
+}
+
+
+/*	make header looked in center.	
+main h1, h2, h3, h5, h2, h4, h6 { margin-left: 4rem; } */
+main h1 { margin-left: 2rem; }
+main h2 { margin-left: 3rem; }
+main h3 { margin-left: 4rem; }
+main h4 { margin-left: 5rem; }
+main h5 { margin-left: 6rem; }
+main h6 { margin-left: 7rem; }
+
+/*	muti-column
+main {
+	display:block;
+	-moz-column-count:2;
+	column-count:2;
+	-webkit-column-count:2;
+}
+*/
+
+main > p {
+	text-indent: 2em;
+}
+
+dd {
+	margin-bottom: 1ex; 
+	}
+
+q:lang(zh)  { quotes: "「" "」" "『" "』" ; }
+q { 
+	color: #555;
+	font-style: italic; 
+	}
+
+/* dl inline ***************************************/
+
+dt {
+	font-weight: 200; 
+	font-size: 110%; 
+	}
+
+.inline dt {
+	float: left; 
+	}
+
+.inline dt:lang(en):after {
+	content: ': '; 
+	}
+
+.inline dt:lang(zh):after {
+	content: '：' ; 
+	}
+
+.inline dd {
+	display: table; 
+	clear: right; 
+	}
+
+
+#markdown { display: none; }
+
+img { max-width: 90%; }
+
+ol { list-style: cjk-ideographic; }
+
+ol ol { list-style: decimal; }
+
+ol ol ol { list-style: lower-roman ; }
