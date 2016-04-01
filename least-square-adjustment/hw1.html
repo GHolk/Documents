@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+
+<html lang="zh-TW">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="date" content="2016-03-14">
+<meta name="generator" content="vim, perl, markdown">
+<meta name="copyright" content="Common Creative">
+<meta name="distribution" content="taiwan">
+<meta name="author" content="c34031328">
+<meta name="keywords" content="least square adjustment, homework, asignment, ">
+<meta name="discription" content="homework 2 of least square adjustment 1 . ">
+<link rel="next" type="text/html" href="hw3.html">
+<link rel="prev" type="text/html" href="hw1.html">
+<link rel="icon" type="image/png" href="../icon.png">
+
+<link rel="stylesheet" type="text/css" 
+	href="http://myweb.ncku.edu.tw/~c34031328/study/word.css">
+
+<title>測量平差作業一</title>
+
+</head>
+
+<main>
+<h1>       測量平差作業一 Date line Mar.23.16</h1>
+
+<ol>
+<li><p><q>某一段平坦地距離以30m捲尺進行量測，分別由七人進行量測，
+其記錄包含各人成果之最或是值及量測次數分別為：
+89.225m(3次)、88.220m(1次)、89.235m(2次)、89.230m(4次)、
+89.240m(2次) 、89.232m(3次)、88.120m(1次)。
+測量時之其它數據如下：溫度=26°C，拉力=20公斤，
+E（彈性係數）=1.55×10^6Kg/cm^2 ， 
+A（截面積）=0.0312cm^2 ， W（單位重）=0.0435Kg/m ，
+α（膨脹係數）=0.5×10^-6 /1°C，設該尺檢定之溫度為15°C，
+拉力15公斤，與標準尺比較得其實長為30.024m(該捲尺刻劃為30m).
+試問： (15%)  <em>[各改正公式請自行參考平測教科書]</em>  </q></p>
+
+<!--89.225*3+89.235*2+89.230*4+89.240*2+89.232*3-->
+
+<ol>
+<li><p><q>存在哪些誤差？該如何處理那些誤差？</q></p>
+
+<dl><dt>系統誤差</dt><dd> 包含因張力被拉伸造成的誤差、溫度澎漲，
+  可以估算誤差的程度，進行改正。
+</dd><dt>隨機誤差</dt><dd> 完全隨機的誤差，趨近常態分布。
+  由於測量本質的不確定，造成的誤差。
+  可以用平均取期望值等統計方式來消除。
+</dd><dt>人為誤差</dt><dd> 看錯、筆誤、記錯，等由人造成的誤差。
+  只能人為挑出。
+</dd></dl></li>
+<li><p><q>距離之最或是值為何？</q></p>
+
+<p>判定 <code>88.*</code> 的觀測量為誤讀剔除。
+其它觀測量之平均值為 89.2315 。</p>
+
+<dl><dt>尺長改正</dt><dd> Cc = 89.2315 &times; 0.024/30 = 0.0713852
+</dd><dt>溫度改正</dt><dd> Ch = 89.2315 &times; 0.5e-6 &times;  ( 26 - 15 ) = 4.9077e-4
+</dd><dt>拉力改正</dt><dd> Cp = 89.2315 &times; A/E &times; ( 20 - 15 ) = 8.9807e-6
+</dd><dt>懸垂改正</dt><dd> Cs = -w<sup>2</sup> &times; L<sup>3</sup> / 24P<sup>2</sup> = -0.24896
+</dd><dt>尺長</dt><dd> L = 89.2315 + C = 89.05442
+</dd></dl></li>
+<li><p><q>單位權中誤差及該段距離最或是值中誤差各為何？</q></p>
+
+<dl><dt>單位權中誤差</dt><dd> σ<sub>0</sub> = ± √( vv^2 / n-1 ) =  ± 0.004847
+</dd><dt>最或是值中誤差</dt><dd> σ = σ<sub>0</sub> / √n = 0.0012956
+</dd></dl></li>
+</ol></li>
+<li><p><q>對某地區的三角網中421個三角形閉合差進行統計分析，
+得到閉合差得平均值為0.06”，閉合差的中誤差為0.62”，
+若取α=0.01的顯著水平，
+請問該地區的測量是否存在系統誤差?  <em>(10%)</em>  </q></p>
+
+<pre>
+<math><mrow><mi>z</mi><mo>&equals;</mo><mfrac><mrow><mn>0</mn><mo>.</mo><mn>0</mn><mn>6</mn><mo>&Prime;</mo></mrow><mrow><mn>0</mn><mo>.</mo><mn>6</mn><mn>2</mn><mo>&Prime;</mo><mi>/</mi><msqrt><mrow><mn>4</mn><mn>2</mn><mn>1</mn></mrow></msqrt></mrow></mfrac><mo>&equals;</mo><mn>1</mn><mo>.</mo><mn>9</mn><mn>8</mn><mn>5</mn><mn>6</mn><mn>4</mn></mrow></math>
+<math><mrow><msub><mi>z</mi><mfrac><mi>a</mi><mn>2</mn></mfrac></msub><mo>&equals;</mo><mn>1</mn><mo>.</mo><mn>6</mn><mn>4</mn><mn>5</mn><mo>&lt;</mo><mi>z</mi></mrow></math>
+存在系統誤差。
+</pre>
+
+</li>
+<li><p><q>假設先驗捲尺量距的標準差σ為±(2 mm +5*10^-4*d)，
+其中d表量距長度(單位為公尺)。今量一段200公尺之距離，
+欲得其測距相對誤差為1/5000時，請問</q></p>
+
+<ol>
+<li><p><q>若純粹以誤差傳播之方式來推導時，需進行幾次量測(5%)？</q></p>
+
+<pre><code>200 / 5000 = 0.04
+σ = 0.002 + 0.1 = 0.102
+<math><mrow><msub><mo>&sigma;</mo><mi>x</mi></msub><mo>&equals;</mo><mfrac><mo>&sigma;</mo><msqrt><mi>n</mi></msqrt></mfrac></mrow></math>
+n = 6.5 &lt; 7
+</code></pre></li>
+<li><p><q>若以統計之觀點來推導，母體平均數與樣本平均數之差
+在5%的顯著水平下，其估計區間為該段距離之標準誤差時，
+需進行幾次量測(5%)？</q></p>
+
+<pre><code>
+<math><mrow><mi>n</mi><mo>&equals;</mo><mfrac><mrow><mo>(</mo><msub><mi>t</mi><mfrac><mi>a</mi><mn>2</mn></mfrac></msub><mo>&sigma;</mo><msup><mo>)</mo><mn>2</mn></msup></mrow><msup><mi>I</mi><mn>2</mn></msup></mfrac></mrow></math>
+t<sub>a/2</sub> = 1.960
+I = 0.04
+&sigma; = 0.102
+n = 24.98 
+至少須要 26 次量測
+</code></pre></li>
+</ol></li>
+</ol>
+
+<h2>教科書:</h2>
+
+<ul>
+<li>PP10 Problem 1.12 (5%)</li>
+<li>PP11 Problem 1.17; 1.19 (10%)</li>
+<li>PP48 Problem 3.17 (10%)</li>
+<li>PP67 Problem 4.7 (5%)</li>
+<li>PP68 Problem 4.19 (10%)</li>
+<li>PP84 Problem 5.14; 5.15 (10%)</li>
+<li>PP85 Problem 5.18; 5.17; 5.20 (15%)</li>
+</ul>
+</main>
+
+
+
+<pre id="markdown">
+
+
+       測量平差作業一 Date line Mar.23.16
+====================================================
+
+ 1. ""某一段平坦地距離以30m捲尺進行量測，分別由七人進行量測，
+	其記錄包含各人成果之最或是值及量測次數分別為：
+	89.225m(3次)、88.220m(1次)、89.235m(2次)、89.230m(4次)、
+	89.240m(2次) 、89.232m(3次)、88.120m(1次)。
+	測量時之其它數據如下：溫度=26°C，拉力=20公斤，
+	E（彈性係數）=1.55×10^6Kg/cm^2 ， 
+	A（截面積）=0.0312cm^2 ， W（單位重）=0.0435Kg/m ，
+	α（膨脹係數）=0.5×10^-6 /1°C，設該尺檢定之溫度為15°C，
+	拉力15公斤，與標準尺比較得其實長為30.024m(該捲尺刻劃為30m).
+	試問： (15%) *[各改正公式請自行參考平測教科書]* ""
+
+	<!--89.225*3+89.235*2+89.230*4+89.240*2+89.232*3-->
+
+	 1. ""存在哪些誤差？該如何處理那些誤差？""
+
+		系統誤差
+		: 包含因張力被拉伸造成的誤差、溫度澎漲，
+		  可以估算誤差的程度，進行改正。
+		隨機誤差
+		: 完全隨機的誤差，趨近常態分布。
+		  由於測量本質的不確定，造成的誤差。
+		  可以用平均取期望值等統計方式來消除。
+		人為誤差
+		: 看錯、筆誤、記錯，等由人造成的誤差。
+		  只能人為挑出。
+
+
+	 2. ""距離之最或是值為何？""
+
+		判定 `88.*` 的觀測量為誤讀剔除。
+		其它觀測量之平均值為 89.2315 。
+
+		尺長改正
+		: Cc = 89.2315 &times; 0.024/30 = 0.0713852
+		溫度改正
+		: Ch = 89.2315 &times; 0.5e-6 &times;  ( 26 - 15 ) = 4.9077e-4
+		拉力改正
+		: Cp = 89.2315 &times; A/E &times; ( 20 - 15 ) = 8.9807e-6
+		懸垂改正
+		: Cs = -w<sup>2</sup> &times; L<sup>3</sup> / 24P<sup>2</sup> = -0.24896
+		尺長
+		: L = 89.2315 + C = 89.05442
+
+
+	 3. ""單位權中誤差及該段距離最或是值中誤差各為何？""
+
+		單位權中誤差
+		: σ<sub>0</sub> = ± √( vv^2 / n-1 ) =  ± 0.004847
+		最或是值中誤差
+		: σ = σ<sub>0</sub> / √n = 0.0012956
+
+
+
+ 2. ""對某地區的三角網中421個三角形閉合差進行統計分析，
+	得到閉合差得平均值為0.06”，閉合差的中誤差為0.62”，
+	若取α=0.01的顯著水平，
+	請問該地區的測量是否存在系統誤差? *(10%)* ""
+
+	存在系統誤差。<!--
+	.EQ
+	z = 0.06\(sd over { 0.62\(sd / sqrt 421 } = 1.98564
+	.EN
+	.EQ
+	z sub { a over 2 } = 1.645 < z 
+	.EN
+	-->
+
+
+ 3. ""假設先驗捲尺量距的標準差σ為±(2 mm +5*10^-4*d)，
+	其中d表量距長度(單位為公尺)。今量一段200公尺之距離，
+	欲得其測距相對誤差為1/5000時，請問""
+
+	 1. ""若純粹以誤差傳播之方式來推導時，需進行幾次量測(5%)？""
+
+	 		200 / 5000 = 0.04
+			σ = 0.002 + 0.1 = 0.102
+			.EQ
+			sigma sub x = sigma over sqrt n 
+			.EN
+			n = 6.5 < 7 
+
+	 2. ""若以統計之觀點來推導，母體平均數與樣本平均數之差
+	 	在5%的顯著水平下，其估計區間為該段距離之標準誤差時，
+		需進行幾次量測(5%)？""
+
+		.EQ
+		n = {( t sub {a over 2} sigma ) sup 2 }over I sup 2
+		.EN
+		t<sub>a/2</sub> = 1.960
+		I = 0.04
+		&sigma; = 0.102
+		n = 24.98 
+		至少須要 26 次量測
+
+
+
+## 教科書:
+
+ - PP10 Problem 1.12 (5%)
+ - PP11 Problem 1.17; 1.19 (10%)
+ - PP48 Problem 3.17 (10%)
+ - PP67 Problem 4.7 (5%)
+ - PP68 Problem 4.19 (10%)
+ - PP84 Problem 5.14; 5.15 (10%)
+ - PP85 Problem 5.18; 5.17; 5.20 (15%)
+
+</pre>
+</body></html>

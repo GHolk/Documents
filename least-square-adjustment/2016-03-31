@@ -1,0 +1,69 @@
+# Created by Octave 4.0.0, Thu Mar 31 17:53:47 2016 CST <c34031328@localhost.localdomain>
+# name: S
+# type: matrix
+# rows: 2
+# columns: 2
+ 0.025 0.005
+ 0.005 0.004
+
+
+# name: S2
+# type: matrix
+# rows: 5
+# columns: 5
+ 0.000225 0.02 0 0 0
+ 0.02 0.0004 -0.02 0 0
+ 0 -0.02 0.000324 0 0
+ 0 0 0 0.0009 0
+ 0 0 0 0 0.0006250000000000001
+
+
+# name: Sz
+# type: scalar
+61586.33146279759
+
+
+# name: a
+# type: scalar
+15
+
+
+# name: an
+# type: matrix
+# rows: 1
+# columns: 2
+ 1256.637061435917 1256.637061435917
+
+
+# name: ans
+# type: scalar
+0.7673017619595635
+
+
+# name: b
+# type: scalar
+25.2
+
+
+# name: c
+# type: scalar
+20.5
+
+
+# name: d
+# type: scalar
+32.485
+
+
+# name: da
+# type: matrix
+# rows: 1
+# columns: 5
+ 12.6 17.75 12.6 15.3 16.2425
+
+
+# name: e
+# type: scalar
+30.6
+
+

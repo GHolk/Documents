@@ -65,17 +65,13 @@ td {
 	/*width: 8em; */
 	}
 
-pre {
-	margin: 1em; 
-	}
+pre { margin: 1em; }
 
-blockquote, q {
-	color: #666; 
-	}
+blockquote, q { color: #666; }
 
 body {
 	margin:2em;
-	font-family: "DFKai-SB" "標楷體" "宋體" "明體"; 
+	font-family: "Kai" "標楷體" "宋體" "明體"; 
 }
 
 /*	make header beheave like document header, as title.
