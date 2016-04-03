@@ -184,4 +184,10 @@ figcaption { /*	remove box shadow. */
 	text-align: center;
 	}
 
+.math {
+	font-style: italic; 
+	font-size: 100%; 
+	font-family: serif; 
+	}
+
 .hide { display: none; }

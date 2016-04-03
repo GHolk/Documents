@@ -16,7 +16,7 @@
 <meta name="discription" content="homework 2 of least square adjustment 1 . ">
 <link rel="next" type="text/html" href="hw3.html">
 <link rel="prev" type="text/html" href="hw1.html">
-<link rel="icon" type="image/png" href="../icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../icon.png">
 <link rel="stylesheet" type="text/css" href="../word.css">
 
 <title>測量平差作業二</title>
@@ -44,7 +44,7 @@
 </mrow></msub></mtd></mtr><mtr><mtd><msub><mo>
 &sigma;</mo><mrow><mi>h</mi><mi>r</mi></mrow></msub></mtd>
 <mtd><msub><msup><mo>&sigma;</mo><mn>2</mn></msup>
-<mi>r</mi></msub></mtd></mtr></mtable><mo>]</mo>
+<mi>h</mi></msub></mtd></mtr></mtable><mo>]</mo>
 </mrow></mrow></math>
 
 <!--
@@ -63,34 +63,35 @@ Sigma = left [
 .EN
 -->
 
-<pre><code>V = h &pi; r_2
-</code></pre>
+<p><code class="math">V = h &pi; r<sup>2</sup> </code></p>
 
-<math><mrow><msub><mo>&Sigma;</mo><mi>V</mi></msub>
-<mo>&equals;</mo><mrow><mo>[</mo><mtable><mtr><mtd>
-<mfrac><mrow><mi>d</mi><mi>V</mi></mrow><mrow><mi>
-d</mi><mi>r</mi></mrow></mfrac></mtd><mtd><mfrac>
-<mrow><mi>d</mi><mi>V</mi></mrow><mrow><mi>d</mi>
-<mi>h</mi></mrow></mfrac></mtd></mtr></mtable><mo>
-]</mo></mrow><mo>&Sigma;</mo><mrow><mo>[</mo><mtable>
-<mtr><mtd><mfrac><mrow><mi>d</mi><mi>V</mi></mrow>
-<mrow><mi>d</mi><mi>r</mi></mrow></mfrac></mtd>
-</mtr><mtr><mtd><mfrac><mrow><mi>d</mi><mi>V</mi>
-</mrow><mrow><mi>d</mi><mi>h</mi></mrow></mfrac>
-</mtd></mtr></mtable><mo>]</mo></mrow><mo>
-&equals;</mo><mn>6158
-6</mn><mo>.</mo><mn>331
-5</mn></mrow></math>
+<math display="block"><mrow><msub><mo>&Sigma;</mo>
+<mi>V</mi></msub><mo>&equals;</mo><mrow><mo>[</mo>
+<mtable><mtr><mtd><mrow><mfrac><mrow><mo>&part;</mo>
+<mi>V</mi></mrow><mrow><mo>&part;</mo><mi>r</mi>
+</mrow></mfrac><msub><mo>&sigma;</mo><mi>r</mi>
+</msub></mrow></mtd><mtd><mrow><mfrac><mrow><mo>
+&part;</mo><mi>V</mi></mrow><mrow><mo>&part;</mo><mi>
+h</mi></mrow></mfrac><msub><mo>&sigma;</mo><mi>h</mi>
+</msub></mrow></mtd></mtr></mtable><mo>]</mo></mrow>
+<mo>&Sigma;</mo><mrow><mo>[</mo><mtable><mtr><mtd>
+<mrow><mfrac><mrow><mo>&part;</mo><mi>V</mi></mrow>
+<mrow><mo>&part;</mo><mi>r</mi></mrow></mfrac><msub>
+<mo>&sigma;</mo><mi>r</mi></msub></mrow></mtd></mtr>
+<mtr><mtd><mfrac><mrow><mo>&part;</mo><mi>V</mi>
+</mrow><mrow><mo>&part;</mo><mi>h</mi><msub><mo>
+&sigma;</mo><mi>h</mi></msub></mrow></mfrac></mtd></mtr>
+</mtable><mo>]</mo></mrow><mo>&equals;</mo><mn>
+1</mn><mo>.</mo><mn>1701</mn></mrow></math>
 
-<pre><code>&sigma;_V = 248.1659
-</code></pre>
+<p><code class="math">&sigma;<sub>V</sub> = 1.0817m</code></p>
 
 <!--
 .EQ
 Sigma sub V = left [ 
 matrix{
-    col{{ d V } over { d r }}
-    col{{ d V }over{ d h }}
+    col{{ partial V }over{ partial r } sigma sub r }
+    col{{ partial V }over{ partial h } sigma sub h }
     } right ]
 
 
@@ -99,12 +100,12 @@ Sigma
 
 left [ 
 matrix{
-    col{{{ d V }over{ d r }} above
-        { d V }over{ d h }
+    col{{{ partial V }over{ partial r } sigma sub r } above
+        { partial V }over{ partial h  sigma sub h }
         }} right ] 
 
 
-= 61586.3315 
+= 1.1701
 .EN
 --></li>
 <li><p>今有一五邊形 ( 如下圖所示) 欲計算其面積，
@@ -113,9 +114,9 @@ matrix{
 其他皆為零；請列出這五個觀測量的變方協變方矩陣為何 (4%)? 
 計算該五邊形的面積及中誤差為何 (6%) ?</p>
 
-<img src="hw2-2.png" alt="5-border-shape" style="float: right; " />
+<p><img src="hw2-2.png" alt="5-border-shape" title="" /></p>
 
-<pre><code>a = 15.000m ± 0.015m
+<pre><code class="math">a = 15.000m ± 0.015m
 b = 25.200m ± 0.020m
 c = 20.500m ± 0.018m
 d = 32.485m ± 0.030m
@@ -152,67 +153,72 @@ matrix{
     col{ 0.000225 above 0.020000 above 0 above 0 above 0 }
     col{ 0.020000 above 0.0004 above -0.02 above 0 above 0 }
     col{ 0 above -0.020000 above 0.000324 above 0 above 0 }
-    col{  0 above 0 above 0.000324 above 0 above 0 }
+    col{ 0 above 0 above 0.000324 above 0 above 0 }
     col{ 0 above 0 above 0 above 0.0009 above 0 }
     } right ] 
 .EN
 -->
 
-<pre><code>area = 0.5 * ( a b + b c + d e ) = 944.3205
+<pre><code class="math">area = 0.5 * ( a b + b c + d e ) = 944.3205
 </code></pre>
 
 <math display="block"><mrow><mi>A</mi><mo>
-&equals;</mo><mrow><mo>[</mo><mtable><mtr><mtd><mfrac><mrow>
-<mo>&part;</mo><mi>a</mi><mi>r</mi><mi>e</mi><mi>
-a</mi></mrow><mrow><mo>&part;</mo><mi>a</mi></mrow>
-</mfrac></mtd><mtd><mfrac><mrow><mo>&part;</mo><mi>
-a</mi><mi>r</mi><mi>e</mi><mi>a</mi></mrow><mrow><mo>
-&part;</mo><mi>b</mi></mrow></mfrac></mtd><mtd><mfrac>
+&equals;</mo><mrow><mo>[</mo><mtable><mtr><mtd><mrow><mfrac>
 <mrow><mo>&part;</mo><mi>a</mi><mi>r</mi><mi>e</mi>
-<mi>a</mi></mrow><mrow><mo>&part;</mo><mi>c</mi>
-</mrow></mfrac></mtd><mtd><mfrac><mrow><mo>
+<mi>a</mi></mrow><mrow><mo>&part;</mo><mi>a</mi>
+</mrow></mfrac><msub><mo>&sigma;</mo><mi>a</mi>
+</msub></mrow></mtd><mtd><mrow><mfrac><mrow><mo>
 &part;</mo><mi>a</mi><mi>r</mi><mi>e</mi><mi>a</mi></mrow>
-<mrow><mo>&part;</mo><mi>d</mi></mrow></mfrac></mtd>
-<mtd><mfrac><mrow><mo>&part;</mo><mi>a</mi><mi>
+<mrow><mo>&part;</mo><mi>b</mi></mrow></mfrac><msub>
+<mo>&sigma;</mo><mi>b</mi></msub></mrow></mtd><mtd>
+<mrow><mfrac><mrow><mo>&part;</mo><mi>a</mi><mi>
 r</mi><mi>e</mi><mi>a</mi></mrow><mrow><mo>
-&part;</mo><mi>e</mi></mrow></mfrac></mtd></mtr></mtable>
-<mo>]</mo></mrow><mo>&equals;</mo><mrow><mo>[</mo>
-<mtable><mtr><mtd><mrow><mn>12</mn><mo>.</mo><mn>
-600</mn></mrow></mtd><mtd><mrow><mn>17</mn><mo>.</mo>
-<mn>750</mn></mrow></mtd><mtd><mrow><mn>12</mn><mo>
-.</mo><mn>600</mn></mrow></mtd><mtd><mrow><mn>15</mn>
-<mo>.</mo><mn>300</mn></mrow></mtd><mtd><mrow><mn>
-16</mn><mo>.</mo><mn>242</mn></mrow></mtd></mtr>
-</mtable><mo>]</mo></mrow></mrow></math>
+&part;</mo><mi>c</mi></mrow></mfrac><msub><mo>&sigma;</mo>
+<mi>c</mi></msub></mrow></mtd><mtd><mrow><mfrac>
+<mrow><mo>&part;</mo><mi>a</mi><mi>r</mi><mi>e</mi>
+<mi>a</mi></mrow><mrow><mo>&part;</mo><mi>d</mi>
+</mrow></mfrac><msub><mo>&sigma;</mo><mi>d</mi>
+</msub></mrow></mtd><mtd><mrow><mfrac><mrow><mo>
+&part;</mo><mi>a</mi><mi>r</mi><mi>e</mi><mi>a</mi></mrow>
+<mrow><mo>&part;</mo><mi>e</mi></mrow></mfrac><msub>
+<mo>&sigma;</mo><mi>e</mi></msub></mrow></mtd></mtr>
+</mtable><mo>]</mo></mrow><mo>&equals;</mo><mrow>
+<mo>[</mo><mtable><mtr><mtd><mrow><mn>0</mn><mo>
+.</mo><mn>1890</mn></mrow></mtd><mtd><mrow><mn>0</mn>
+<mo>.</mo><mn>3550</mn></mrow></mtd><mtd><mrow><mn>
+0</mn><mo>.</mo><mn>2268</mn></mrow></mtd><mtd><mrow>
+<mn>0</mn><mo>.</mo><mn>4590</mn></mrow></mtd><mtd>
+<mrow><mn>0</mn><mo>.</mo><mn>4060</mn></mrow></mtd>
+</mtr></mtable><mo>]</mo></mrow></mrow></math>
 
 <!--
 .EQ
 A = left [ 
 matrix{
-    col{{ partial area } over { partial a }}
-    col{{ partial area } over { partial b }}
-    col{{ partial area } over { partial c }}
-    col{{ partial area } over { partial d }}
-    col{{ partial area } over { partial e }}
+    col{{ partial area } over { partial a } sigma sub a }
+    col{{ partial area } over { partial b } sigma sub b }
+    col{{ partial area } over { partial c } sigma sub c }
+    col{{ partial area } over { partial d } sigma sub d }
+    col{{ partial area } over { partial e } sigma sub e }
     } right ] 
 
 
 = left [ 
 matrix{
-    col{ 12.600 }
-    col{ 17.750 }
-    col{ 12.600 }
-    col{ 15.300 }
-    col{ 16.242 }
+    col{ 0.1890 }
+    col{ 0.3550 }
+    col{ 0.2268 }
+    col{ 0.4590 }
+    col{ 0.4060 }
     } right ] 
 
 
 .EN
 -->
 
-<pre><code>&sigma;<sub>area</sub><sup>2</sup> = A &Sigma; A<sup>T</sup> = 0.58875
-</code></pre></li>
-<li><p>承上題，請計算此三個三角形面積的變方協變方矩陣。 <i>( 9 % )</i></p>
+<code class="math">&sigma;<sub>area</sub><sup>2</sup> = A &Sigma; A<sup>T</sup> = 0.0001690m ; &sigma;<sub>area</sub> = 0.01300
+</code></li>
+<li><p>承上題，請計算此三個三角形面積的變方協變方矩陣。 *( 9 % )*</p>
 
 <math display="block"><mrow><msub><mo>&Sigma;</mo>
 <mn>1</mn></msub><mo>&equals;</mo><mrow><mo>[</mo>
@@ -271,10 +277,56 @@ matrix{
 --></li>
 </ol>
 
+<hr />
+
 <h2>教科書</h2>
 
+<ul>
+<li><p>PP 100 Problem 6.18 ( 10%) </p>
+
+<dl class="inline">
+<dt>矩形</dt><dd> <code class="math">X &times; Y = 1600.005&plusmn;0.004 &times; 250.253&plusmn;0.003 </code></dd>
+<dt>觀測量  <u>變方協變方矩陣</u>  </dt><dd> <math display="block">
+<mrow><mo>&Sigma;</mo><mo>=</mo>
+<mrow><mo>[</mo><mtable><mtr>
+<mtd><mrow><mn>0</mn><mo>.</mo><mn>004</mn></mrow>
+</mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>
+0</mn></mtd><mtd><mrow><mn>0</mn><mo>.</mo><mn>
+003</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow>
+</mrow></math></dd>
+<dt>周長</dt><dd> <code class="math">2 X + &pi; Y = 3986.203 </code></dd>
+<dt>周長標準差</dt><dd> <code class="math"> &sigma;<sub>s</sub><sup>2</sup> = A &Sigma; A<sup>T</sup> = 0.04561 ; 
+A = [ 0.008  0.009425 ] ; &sigma;<sub>s</sub> = 0.0007228 </code></dd>
+<dt>面積</dt><dd> <code class="math"> X Y + Y<sup>2</sup> &pi;/4 
+= 449592.8396 </code></dd>
+<dt>面積標準差</dt><dd> <code class="math"> &sigma;<sub>A</sub><sup>2</sup> = A &Sigma; A<sup>T</sup> = 12167.8669 ; 
+A = [ 1.0010 5.9793 ] ; 
+&sigma;<sub>A</sub> = 0.3336 ; </code> </dd>
+</dl>
+
+<!--
+.EQ
+Sigma = left [ matrix{ 
+col{ 0.004 above 0 }
+col{ 0 above 0.003 }
+} right ] 
+.EN
+-->
+</li>
+<li>
+<p>PP 100 6.21 ( 8 %)</p>
+
 <ol>
-<li><p>PP 100 Problem 6.18 ( 1 0%) ； 6.21 ( 8 %)</p></li>
+<li><code class="math"> H = L cos a ; &sigma;<sub>H</sub><sup>2</sup> = ( &sigma;<sub>L</sub> cos &alpha; )<sup>2</sup> + 
+( - &sigma;<sub>&alpha;</sub> L sin &alpha; )<sup>2</sup> ; </code> </li>
+<li><code class="math"> C<sub>T</sub> = k ( T<sub>f</sub> - T ) L ; &sigma;<sub>C<sub>T</sub></sub> 
+= &sigma;<sub>T<sub>f</sub></sub> k L</code> </li>
+<li><code class="math"> C<sub>P</sub> = ( P<sub>f</sub> - P ) L &divide; A E  ; 
+&sigma;<sub>P</sub> = &sigma;<sub>P<sub>f</sub></sub> L &divide; A E  </code></li>
+<li><code class="math"> C<sub>S</sub> = - w<sup>2</sup> l<sub>S</sub><sup>3</sup> &divide; 24 P<sub>f</sub><sup>2</sup> ; 
+&sigma;<sub>C<sub>S</sub></sub> 
+= w<sup>2</sup> l<sub>S</sub><sup>3</sup> &divide; 12 P<sub>f</sub><sup>3</sup> &sigma;<sub>P<sub>f</sub></sub> </code> </li>
+</ol></li>
 <li><p>PP 126 Problem 7.8 ( 4 %)</p></li>
 <li><p>PP 127 Problem 7.10 (4%) ； 7.13 (6%)</p></li>
 <li><p>PP 128 Problem 7.17 (6%)</p></li>
@@ -282,8 +334,7 @@ matrix{
 <li><p>PP 147 Problem 8.14 (10%)</p></li>
 <li><p>PP 162 Problem 9.1 ； 9.3 (10%)</p></li>
 <li><p>PP 163 Problem 9.15 ( 7 %)</p></li>
-</ol>
-
+</ul>
 
 
 <pre class="hide">
@@ -307,7 +358,7 @@ matrix{
 	</mrow></msub></mtd></mtr><mtr><mtd><msub><mo>
 	&sigma;</mo><mrow><mi>h</mi><mi>r</mi></mrow></msub></mtd>
 	<mtd><msub><msup><mo>&sigma;</mo><mn>2</mn></msup>
-	<mi>r</mi></msub></mtd></mtr></mtable><mo>]</mo>
+	<mi>h</mi></msub></mtd></mtr></mtable><mo>]</mo>
 	</mrow></mrow></math>
 
 
@@ -327,43 +378,46 @@ matrix{
 	.EN
 	-->
 
-		V = h &pi; r_2 
+	$`V = h &pi; r^2 `
 
-	<math><mrow><msub><mo>&Sigma;</mo><mi>V</mi></msub>
-	<mo>&equals;</mo><mrow><mo>[</mo><mtable><mtr><mtd>
-	<mfrac><mrow><mi>d</mi><mi>V</mi></mrow><mrow><mi>
-	d</mi><mi>r</mi></mrow></mfrac></mtd><mtd><mfrac>
-	<mrow><mi>d</mi><mi>V</mi></mrow><mrow><mi>d</mi>
-	<mi>h</mi></mrow></mfrac></mtd></mtr></mtable><mo>
-	]</mo></mrow><mo>&Sigma;</mo><mrow><mo>[</mo><mtable>
-	<mtr><mtd><mfrac><mrow><mi>d</mi><mi>V</mi></mrow>
-	<mrow><mi>d</mi><mi>r</mi></mrow></mfrac></mtd>
-	</mtr><mtr><mtd><mfrac><mrow><mi>d</mi><mi>V</mi>
-	</mrow><mrow><mi>d</mi><mi>h</mi></mrow></mfrac>
-	</mtd></mtr></mtable><mo>]</mo></mrow><mo>
-	&equals;</mo><mn>6158
-	6</mn><mo>.</mo><mn>331
-	5</mn></mrow></math>
+	<math display="block"><mrow><msub><mo>&Sigma;</mo>
+	<mi>V</mi></msub><mo>&equals;</mo><mrow><mo>[</mo>
+	<mtable><mtr><mtd><mrow><mfrac><mrow><mo>&part;</mo>
+	<mi>V</mi></mrow><mrow><mo>&part;</mo><mi>r</mi>
+	</mrow></mfrac><msub><mo>&sigma;</mo><mi>r</mi>
+	</msub></mrow></mtd><mtd><mrow><mfrac><mrow><mo>
+	&part;</mo><mi>V</mi></mrow><mrow><mo>&part;</mo><mi>
+	h</mi></mrow></mfrac><msub><mo>&sigma;</mo><mi>h</mi>
+	</msub></mrow></mtd></mtr></mtable><mo>]</mo></mrow>
+	<mo>&Sigma;</mo><mrow><mo>[</mo><mtable><mtr><mtd>
+	<mrow><mfrac><mrow><mo>&part;</mo><mi>V</mi></mrow>
+	<mrow><mo>&part;</mo><mi>r</mi></mrow></mfrac><msub>
+	<mo>&sigma;</mo><mi>r</mi></msub></mrow></mtd></mtr>
+	<mtr><mtd><mfrac><mrow><mo>&part;</mo><mi>V</mi>
+	</mrow><mrow><mo>&part;</mo><mi>h</mi><msub><mo>
+	&sigma;</mo><mi>h</mi></msub></mrow></mfrac></mtd></mtr>
+	</mtable><mo>]</mo></mrow><mo>&equals;</mo><mn>
+	1</mn><mo>.</mo><mn>1701</mn></mrow></math>
 
-		&sigma;_V = 248.1659
+	$`&sigma;_V = 1.0817m`
 
 	<!--
 	.EQ
 	Sigma sub V = left [ 
 	matrix{
-		col{{ d V } over { d r }}
-		col{{ d V }over{ d h }}
+		col{{ partial V }over{ partial r } sigma sub r }
+		col{{ partial V }over{ partial h } sigma sub h }
 		} right ]
 
 	Sigma
 
 	left [ 
 	matrix{
-		col{{{ d V }over{ d r }} above
-			{ d V }over{ d h }
+		col{{{ partial V }over{ partial r } sigma sub r } above
+			{ partial V }over{ partial h  sigma sub h }
 			}} right ] 
 
-	= 61586.3315 
+	= 1.1701
 	.EN
 	-->
 
@@ -411,7 +465,7 @@ matrix{
 		col{ 0.000225 above 0.020000 above 0 above 0 above 0 }
 		col{ 0.020000 above 0.0004 above -0.02 above 0 above 0 }
 		col{ 0 above -0.020000 above 0.000324 above 0 above 0 }
-		col{  0 above 0 above 0.000324 above 0 above 0 }
+		col{ 0 above 0 above 0.000324 above 0 above 0 }
 		col{ 0 above 0 above 0 above 0.0009 above 0 }
 		} right ] 
 	.EN
@@ -420,53 +474,58 @@ matrix{
 		area = 0.5 * ( a b + b c + d e ) = 944.3205
 
 	<math display="block"><mrow><mi>A</mi><mo>
-	&equals;</mo><mrow><mo>[</mo><mtable><mtr><mtd><mfrac><mrow>
-	<mo>&part;</mo><mi>a</mi><mi>r</mi><mi>e</mi><mi>
-	a</mi></mrow><mrow><mo>&part;</mo><mi>a</mi></mrow>
-	</mfrac></mtd><mtd><mfrac><mrow><mo>&part;</mo><mi>
-	a</mi><mi>r</mi><mi>e</mi><mi>a</mi></mrow><mrow><mo>
-	&part;</mo><mi>b</mi></mrow></mfrac></mtd><mtd><mfrac>
+	&equals;</mo><mrow><mo>[</mo><mtable><mtr><mtd><mrow><mfrac>
 	<mrow><mo>&part;</mo><mi>a</mi><mi>r</mi><mi>e</mi>
-	<mi>a</mi></mrow><mrow><mo>&part;</mo><mi>c</mi>
-	</mrow></mfrac></mtd><mtd><mfrac><mrow><mo>
+	<mi>a</mi></mrow><mrow><mo>&part;</mo><mi>a</mi>
+	</mrow></mfrac><msub><mo>&sigma;</mo><mi>a</mi>
+	</msub></mrow></mtd><mtd><mrow><mfrac><mrow><mo>
 	&part;</mo><mi>a</mi><mi>r</mi><mi>e</mi><mi>a</mi></mrow>
-	<mrow><mo>&part;</mo><mi>d</mi></mrow></mfrac></mtd>
-	<mtd><mfrac><mrow><mo>&part;</mo><mi>a</mi><mi>
+	<mrow><mo>&part;</mo><mi>b</mi></mrow></mfrac><msub>
+	<mo>&sigma;</mo><mi>b</mi></msub></mrow></mtd><mtd>
+	<mrow><mfrac><mrow><mo>&part;</mo><mi>a</mi><mi>
 	r</mi><mi>e</mi><mi>a</mi></mrow><mrow><mo>
-	&part;</mo><mi>e</mi></mrow></mfrac></mtd></mtr></mtable>
-	<mo>]</mo></mrow><mo>&equals;</mo><mrow><mo>[</mo>
-	<mtable><mtr><mtd><mrow><mn>12</mn><mo>.</mo><mn>
-	600</mn></mrow></mtd><mtd><mrow><mn>17</mn><mo>.</mo>
-	<mn>750</mn></mrow></mtd><mtd><mrow><mn>12</mn><mo>
-	.</mo><mn>600</mn></mrow></mtd><mtd><mrow><mn>15</mn>
-	<mo>.</mo><mn>300</mn></mrow></mtd><mtd><mrow><mn>
-	16</mn><mo>.</mo><mn>242</mn></mrow></mtd></mtr>
-	</mtable><mo>]</mo></mrow></mrow></math>
+	&part;</mo><mi>c</mi></mrow></mfrac><msub><mo>&sigma;</mo>
+	<mi>c</mi></msub></mrow></mtd><mtd><mrow><mfrac>
+	<mrow><mo>&part;</mo><mi>a</mi><mi>r</mi><mi>e</mi>
+	<mi>a</mi></mrow><mrow><mo>&part;</mo><mi>d</mi>
+	</mrow></mfrac><msub><mo>&sigma;</mo><mi>d</mi>
+	</msub></mrow></mtd><mtd><mrow><mfrac><mrow><mo>
+	&part;</mo><mi>a</mi><mi>r</mi><mi>e</mi><mi>a</mi></mrow>
+	<mrow><mo>&part;</mo><mi>e</mi></mrow></mfrac><msub>
+	<mo>&sigma;</mo><mi>e</mi></msub></mrow></mtd></mtr>
+	</mtable><mo>]</mo></mrow><mo>&equals;</mo><mrow>
+	<mo>[</mo><mtable><mtr><mtd><mrow><mn>0</mn><mo>
+	.</mo><mn>1890</mn></mrow></mtd><mtd><mrow><mn>0</mn>
+	<mo>.</mo><mn>3550</mn></mrow></mtd><mtd><mrow><mn>
+	0</mn><mo>.</mo><mn>2268</mn></mrow></mtd><mtd><mrow>
+	<mn>0</mn><mo>.</mo><mn>4590</mn></mrow></mtd><mtd>
+	<mrow><mn>0</mn><mo>.</mo><mn>4060</mn></mrow></mtd>
+	</mtr></mtable><mo>]</mo></mrow></mrow></math>
 
 	<!--
 	.EQ
 	A = left [ 
 	matrix{
-		col{{ partial area } over { partial a }}
-		col{{ partial area } over { partial b }}
-		col{{ partial area } over { partial c }}
-		col{{ partial area } over { partial d }}
-		col{{ partial area } over { partial e }}
+		col{{ partial area } over { partial a } sigma sub a }
+		col{{ partial area } over { partial b } sigma sub b }
+		col{{ partial area } over { partial c } sigma sub c }
+		col{{ partial area } over { partial d } sigma sub d }
+		col{{ partial area } over { partial e } sigma sub e }
 		} right ] 
 
 	= left [ 
 	matrix{
-		col{ 12.600 }
-		col{ 17.750 }
-		col{ 12.600 }
-		col{ 15.300 }
-		col{ 16.242 }
+		col{ 0.1890 }
+		col{ 0.3550 }
+		col{ 0.2268 }
+		col{ 0.4590 }
+		col{ 0.4060 }
 		} right ] 
 
 	.EN
 	-->
 
-		&sigma;<sub>area</sub><sup>2</sup> = A &Sigma; A<sup>T</sup> = 0.58875
+		&sigma;<sub>area</sub><sup>2</sup> = A &Sigma; A<sup>T</sup> = -0.0001690m
 
 
 
@@ -530,24 +589,76 @@ matrix{
 	.EN
 	-->
 
+
+----------------------------------------------------
+
+
+
 ## 教科書 ##
 
 
- 1. PP 100 Problem 6.18 ( 1 0%) ； 6.21 ( 8 %)
+ -  PP 100 Problem 6.18 ( 10%) 
 
- 1. PP 126 Problem 7.8 ( 4 %)
+	+ 矩形： <code class="math">X &times; Y = 1600.005&plusmn;0.004 &times; 250.253&plusmn;0.003 </code>
+	+ 觀測量 _變方協變方矩陣_ ： <math display="block">
+		<mrow><mo>&Sigma;</mo><mo>=</mo>
+		<mrow><mo>[</mo><mtable><mtr>
+		<mtd><mrow><mn>0</mn><mo>.</mo><mn>004</mn></mrow>
+		</mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>
+		0</mn></mtd><mtd><mrow><mn>0</mn><mo>.</mo><mn>
+		003</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow>
+		</mrow></math>
+	+ 周長： <code class="math">2 X + &pi; Y = 3986.203 </code>
+	+ 周長標準差： $` &sigma;_s^2 = A &Sigma; A<sup>T</sup> = 0.04561 ; 
+		A = [ 0.008  0.009425 ] ; &sigma;_s = 0.0007228 `
+	+ 面積： <code class="math"> X Y + Y<sup>2</sup> &pi;/4 
+		= 449592.8396 </code>
+	+ 面積標準差： $` &sigma;_A^2 = A &Sigma; A^T = 12167.8669 ; 
+		A = [ 1.0010 5.9793 ] ; 
+		&sigma;_A = 0.3336 ; ` 
 
- 1. PP 127 Problem 7.10 (4%) ； 7.13 (6%)
 
- 1. PP 128 Problem 7.17 (6%)
+	<!--
+	.EQ
+	Sigma = left [ matrix{ 
+	col{ 0.004 above 0 }
+	col{ 0 above 0.003 }
+	} right ] 
+	.EN
+	-->
 
- 1. PP 146 Problem 8.8 ; 8.10 ( 10%)
 
- 1. PP 147 Problem 8.14 (10%)
+ -  PP 100 6.21 ( 8 %)
 
- 1. PP 162 Problem 9.1 ； 9.3 (10%)
+	1. $` H = L cos a ; &sigma;_H^2 = ( &sigma;_L cos &alpha; )^2 + 
+		( - &sigma;_&alpha; L sin &alpha; )^2 ; ` 
+	2. $` C_T = k ( T_f - T ) L ; &sigma;_C<sub>T</sub> 
+		= &sigma;_T<sub>f</sub> k L` 
+	3. $` C_P = ( P_f - P ) L &divide; A E  ; 
+		&sigma;_P = &sigma;_P<sub>f</sub> L &divide; A E  `
+	4. $` C_S = - w^2 l_S^3 &divide; 24 P_f^2 ; 
+		&sigma;_C<sub>S</sub> 
+		= w^2 l_S^3 &divide; 12 P_f^3 &sigma;_P<sub>f</sub> ` 
 
- 1. PP 163 Problem 9.15 ( 7 %)
+ -  PP 126 Problem 7.8 ( 4 %)
+
+	$`&sigma;_D^2 = &sigma;_i^2 + &sigma;_t^2 + a^2 + ( D &times; b ppm )^2 
+	 = 0.0015^2 + 0.0015^2 + 0.003^2 + ( 540268 &times; 3ppm )^2 
+	 = 2.6285mm`
+
+ -  PP 127 Problem 7.10 (4%) ； 7.13 (6%)
+
+	
+
+ -  PP 128 Problem 7.17 (6%)
+
+ -  PP 146 Problem 8.8 ; 8.10 ( 10%)
+
+ -  PP 147 Problem 8.14 (10%)
+
+ -  PP 162 Problem 9.1 ； 9.3 (10%)
+
+ -  PP 163 Problem 9.15 ( 7 %)
 
 
 
