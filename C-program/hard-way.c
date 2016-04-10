@@ -3,18 +3,26 @@
 
 int main( int argc , char *argv[] ){
 
+/*
 if( argc != 2 ){
 	puts("you can only have 1 argument! "); 
 	return 1 ;
 	}
+*/
 
 
 int i = 0 ; 
 
-for( i = 0 ; argv[1][i] != '\0' ; i++ ){
+char str[20] ;
+
+//char * str2 ; 
+
+fgets( str, sizeof(str), stdin ); 
+
+for( i = 0 ; str[i] != '\0' ; i++ ){
 
 
-	switch( argv[1][i] ){
+	switch( str[i] ){
 
 	case 'a' :
 	case 'A' :

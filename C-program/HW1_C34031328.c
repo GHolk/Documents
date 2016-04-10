@@ -1,20 +1,13 @@
 
 #include <stdio.h>
 
-int add( int a, int b, int c ){ return a+b+c ; }
-
-
-int times( int a, int b, int c ){ return a*b*c ; }
-
-
-
 
 int maximan( int a , int b , int c ){ 
 
 int max = a ; 
 
-if( max > b ) max = b ; 
-if( max > c ) max = c ; 
+if( max < b ) max = b ; 
+if( max < c ) max = c ; 
 
 return max ; 
 }
@@ -23,8 +16,8 @@ return max ;
 
 int minimal( int a , int b , int c ){
 
-if( a < b ) a = b ; 
-if( a < c ) a = c ; 
+if( a > b ) a = b ; 
+if( a > c ) a = c ; 
 
 return a ; 
 }
@@ -32,7 +25,7 @@ return a ;
 
 
 float average( int a, int b, int c ) { 
-	return ( (float) a + (float) b + (float) c )/3 ; 
+	return ( (float)( a + b + c ) ) /3 ; 
 	}
 
 
@@ -50,16 +43,34 @@ fa *= fa ;
 fb *= fb ; 
 fc *= fc ; 
 
-variance = ( fa + fb + fc )/3 ; 
+variance = ( fa + fb + fc )/2 ; 
 
 return variance ; 
+
+}
+
+int mid ( int a , int b , int c ){
+
+if( a >= b ){
+
+	if( b > c ) return b ;
+	if( a < c ) return a ; 
+	}
+
+if( a < b ){
+
+	if( b < c ) return b ;
+	if( a > c ) return a ; 
+	}
+
+return c ;
 
 }
 
 
 
 
-int main( int argc , char *argv[] ){
+int main(){
 
 /*
 if( argc != 3 ){
@@ -68,15 +79,19 @@ if( argc != 3 ){
 	}
 */
 
-int a = 10 , b = 20 , c = 30 ; 
+int a, b, c ; 
 
 int sum, prod, min, max ; 
 float mean ; 
 float variance ; 
 
-sum = add( a, b, c ); 
+puts("please input 3 number devide by space: ");
 
-prod = times( a, b, c ); 
+scanf("%8d %8d %8d", &a, &b, &c);
+
+sum = a + b + c ; 
+
+prod = a * b * c ; 
 
 mean = average( a, b, c ); 
 
@@ -87,10 +102,19 @@ max = maximan( a, b, c );
 min = minimal( a, b, c );
 
 
-printf("sum = %d ; \nprod = %d ; \nmean = %f ; \nvar = %f ; \n", 
+printf("( X , Y , Z ) = ( %d , %d , %d )\n", a, b, c); 
+
+printf("sum = %d\nprod = %d\nmean = %f\nvar = %f\n", 
 	sum, prod, mean, variance ); 
 
-printf("max = %d ; \nmin = %d ; \n", max, min ); 
+printf("max = %d\nmin = %d\nmid = %d\n", max, min, mid(a, b, c) ); 
+
+printf("char X = %c\nY - Z = %d\n Z*Y/X = %.2f\n", 
+	 a+64 , b-c ,  (float) c*b/a ); 
+
+//system("pause");
+
+
 
 return 0 ;
 
