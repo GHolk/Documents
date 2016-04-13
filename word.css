@@ -190,4 +190,4 @@ figcaption { /*	remove box shadow. */
 	font-family: serif; 
 	}
 
-.hide { display: none; }
+.markdown , .eqn , .latex , .table , .hide { display: none; }
