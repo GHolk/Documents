@@ -165,14 +165,12 @@ ol ol ol { list-style: lower-roman ; }
 
 
 figure { /*	display table made box adjust element inside. */
-	display: table; 
-	margin: 1em auto; 
-	overflow: auto; 
-	max-width: 100%; 
-	text-align: center; 
+	margin: 1em ; 
 	}
 
 figure img , figure pre , figure iframe {
+	display: block; 
+	margin: auto; 
 	box-shadow: 0 0 0.3ex black ;
 	}
 
