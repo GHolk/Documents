@@ -1,0 +1,29 @@
+# Created by Octave 4.0.0, Sun Apr 17 15:49:43 2016 CST <c34031328@localhost.localdomain>
+# name: D107
+# type: matrix
+# rows: 1
+# columns: 3
+ 267 268.94 268.99
+
+
+# name: W107
+# type: diagonal matrix
+# rows: 3
+# columns: 3
+0.1111111111111111
+400
+6783.34011667345
+
+
+# name: ans
+# type: scalar
+21.21320343559643
+
+
+# name: s107
+# type: matrix
+# rows: 1
+# columns: 3
+ 3 0.05 0.01214166380690884
+
+

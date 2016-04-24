@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+
+<html lang="zh-TW">
+
+
+<head>
+<meta charset="UTF-8">
+
+<meta name="date" content="2016-04-24">
+<meta name="author" content="c34031328">
+<meta name="copyright" content="Common Creative">
+
+<meta name="generator" content="vim, markdown">
+
+<meta name="distribution" content="taiwan">
+
+<meta name="keywords" content="C program language, homework, gcc, mingw">
+
+<meta name="discription" content="documentation of C program language homework. ">
+
+<link rel="stylesheet" type="text/css" href="../../word.css">
+<title> 計算機程式設計 作業二 </title>
+</head>
+<body>
+<main>
+
+<h1> HW2_C34031328.exe 使用手冊 </h1>
+
+<dl class="inline">
+<dt> 作者</dt> <dd>王鼎鈞 <a href="&#x6D;&#97;&#x69;&#x6C;&#x74;o:&#99;&#x33;&#52;&#x30;&#x33;&#x31;&#x33;&#50;&#56;&#64;&#109;&#x61;&#105;&#x6C;&#x2E;&#110;&#x63;&#x6B;&#117;&#46;&#101;&#x64;&#x75;&#x2E;&#x74;&#x77;">&#99;&#x33;&#52;&#x30;&#x33;&#x31;&#x33;&#50;&#56;&#64;&#109;&#x61;&#105;&#x6C;&#x2E;&#110;&#x63;&#x6B;&#117;&#46;&#101;&#x64;&#x75;&#x2E;&#x74;&#x77;</a> </dd>
+<dt> 系級</dt> <dd>測量 107 </dd>
+<dt> 日期</dt> <dd> 2016-04-24 </dd>
+<dt> 作品</dt> <dd> <a href="HW2_C34031328.exe">HW2_C34031328.exe</a> </dd>
+</dl>
+
+<h2> 操作 </h2>
+
+<ol>
+<li><p>雙擊 <a href="HW2_C34031328.exe">HW2_C34031328.exe</a> 執行，
+或在 <code>cmd.exe</code> 下輸入 <code>HW2_C34031328</code> 執行程式。 </p>
+
+<img src="screen_2016-04-24T15:15:14+08.png" alt="excute-program" /></li>
+<li><p>依照指示輸入兩個小於 26 的自然數；
+之間以空白分隔。
+ <strong>此程式無防呆功能，不需要裝呆。</strong>  </p>
+
+<img src="screen_2016-04-24T15:26:06+08.png" alt="input-number" /></li>
+<li><p>程式會根據輸入輸出各項運算的結果。 </p>
+
+<img src="screen_2016-04-24T15:25:51+08.png" alt="output-result" /></li>
+</ol>
+
+<h2> 程式內容 </h2>
+
+<p>一開始除了兩個輸入值 <code>n</code> , <code>m</code> 外，
+把其中大和小的分別存入 <code>large</code> 和 <code>small</code> 變數。
+以便在需要照大小順序時取用。 </p>
+
+<p>有關迴圈，我是寫了一大堆的迴圈，很多都只有一行。
+有人習慣在一個迴圈中處理很多事，
+但這樣其實不是好的編程習慣。
+我這次嘗試把迴圈寫到最短。
+但如果有條件相同的迴圈，
+我還是會合寫在一起。 </p>
+
+<p>我在程式中大量使用了迴圈的簡寫，
+也就是省略大括號。
+ <code>if</code> 判斷式大部份也都沒有加大括號。 </p>
+
+<p>在一開始有定義了兩個小巨集，
+作用是回傳兩個數中較大的一個。 </p>
+
+<p>原來 <code>system</code> 是 <code>stdlib.h</code> 的函數。
+之前幾次沒有 <code>#include &lt;stdlib.h&gt;</code> ，
+難怪 <code>system("pause");</code> 會報錯。 </p>
+
+<p>我的環境不是  <a href="http://zh.wikipedia.org/wiki/Dev-C++">Dev-C++</a>  。
+我是用  <a href="http://zh.wikipedia.org/wiki/Mingw32">Mingw32</a>  把 <a href="HW2_C34031328.c">HW2_C34031328.c</a>
+編譯成 <a href="HW2_C34031328.exe">HW2_C34031328.exe</a> 。
+其中要注意的是 windows 下換行字元是 <code>\r\n</code> ，
+所以在 <code>fgets()</code> 時會多吃進一個回車鍵，處理時要注意。 </p>
+
+
+</main>
+
+<pre class="markdown">
+
+# HW2_C34031328.exe 使用手冊 #
+
+ - 作者：王鼎鈞 <c34031328@mail.ncku.edu.tw>
+ - 系級：測量 107
+ - 日期： 2016-04-24
+ - 作品： [HW2_C34031328.c](HW2_C34031328.c)
+
+
+
+
+## 操作 ##
+
+
+ 1. 雙擊 [HW2_C34031328.exe][] 執行，
+    或在 `cmd.exe` 下輸入 `HW2_C34031328` 執行程式。
+
+    ![excute-program](screen_2016-04-24T15:15:14+08.png)
+
+
+ 3. 依照指示輸入兩個小於 26 的自然數；
+    之間以空白分隔。
+     **此程式無防呆功能，不需要裝呆。** 
+
+    ![input-number](screen_2016-04-24T15:26:06+08.png)
+
+
+ 3. 程式會根據輸入輸出各項運算的結果。
+
+    ![output-result](screen_2016-04-24T15:25:51+08.png)
+
+
+## 程式內容 ##
+
+一開始除了兩個輸入值 `n` , `m` 外，
+把其中大和小的分別存入 `large` 和 `small` 變數。
+以便在需要照大小順序時取用。
+
+有關迴圈，我是寫了一大堆的迴圈，很多都只有一行。
+有人習慣在一個迴圈中處理很多事，
+但這樣其實不是好的編程習慣。
+我這次嘗試把迴圈寫到最短。
+但如果有條件相同的迴圈，
+我還是會合寫在一起。
+
+我在程式中大量使用了迴圈的簡寫，
+也就是省略大括號。
+ `if` 判斷式大部份也都沒有加大括號。
+
+在一開始有定義了兩個小巨集，
+作用是回傳兩個數中較大的一個。
+
+原來 `system` 是 `stdlib.h` 的函數。
+之前幾次沒有 `#include <stdlib.h>` ，
+難怪 `system("pause");` 會報錯。
+
+我的環境不是 [[Dev-C++]] 。
+我是用 [[Mingw32]] 把 [HW2_C34031328.c](HW2_C34031328.c)
+編譯成 [HW2_C34031328.exe][] 。
+其中要注意的是 windows 下換行字元是 `\r\n` ，
+所以在 `fgets()` 時會多吃進一個回車鍵，處理時要注意。
+
+[HW2_C34031328.exe]: HW2_C34031328.exe
+
+</pre>
+</body>
+</html>
+
