@@ -1,0 +1,164 @@
+# Created by Octave 4.0.1, Wed Apr 27 13:39:30 2016 CST <c34031328@localhost.localdomain>
+# homework 4 of least square adjustment. 
+# name: D107
+# type: matrix
+# rows: 1
+# columns: 3
+ 267 268.94 268.99
+
+
+# name: L9
+# type: matrix
+# rows: 1
+# columns: 4
+ 36.032 32.305 48.897 38.902
+
+
+# name: W107
+# type: diagonal matrix
+# rows: 3
+# columns: 3
+0.1111111111111111
+400
+6783.34011667345
+
+
+# name: ans
+# type: scalar
+0.03511884584284172
+
+
+# name: h10
+# type: matrix
+# rows: 0
+# columns: 0
+
+
+# name: h11
+# type: matrix
+# rows: 3
+# columns: 1
+ 14.8
+ 14.87
+ 14.83
+
+
+# name: h9
+# type: matrix
+# rows: 1
+# columns: 4
+ 5.003 4.978 5.012 4.995
+
+
+# name: i
+# type: scalar
+3
+
+
+# name: l11
+# type: matrix
+# rows: 1
+# columns: 3
+ 3200 4800 3900
+
+
+# name: mh9
+# type: scalar
+4.995414439469767
+
+
+# name: s10
+# type: matrix
+# rows: 1
+# columns: 3
+ 6.5 4.3 8.9
+
+
+# name: s107
+# type: matrix
+# rows: 1
+# columns: 3
+ 3 0.05 0.01214166380690884
+
+
+# name: th10
+# type: matrix
+# rows: 3
+# columns: 3
+ 303 26 33
+ 303 26 28
+ 303 26 49
+
+
+# name: th10d
+# type: matrix
+# rows: 1
+# columns: 3
+ 303.4425 303.4411111111111 303.4469444444445
+
+
+# name: th10s
+# type: matrix
+# rows: 1
+# columns: 3
+ 1092393 1092388 1092409
+
+
+# name: w10
+# type: diagonal matrix
+# rows: 3
+# columns: 3
+0.02366863905325444
+0.05408328826392645
+0.01262466860244918
+
+
+# name: w11
+# type: diagonal matrix
+# rows: 3
+# columns: 3
+0.0003125
+0.0002083333333333333
+0.0002564102564102564
+
+
+# name: w9
+# type: diagonal matrix
+# rows: 4
+# columns: 4
+0.027753108348135
+0.03095496053242532
+0.020451152422439
+0.02570561924836769
+
+
+# name: wm11
+# type: scalar
+14.82865979381443
+
+
+# name: wmh9
+# type: scalar
+4.995414439469767
+
+
+# name: wmth10
+# type: scalar
+303.4422897017506
+
+
+# name: ws10
+# type: scalar
+0.003398524002789447
+
+
+# name: ws11
+# type: scalar
+0.03558224684846844
+
+
+# name: ws9
+# type: scalar
+0.0144452991200136
+
+
