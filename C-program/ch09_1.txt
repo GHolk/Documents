@@ -2,7 +2,10 @@ D:\工工工\授授\104下\程程程程\授課課課\ch09_1\ch09_1.c
 
 2016年5月7日 下下 06:51
 
-/* CH09-1-11 */
+
+
+/** CH09-1-11 ***************************************/
+
 #include <stdio.h>
 #include <stdlib.h>
 int main(void)
@@ -27,114 +30,121 @@ printf("%d %d\n", min, max);
 system("pause");
 return 0;
 }
-/* CH09-1-12 */
+
+
+
+/** CH09-1-12 *******************************************/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	int n=0, m=0, i=0, j=0;
+	scanf("%d %d", &n, &m);
+	int score[n][m];
+	for(i=0; i<n; i++)
+	{
+		for(j=0; j<m; j++)
+		{
+			scanf("%d", &score[i][j]);
+		}
+	}
+
+for(i=0; i<n; i++)
+{
+	int min = score[i][0];
+	int max = score[i][0];
+	for(j=0; j<m; j++)
+	{
+	if(score[i][j] < min)
+		min = score[i][j];
+
+	if(score[i][j] > max)
+		max = score[i][j];
+	}
+
+	printf("%d %d\n", min, max);
+}
+
+system("pause");
+return 0;
+}
+
+
+/** CH09-1-13 ************************************************/
 #include <stdio.h>
 #include <stdlib.h>
 int main(void)
 {
-int n=0, m=0, i=0, j=0;
-scanf("%d %d", &n, &m);
-int score[n][m];
-for(i=0; i<n; i++)
-{
-for(j=0; j<m; j++)
-{
-scanf("%d", &score[i][j]);
-}
-}
-for(i=0; i<n; i++)
-{
-int min = score[i][0];
-int max = score[i][0];
-for(j=0; j<m; j++)
-{
-if(score[i][j] < min)
--1-
+	int n=0, m=0, i=0, j=0;
+	scanf("%d %d", &n, &m);
+	int score[n][m];
+	for(i=0; i<n; i++)
+	{
+		for(j=0; j<m; j++)
+		{
+			scanf("%d", &score[i][j]);
+		}
+	}
+	for(i=0; i<n; i++)
+	{
+		int min = score[i][0];
+		int max = score[i][0];
+		int min_id = 0;
+		int max_id = 0;
 
-D:\工工工\授授\104下\程程程程\授課課課\ch09_1\ch09_1.c
+		for(j=0; j<m; j++)
+		{
+			if(score[i][j] < min)
+			{
+				min = score[i][j];
+				min_id = j;
+			}
 
-2016年5月7日 下下 06:51
+			if(score[i][j] > max)
+			{
+				max = score[i][j];
+				max_id = j;
+			}
+		}
 
-min = score[i][j];
-if(score[i][j] > max)
-max = score[i][j];
+		printf("%d %d\n", min_id+1, max_id+1);
+	}
+	system("pause");
+	return 0;
 }
-printf("%d %d\n", min, max);
-}
-system("pause");
-return 0;
-}
-/* CH09-1-13 */
-#include <stdio.h>
-#include <stdlib.h>
-int main(void)
-{
-int n=0, m=0, i=0, j=0;
-scanf("%d %d", &n, &m);
-int score[n][m];
-for(i=0; i<n; i++)
-{
-for(j=0; j<m; j++)
-{
-scanf("%d", &score[i][j]);
-}
-}
-for(i=0; i<n; i++)
-{
-int min = score[i][0];
-int max = score[i][0];
-int min_id = 0;
-int max_id = 0;
-for(j=0; j<m; j++)
-{
-if(score[i][j] < min)
-{
-min = score[i][j];
-min_id = j;
-}
-if(score[i][j] > max)
-{
-max = score[i][j];
-max_id = j;
-}
-}
-printf("%d %d\n", min_id+1, max_id+1);
-}
-system("pause");
-return 0;
-}
-/* CH09-1-14 */
--2-
 
-D:\工工工\授授\104下\程程程程\授課課課\ch09_1\ch09_1.c
 
-2016年5月7日 下下 06:51
+/** CH09-1-14 *******************************************/
+
+
 
 #include <stdio.h>
 #include <stdlib.h>
 int main(void)
 {
-int n=0, m=0, i=0, j=0;
-scanf("%d %d", &n, &m);
-int score[n][m];
-for(i=0; i<n; i++)
-{
-for(j=0; j<m; j++)
-{
-scanf("%d", &score[i][j]);
-}
-}
-for(i=0; i<n; i++)
-{
-int sum = 0;
-for(j=0; j<m; j++)
-{
-sum += score[i][j];
-}
-printf("%d\n", sum);
-}
-system("pause");
-return 0;
+	int n=0, m=0, i=0, j=0;
+	scanf("%d %d", &n, &m);
+	int score[n][m];
+	for(i=0; i<n; i++)
+	{
+	for(j=0; j<m; j++)
+	{
+	scanf("%d", &score[i][j]);
+	}
+	}
+	for(i=0; i<n; i++)
+	{
+	int sum = 0;
+	for(j=0; j<m; j++)
+	{
+	sum += score[i][j];
+	}
+	printf("%d\n", sum);
+	}
+	system("pause");
+	return 0;
 }
 /* CH09-1-15 */
 #include <stdio.h>
