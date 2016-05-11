@@ -16,11 +16,11 @@
 @media print {
 
 	@page { margin: 2em; }
-	main { margin: 0; }
 	/*a:after { content: " (" attr(href) ") " ; }*/
 	@page:left, @page:right { content: "my cockroch" ; }
 	/* h1 { page-break-before: always ; } */
 	h2, h3, h4, h5 { page-break-after: avoid ; }
+	header { page-break-after: always; }
 
 }
 
@@ -205,6 +205,7 @@ figcaption { /*	remove box shadow. */
 
 .markdown , .eqn , .latex , .table , .hide { display: none; }
 
+/*
 @media print {
 
 	main { margin: 0; }
@@ -214,4 +215,4 @@ figcaption { /*	remove box shadow. */
 	ul li { content: "» "; }
 
 
-}
+}*/

@@ -1,6 +1,15 @@
 
 #include <stdio.h>
 
+/* by for loop *****************
+int digital(int m){
+	int i;
+	for( i=0; m>0; i++) m/=10;
+	return i; 
+}
+*/
+
+
 int digital(int m){
 	
 	m/=10;
