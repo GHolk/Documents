@@ -62,7 +62,7 @@ Moodle之作業繳交平台。</p>
 
 </header>
 
-<section>
+<section class="hide">
 <h2>第十章 導線及控制測量</h2>
 <i>滿分3分(第4題為額外加分題)</i>
 
@@ -303,345 +303,97 @@ P = W<sub>T</sub> / &Sigma;S = 0.00002394
 
 </section>
 
+<h2> 第十二章 全球定位系統 </h2>
 
-<h2>第十一章 坐標系統</h2>
+<p><em>滿分3分</em>  </p>
 
-<p><i>滿分4分</i></p>
+<ol class="cjk">
+<li><p>GPS衛星傳送兩種訊號L1及L2，而其載運的電碼(codes)
+又有所謂的C/A code及P code，請描述訊號與電碼間的關係。
+若所使用的GPS接收儀為單頻接收儀，
+代表此接收儀只能收到哪些訊號及電碼？(1分) </p>
+
+<dl lang="en" class="inline">
+<dt> C/A code</dt> <dd>Coaser/Acquisition code ，標準定位服務。 </dd>
+<dt> P code</dt> <dd>Precision code ，精密定位服務。 </dd>
+<dt> L1</dt> <dd>C/A code 與 P code 的混合， 1575.42Hz 。 </dd>
+<dt> L2</dt> <dd>只包含 P code ， 1227.60Hz 。 </dd>
+</dl></li>
+<li><p>何謂GPS虛擬距離定位法？請列出虛擬距離定位原理之觀測方程式，
+並說明此觀測方程式所有符號的意義，指出哪些符號代表觀測量？
+哪些為未知數？哪些為常數？哪些為已知量
+（並說明這些已知量是根據何種資訊計算而得）？
+此觀測方程式屬線性還是非線性函數？
+若某GPS接收儀於某一時刻收到10顆衛星訊號，
+可列出幾個觀測方程式？而此解算情形又具有多少多餘觀測數？(1分) </p>
 
 <ol>
-<li><p>若某一平面坐標 <code>(x, y) = (345.64, 2378.15)</code> ，
-依序經過旋轉 <code>(θ = 135°49′36″)</code> 、 尺度 <code>(S = 1.00045)</code> 
-及平移 <code>(T<sub>x</sub> , T<sub>y</sub>) = (35.82, 23.21)</code> 轉換後，
-得轉換後坐標 <code>(x', y')</code> ，請列出此坐標轉換的線性關係如下式，
-其中a, b, c及d參數請以數字表示，並計算轉換後坐標(x', y')。（1分）</p>
-
-
-<math display="block"><mrow><mrow><mo>[</mo><mtable>
-<mtr><mtd columnalign='center'><mrow><mi>x</mi><mo>
-&prime;</mo></mrow></mtd></mtr><mtr>
-<mtd columnalign='center'><mrow><mi>y</mi><mo>
-&prime;</mo></mrow></mtd></mtr></mtable><mo>]</mo></mrow>
-<mo>&equals;</mo><mi>S</mi><mtext>&ensp;</mtext>
-<mrow><mo>[</mo><mtable><mtr>
-<mtd columnalign='center'><mrow>
-<mstyle mathvariant='normal'><mtext>cos</mtext>
-</mstyle><mo>&theta;</mo></mrow></mtd>
-<mtd columnalign='center'><mrow>
-<mstyle mathvariant='normal'><mtext>sin</mtext>
-</mstyle><mo>&theta;</mo></mrow></mtd></mtr><mtr>
-<mtd columnalign='center'><mrow><mo>&minus;</mo>
-<mstyle mathvariant='normal'><mtext>sin</mtext>
-</mstyle><mo>&theta;</mo></mrow></mtd>
-<mtd columnalign='center'><mrow>
-<mstyle mathvariant='normal'><mtext>cos</mtext>
-</mstyle><mo>&theta;</mo></mrow></mtd></mtr>
-</mtable><mo>]</mo></mrow><mrow><mo>[</mo><mtable>
-<mtr><mtd columnalign='center'><mi>x</mi></mtd>
-</mtr><mtr><mtd columnalign='center'><mi>y</mi>
-</mtd></mtr></mtable><mo>]</mo></mrow><mo>
-&plus;</mo><mrow><mo>[</mo><mtable><mtr>
-<mtd columnalign='center'><msub><mi>T</mi><mi>x</mi>
-</msub></mtd></mtr><mtr><mtd columnalign='center'>
-<msub><mi>T</mi><mi>y</mi></msub></mtd></mtr>
-</mtable><mo>]</mo></mrow><mo>&equals;</mo><mn>
-1</mn><mo>.</mo><mn>0</mn><mn>0</mn><mn>0</mn><mn>
-4</mn><mn>5</mn><mrow><mo>[</mo><mtable><mtr>
-<mtd columnalign='center'><mrow><mo>&minus;</mo><mn>
-0</mn><mo>.</mo><mn>7</mn><mn>1</mn><mn>7</mn><mn>
-2</mn><mn>4</mn></mrow></mtd>
-<mtd columnalign='center'><mrow><mn>0</mn><mo>.</mo>
-<mn>6</mn><mn>9</mn><mn>6</mn><mn>8</mn><mn>3</mn>
-</mrow></mtd></mtr><mtr><mtd columnalign='center'>
-<mrow><mo>&minus;</mo><mn>0</mn><mo>.</mo><mn>6</mn>
-<mn>9</mn><mn>6</mn><mn>8</mn><mn>3</mn></mrow>
-</mtd><mtd columnalign='center'><mrow><mo>
-&minus;</mo><mn>0</mn><mo>.</mo><mn>7</mn><mn>1</mn><mn>
-7</mn><mn>2</mn><mn>4</mn></mrow></mtd></mtr>
-</mtable><mo>]</mo></mrow><mrow><mo>[</mo><mtable>
-<mtr><mtd columnalign='center'><mi>x</mi></mtd>
-</mtr><mtr><mtd columnalign='center'><mi>y</mi>
-</mtd></mtr></mtable><mo>]</mo></mrow><mo>
-&plus;</mo><mrow><mo>[</mo><mtable><mtr>
-<mtd columnalign='center'><mrow><mn>3</mn><mn>5</mn>
-<mo>.</mo><mn>8</mn><mn>2</mn></mrow></mtd></mtr>
-<mtr><mtd columnalign='center'><mrow><mn>2</mn><mn>
-3</mn><mo>.</mo><mn>2</mn><mn>1</mn></mrow></mtd>
-</mtr></mtable><mo>]</mo></mrow><mo>&equals;</mo>
-<mrow><mo>[</mo><mtable><mtr>
-<mtd columnalign='center'><mrow><mn>1</mn><mn>4</mn>
-<mn>4</mn><mn>5</mn><mo>.</mo><mn>7</mn><mn>1</mn>
-<mn>8</mn><mn>6</mn></mrow></mtd></mtr><mtr>
-<mtd columnalign='center'><mrow><mo>&minus;</mo><mn>
-1</mn><mn>9</mn><mn>2</mn><mn>4</mn><mo>.</mo><mn>
-2</mn><mn>1</mn><mn>1</mn><mn>2</mn></mrow></mtd>
-</mtr></mtable><mo>]</mo></mrow></mrow></math>
-
-<!--
-.EQ
-left [ 
-matrix{
-    col{ { x \(fm } above { y \(fm } }
-    } right ] 
-= S ~ left [ 
-matrix{
-    col{ { cos theta } above { - sin theta } }
-    col{ { sin theta } above { cos theta } }
-    } right ] 
-
-
-left [
-matrix{
-    col{ x above y }
-    } right ] 
-
-
-
-
-757588c3e1e3d7e6076fd4dcfa140a89
-
-
-= 1.00045 left [
- matrix{ 
-    col{ -0.71724 above -0.69683 }
-    col{ 0.69683 above -0.71724 }
-    } right ]
-
-
- left [ matrix{ col{ x above y } } right ]
-
-
-95a0584427ab01545b6d4b93bd58d9d1
-
-
-= left [ matrix{
-    col{ 1445.7186 above -1924.2112 }
-    } right ]
-.EN
---></li>
-<li><p>某二維直角坐標系統之正形 (conformal) 轉換關係如下式，
-請說明此轉換之幾何關係為何，即說明坐標系統之旋轉、
-尺度及平移的量及順序為何。 （1分）</p>
-
-<math display="block"><mrow><mrow><mo>[</mo><mtable><mtr>
-<mtd columnalign='center'><mrow><mi>x</mi><mo>
-&prime;</mo></mrow></mtd></mtr><mtr>
-<mtd columnalign='center'><mrow><mi>y</mi><mo>
-&prime;</mo></mrow></mtd></mtr></mtable><mo>]</mo></mrow>
-<mo>&equals;</mo><mi>S</mi><mtext>&ensp;</mtext>
-<mrow><mo>[</mo><mtable><mtr>
-<mtd columnalign='center'><mrow><mn>1</mn><mo>.</mo>
-<mn>2</mn><mn>3</mn></mrow></mtd>
-<mtd columnalign='center'><mrow><mn>0</mn><mo>.</mo>
-<mn>8</mn><mn>5</mn><mn>8</mn><mn>5</mn></mrow>
-</mtd></mtr><mtr><mtd columnalign='center'><mrow>
-<mo>&minus;</mo><mn>0</mn><mo>.</mo><mn>8</mn><mn>
-5</mn><mn>8</mn><mn>5</mn></mrow></mtd>
-<mtd columnalign='center'><mrow><mn>1</mn><mo>.</mo>
-<mn>2</mn><mn>3</mn></mrow></mtd></mtr></mtable><mo>
-]</mo></mrow><mrow><mo>[</mo><mtable><mtr>
-<mtd columnalign='center'><mi>x</mi></mtd></mtr>
-<mtr><mtd columnalign='center'><mi>y</mi></mtd>
-</mtr></mtable><mo>]</mo></mrow><mo>&plus;</mo>
-<mrow><mo>[</mo><mtable><mtr>
-<mtd columnalign='center'><mrow><mn>1</mn><mn>2</mn>
-<mo>.</mo><mn>3</mn><mn>4</mn></mrow></mtd></mtr>
-<mtr><mtd columnalign='center'><mrow><mn>4</mn><mn>
-3</mn><mo>.</mo><mn>2</mn><mn>1</mn></mrow></mtd>
-</mtr></mtable><mo>]</mo></mrow></mrow></math>
-
-<!--
-.EQ
-left [
-matrix{
-col{ { x \(fm } above { y \(fm } }
-} right ]
-
-
-= S ~ left [
-matrix{
-col{  1.23  above -0.8585  }
-col{  0.8585 above 1.23 }
-} right ]
-
-
-left [
-matrix{ 
-col{ {x} above {y} }
-} right ]
-
-
-
-
-e633b10426ec5698684f5c08e1b97af9
-
-
-.EN
--->
-
-<p>先旋轉並縮放，再平移。</p>
-
-<dl class="inline">
-<dt>旋轉</dt><dd> <code>θ = arctan a/b = 0.961436 (rad)</code></dd>
-<dt>平移</dt><dd> <code> (T<sub>x</sub>, T<sub>y</sub>) = (12.34, 43.21)</code></dd>
-</dl></li>
-<li><p>何謂參考橢球體？請問參考橢球體過旋轉軸的縱切面是什麼形狀？
-而赤道面的橫切面又是什麼形狀？
-請繪圖並加註記說明大地坐標系統與參考橢球體的關係，
-以及X, Y, Z坐標軸之定義，
-並於圖上標示並說明某一點位在此坐標系統之經緯度 (φ, λ) 
-及橢球高 h 的定義。（1分）</p>
-
-<dl class="inline">
-<dt>參考橢球體</dt><dd>一數學上的理想橢球，近似於大地水準面。</dd>
-<dt>縱切面</dt><dd>橢圓形。</dd>
-<dt>橫切面</dt><dd>圓形；因參考橢為  <em>扁橢球</em>  。</dd>
-</dl>
-
-
-<dl class="inline">
-<dt>X 軸</dt><dd>格林威治零子午圈。</dd>
-<dt>Y 軸</dt><dd> <code>X × Z = Y</code> ；X 與 Z 軸的外積。</dd>
-<dt>Z 軸</dt><dd>自轉軸。</dd>
-</dl>
-
-
-<figure>
-<img src="ellipsoid-and-geoid.png" alt="ellipsoid-and-geoid" />
-<figcaption>
-大地座標系統為根據某一參考橢球所定義的座標系。
-</figcaption>
-</figure>
-
-
-<dl class="inline">
-<dt>h </dt><dd>該點離橢球面的最短距離。（且該連線會垂直橢球面。）</dd>
-<dt>&phi; </dt><dd>該連線延伸與赤道面的交角。</dd>
-<dt>&lambda; </dt><dd>該點所在經度。</dd>
-</dl></li>
-<li><p>若地球原子採用GRS80 Ellipsoid (長半徑a=6378137 m；
-短半徑b=6356752 m)，請繪圖說明地心坐標系統 
-(Geocentric Coordinate System) 之X, Y, Z坐標軸如何定義，
-並於圖上標示地理坐標系統(Geographical Coordinate System)
-之經緯度 (φ, λ) 及橢球高 h 之定義。
-若台北101大樓塔尖之地理坐標為φ=25°02′01″、 λ=121°33′53″ ，
-及橢球高 h=385.5m，請計算台北101大樓之地心坐標 (X, Y, Z)。  <em>（1分）</em>  </p>
-
-<math display="block"><mrow><mrow><mo>[</mo><mtable><mtr>
-<mtd columnalign='center'><mi>X</mi></mtd></mtr>
-<mtr><mtd columnalign='center'><mi>Y</mi></mtd>
-</mtr><mtr><mtd columnalign='center'><mi>Z</mi>
-</mtd></mtr></mtable><mo>]</mo></mrow><mo>
-&equals;</mo><mrow><mo>[</mo><mtable><mtr>
-<mtd columnalign='center'><mrow><mo>(</mo><mi>N</mi>
-<mo>&plus;</mo><mi>H</mi><mo>)</mo><mtext>
-&ensp;</mtext><mstyle mathvariant='normal'><mtext>
-cos</mtext></mstyle><mo>&phi;</mo><mtext>&ensp;</mtext>
-<mstyle mathvariant='normal'><mtext>cos</mtext>
-</mstyle><mo>&lambda;</mo></mrow></mtd></mtr><mtr>
-<mtd columnalign='center'><mrow><mo>(</mo><mi>N</mi>
-<mo>&plus;</mo><mi>H</mi><mo>)</mo><mtext>
-&ensp;</mtext><mstyle mathvariant='normal'><mtext>
-cos</mtext></mstyle><mo>&phi;</mo><mtext>&ensp;</mtext>
-<mstyle mathvariant='normal'><mtext>sin</mtext>
-</mstyle><mo>&lambda;</mo></mrow></mtd></mtr><mtr>
-<mtd columnalign='center'><mrow><mo>(</mo><mi>N</mi>
-<mo>(</mo><mn>1</mn><mo>&minus;</mo><msup><mi>e</mi>
-<mn>2</mn></msup><mo>)</mo><mo>&plus;</mo><mi>h</mi>
-<mo>)</mo><mtext>&ensp;</mtext>
-<mstyle mathvariant='normal'><mtext>sin</mtext>
-</mstyle><mo>&phi;</mo></mrow></mtd></mtr></mtable>
-<mo>]</mo></mrow></mrow></math>
-
-<math display="block"><mrow><mi>N</mi><mo>&equals;</mo><mfrac><mi>
-a</mi><msqrt><mrow><mn>1</mn><mo>&minus;</mo><msup>
-<mi>e</mi><mn>2</mn></msup><msup>
-<mstyle mathvariant='normal'><mtext>sin</mtext>
-</mstyle><mn>2</mn></msup><mo>&phi;</mo></mrow>
-</msqrt></mfrac></mrow></math>
-
-<math display="block"><mrow><mi>e</mi><mo>&equals;</mo><mfrac>
-<msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>
-&minus;</mo><msup><mi>b</mi><mn>2</mn></msup></mrow>
-</msqrt><mi>a</mi></mfrac><mo>&equals;</mo><mn>
-0</mn><mo>.</mo><mn>0818198</mn></mrow></math>
-
-<pre><code>N = 6381963.1291
-( X, Y, Z ) = ( 4927221.8563 , -3027066.7331 , 2682611.2565 )
-</code></pre>
-
-<!--
-.EQ
-left [ matrix{
-    col{ X above Y above Z }
-    } right ] = 
-
-
-left [ matrix{
-    col{ 
-        { ( N + h ) ~ cos{ phi } ~ cos{ lambda } } above
-        { ( N + h ) ~ cos{ phi } ~ sin{ lambda } } above
-        { ( N ( 1 - e sup 2 ) + h ) ~ sin phi } 
-        }
-    } right ] 
-.EN
-
-
-.EQ
-N = a over sqrt { 1 - e sup 2 sin sup 2 phi } 
-.EN
-
-
-.EQ
-e = sqrt{ a sup 2 - b sup 2 } over a = 0.0818198
-.EN
-
-
-N = 6381963.1291
-
-
-( X, Y, Z ) = ( 4927221.8563 , -3027066.7331 , 2682611.2565 )
---></li>
-<li><p>請問現行台灣大地基準(TWD97)是如何決定的？
-所採用的國際地球參考框架(ITRF)為何？
-請繪圖說明TWD97-2°TM投影坐標系統之投影帶寬、
-中央經線、及E, N坐標軸之定義。(1分)</p>
-
-<ol>
-<li>在台灣八處觀測 GPS ，得到八個 WGS84 座標。</li>
-<li>與 WGS84 同。</li>
-<li><img src="tm2deg-taiwan.png" alt="TWD97-2_TM2度分帶" /></li>
-</ol></li>
-<li><p>國內現行之高程控制系統的中英文名稱為何? 
-此系統的參考依據 (或稱水準原點) 為何? 
-此系統中所建置之高程控制點的高程公告值，屬正高或是橢球高?
-無論是哪一種請繪圖並加註文字解釋此高程的意義。 *(1分)*</p>
-
-<dl class="inline">
-<dt>本國高程控制系統</dt><dd> 台灣高程基準，  <em>Taiwan Virtical Datum 2001</em>  。</dd>
-<dt>水準原點</dt><dd>基隆平均海水面。</dd>
-<dt>高程公告</dt><dd>正高。</dd>
-</dl>
-
-
-<figure>
-<img src="norm-heigh.png" alt="正高與橢球高的意義" />
-<figcaption>
-正高為到大地水準面的高度。
-</figcaption>
-</figure></li>
-<li><p>請繪圖並加註文字說明正高 (Orthometric Height)、
-橢球高 (Ellipsoid Height) 及
-大地基準面高 (Geoid Height) 之意義，
-並以數學式說明這三者之關係。</p>
-
-<figure>
-<img src="high.png" alt="severeal-heigh" />
-<figcaption>
-橢球高 = 正高 + 大地基準面高
-</figcaption>
-</figure></li>
+<li> 利用接收儀與衛星的時差求出與衛星的距離。 </li>
+<li> 但求出精確的時差有困難，所以多用一顆衛星求時錶差。 </li>
+<li> 再用三顆衛星求出接收儀的座標。 </li>
 </ol>
 
+<math><mrow><msup><mi>R</mi><mi>j</mi></msup><mo>&plus;</mo><msub><mi>V</mi><msup><mi>R</mi><mi>j</mi></msup></msub><mo>&equals;</mo><msqrt><mrow><mo>(</mo><msup><mi>X</mi><mi>j</mi></msup><mo>&minus;</mo><mi>X</mi><msup><mo>)</mo><mn>2</mn></msup><mo>&plus;</mo><mo>(</mo><msup><mi>Y</mi><mi>j</mi></msup><mo>&minus;</mo><mi>Y</mi><msup><mo>)</mo><mn>2</mn></msup><mo>&plus;</mo><mo>(</mo><msup><mi>Z</mi><mi>j</mi></msup><mo>&minus;</mo><mi>Z</mi><msup><mo>)</mo><mn>2</mn></msup></mrow></msqrt><mo>&minus;</mo><mi>c</mi><mo>&delta;</mo><mi>t</mi></mrow></math>
+
+<dl lang="en" class="inline">
+<dt> <code class="math">R<sup>j</sup></code></dt> <dd>與衛星 j 的距離，用時差求的。已知數。 </dd>
+<dt> V</dt> <dd>誤差。 </dd>
+<dt> &delta;t</dt> <dd>時間差，未知數。 </dd>
+<dt> <code class="math">X<sup>j,</sup> Y<sup>j,</sup> Z<sup>j</sup></code></dt> <dd>衛星的 WGS84 座標，
+已知數。由星曆求得。 </dd>
+<dt> X, Y, Z</dt> <dd>測站的 WGS84 座標，未知數。 </dd>
+<dt> c</dt> <dd>光速，常數。 </dd>
+</dl>
+
+<p>此方程式為非線性，須線性化後解算。
+有 10 顆衛星則可以列出 10 條方程式。
+m - n = r ， 10 - 4 = 6 ， 6 個多餘觀測量。 </p></li>
+<li><p>依據虛擬距離定位原理，請列平差計算式說明如何計算得點位坐標，
+及未知參數精度估計式。從所列的未知參數精度估計式中，
+說明如何計算得點位精度因子(PDOP)？ 
+並說明PDOP與GPS某一時刻接收到之衛星顆數及其分佈幾何有何關係？
+若平差所得的單位權中誤差¾ 0=±6.8m，而計算得 PDOP=3.2時，
+則可估計其定位精度為何？(1分) </p>
+
+<math><mrow><msup><mi>R</mi><mi>j</mi></msup><mo>&minus;</mo><msub><msup><mi>F</mi><mi>j</mi></msup><mn>0</mn></msub><mo>&plus;</mo><msup><mi>v</mi><mi>j</mi></msup><mo>&equals;</mo><mo>(</mo><mfrac><mrow><mo>&part;</mo><msup><mi>F</mi><mi>j</mi></msup></mrow><mrow><mo>&part;</mo><mi>X</mi></mrow></mfrac><mo>)</mo><mi>d</mi><mi>X</mi><mo>&plus;</mo><mo>(</mo><mfrac><mrow><mo>&part;</mo><msup><mi>F</mi><mi>j</mi></msup></mrow><mrow><mo>&part;</mo><mi>Y</mi></mrow></mfrac><mo>)</mo><mi>d</mi><mi>Y</mi><mo>&plus;</mo><mo>(</mo><mfrac><mrow><mo>&part;</mo><msup><mi>F</mi><mi>j</mi></msup></mrow><mrow><mo>&part;</mo><mi>Z</mi></mrow></mfrac><mo>)</mo><mi>d</mi><mi>Z</mi><mo>&plus;</mo><mo>(</mo><mfrac><mrow><mo>&part;</mo><msup><mi>F</mi><mi>j</mi></msup></mrow><mrow><mo>&part;</mo><mo>&delta;</mo><mi>T</mi></mrow></mfrac><mo>)</mo><mi>d</mi><mo>&delta;</mo><mi>T</mi><mo>&equals;</mo><mo>(</mo><mfrac><mrow><mi>X</mi><mo>&minus;</mo><msup><mi>X</mi><mi>j</mi></msup></mrow><msup><mo>&rho;</mo><mi>j</mi></msup></mfrac><msub><mo>)</mo><mn>0</mn></msub><mi>d</mi><mi>X</mi><mo>&plus;</mo><mo>(</mo><mfrac><mrow><mi>Y</mi><mo>&minus;</mo><msup><mi>Y</mi><mi>j</mi></msup></mrow><msup><mo>&rho;</mo><mi>j</mi></msup></mfrac><msub><mo>)</mo><mn>0</mn></msub><mi>d</mi><mi>Y</mi><mo>&plus;</mo><mo>(</mo><mfrac><mrow><mi>Z</mi><mo>&minus;</mo><msup><mi>Z</mi><mi>j</mi></msup></mrow><msup><mo>&rho;</mo><mi>j</mi></msup></mfrac><msub><mo>)</mo><mn>0</mn></msub><mi>d</mi><mi>Z</mi><mo>&plus;</mo><mi>c</mi><mi>d</mi><mo>&delta;</mo><mi>t</mi></mrow></math>
+
+<math><mrow><mi>L</mi><mo>&plus;</mo><mi>V</mi><mo>&equals;</mo><mi>A</mi><mi>X</mi></mrow></math>
+
+<math><mrow><mi>X</mi><mo>&equals;</mo><mo>(</mo><msup><mi>A</mi><mi>T</mi></msup><mi>A</mi><msup><mo>)</mo><mrow><mo>&minus;</mo><mn>1</mn></mrow></msup><msup><mi>A</mi><mi>T</mi></msup><mi>L</mi><mo>&equals;</mo><mrow><mo>[</mo><mtable><mtr><mtd columnalign='center'><mi>X</mi></mtd></mtr><mtr><mtd columnalign='center'><mi>Y</mi></mtd></mtr><mtr><mtd columnalign='center'><mi>Z</mi></mtd></mtr><mtr><mtd columnalign='center'><mrow><mo>&delta;</mo><mi>t</mi></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>
+
+<p><code class="math">&sigma; = &plusmn; UERE &sdot; PDOP = 21.7</code> </p></li>
+<li><p>何謂總和(Total)的使用者等效距離誤差
+(User Equivalent Range Error, UERE)？
+又何謂定位精度因子(Positional Dilution of Precision, PDOP)？
+PDOP與GPS某一時刻接收到之衛星顆數及其分佈幾何有何關係？
+PDOP值與定位精度的關係為何？若Total UERE為±7.9m，當PDOP=2.5時，
+則可估計其定位精度為何？(1分) </p>
+
+<p><dl>
+<dt> UERE </dt><dd><p>是接收端的誤差，像接收儀附近的雜訊、
+  電離層造成的誤差、軌道計算的誤差。 </p></dd> </p>
+
+<p><dt> PDOP </dt><dd><p>為衛星定位的精度，是在 XYZ 三個軸的精度的平方和開根號。
+  衛星的顆數越多，天頂角越小則 PDOP 理應越小。 </p></dd> </p>
+
+<p><dt> 定位精度 </dt><dd><p><code class="math">&sigma; = &plusmn; UERE &sdot; PDOP</code> </p></dd>
+</dl></li>
+<li><p>以地球大氣層的影響而言，會使得GPS衛星訊號化算得之距離 
+(range) 觀測量含有哪些主要的系統誤差？
+各項誤差影響量大約為何？哪一項系統誤差可透過雙頻訊號組合
+或計算方式解算或削減其影響量？（1分） </p> </p>
+
+<p>GPS 衛星訊號在經過 <strong>電離層</strong> 時會受影響。
+因電離層的折射率小，光速不同，用時間反推距離會有誤差。
+而衛星天頂角越大，穿過電離層的時間越長，誤差越大。
+時錶差可以透過雙頻訊號計算削減。 </p></li>
+<li><p>何謂GPS星曆(ephemeris)？星曆中最主要是包含什麼資訊？
+廣播星曆多久會更新一次？請說明星曆的用途為何。（1分） </p>
+
+<p><p>包含時間、克卜勒的六軌道參數、曆書。
+可以用來計算衛星的位置座標。
+廣播星曆 2 小時更新一次， </p></li>
+</ol> </p>
 
 
 <pre class="markdown">
@@ -1212,7 +964,7 @@ N = 6381963.1291
 	 + ![正高與橢球高的意義](norm-heigh.png)
 	 + 正高為到大地水準面的高度。
 
- 7. 請繪圖並加註文字說明正高 (Orthometric Height)、
+7. 請繪圖並加註文字說明正高 (Orthometric Height)、
 	橢球高 (Ellipsoid Height) 及
 	大地基準面高 (Geoid Height) 之意義，
 	並以數學式說明這三者之關係。
@@ -1224,51 +976,129 @@ N = 6381963.1291
 
 
 ## 第十二章 全球定位系統
-滿分3分
-1.
+*滿分3分*
 
-GPS衛星傳送兩種訊號L1及L2，而其載運的電碼(codes)又有所謂的C/A
-code及P code，請描述訊號與電碼間的關係。若所使用的GPS接收儀為單
-頻接收儀，代表此接收儀只能收到哪些訊號及電碼？(1分)
+1.  GPS衛星傳送兩種訊號L1及L2，而其載運的電碼(codes)
+	又有所謂的C/A code及P code，請描述訊號與電碼間的關係。
+	若所使用的GPS接收儀為單頻接收儀，
+	代表此接收儀只能收到哪些訊號及電碼？(1分)
 
-2.
+	 - C/A code: Coaser/Acquisition code ，標準定位服務。
+	 - P code: Precision code ，精密定位服務。
+	 - L1: C/A code 與 P code 的混合， 1575.42Hz 。
+	 - L2: 只包含 P code ， 1227.60Hz 。
 
-何謂GPS虛擬距離定位法？請列出虛擬距離定位原理之觀測方程式，並說
-明此觀測方程式所有符號的意義，指出哪些符號代表觀測量？哪些為未知
-數？哪些為常數？哪些為已知量（並說明這些已知量是根據何種資訊計算而
-得）？此觀測方程式屬線性還是非線性函數？若某GPS接收儀於某一時刻
-收到10顆衛星訊號，可列出幾個觀測方程式？而此解算情形又具有多少多
-餘觀測數？(1分)
 
-3.
+2.  何謂GPS虛擬距離定位法？請列出虛擬距離定位原理之觀測方程式，
+	並說明此觀測方程式所有符號的意義，指出哪些符號代表觀測量？
+	哪些為未知數？哪些為常數？哪些為已知量
+	（並說明這些已知量是根據何種資訊計算而得）？
+	此觀測方程式屬線性還是非線性函數？
+	若某GPS接收儀於某一時刻收到10顆衛星訊號，
+	可列出幾個觀測方程式？而此解算情形又具有多少多餘觀測數？(1分)
 
-依據虛擬距離定位原理，請列平差計算式說明如何計算得點位坐標，及未知
-參數精度估計式。從所列的未知參數精度估計式中，說明如何計算得點位精
-度因子(PDOP)？ 並說明PDOP與GPS某一時刻接收到之衛星顆數及其分佈
-幾何有何關係？若平差所得的單位權中誤差¾ 0=±6.8m，而計算得
-b
-PDOP=3.2時，則可估計其定位精度為何？(1分)
+	 1. 利用接收儀與衛星的時差求出與衛星的距離。
+	 2. 但求出精確的時差有困難，所以多用一顆衛星求時錶差。
+	 3. 再用三顆衛星求出接收儀的座標。
 
-4.
+	.EQ
+	R sup j + V sub { R sup j } = sqrt{ 
+		( X sup j - X ) sup 2 +
+		( Y sup j - Y ) sup 2 +
+		( Z sup j - Z ) sup 2 
+		} - c delta t
+	.EN
 
-何謂總和(Total)的使用者等效距離誤差(User Equivalent Range Error,
-UERE)？又何謂定位精度因子(Positional Dilution of Precision, PDOP)？
-PDOP與GPS某一時刻接收到之衛星顆數及其分佈幾何有何關係？PDOP值
-與定位精度的關係為何？若Total UERE為±7.9m，當PDOP=2.5時，則可估
-計其定位精度為何？(1分)
+	 - $`R^j`: 與衛星 j 的距離，用時差求的。已知數。
+	 - V: 誤差。
+	 - &delta;t: 時間差，未知數。
+	 - $`X^j, Y^j, Z^j`: 衛星的 WGS84 座標，
+		已知數。由星曆求得。
+	 - X, Y, Z: 測站的 WGS84 座標，未知數。
+	 - c: 光速，常數。
 
-5.
+	此方程式為非線性，須線性化後解算。
+	有 10 顆衛星則可以列出 10 條方程式。
+	m - n = r ， 10 - 4 = 6 ， 6 個多餘觀測量。
 
-以地球大氣層的影響而言，會使得GPS衛星訊號化算得之距離 (range) 觀測
-量含有哪些主要的系統誤差？各項誤差影響量大約為何？哪一項系統誤差可
-透過雙頻訊號組合或計算方式解算或削減其影響量？（1分）
+3.  依據虛擬距離定位原理，請列平差計算式說明如何計算得點位坐標，
+	及未知參數精度估計式。從所列的未知參數精度估計式中，
+	說明如何計算得點位精度因子(PDOP)？ 
+	並說明PDOP與GPS某一時刻接收到之衛星顆數及其分佈幾何有何關係？
+	若平差所得的單位權中誤差¾ 0=±6.8m，而計算得 PDOP=3.2時，
+	則可估計其定位精度為何？(1分)
 
-6.
+	.EQ
+	R sup j - {F sup j} sub 0 + v sup j = 
+		( {\(pd F sup j} over {\(pd X} ) dX +
+		( {\(pd F sup j} over {\(pd Y} ) dY +
+		( {\(pd F sup j} over {\(pd Z} ) dZ +
+		( {\(pd F sup j} over {\(pd delta T} ) d{ delta T} =
 
-何謂GPS星曆(ephemeris)？星曆中最主要是包含什麼資訊？廣播星曆多久
-會更新一次？請說明星曆的用途為何。（1分）
+		( {X - X sup j} over {rho sup j} ) sub 0 d X +
+		( {Y - Y sup j} over {rho sup j} ) sub 0 d Y +
+		( {Z - Z sup j} over {rho sup j} ) sub 0 d Z +
+		c d delta t
+	.EN
 
-第十三章 衛星定位測量
+	.EQ
+	L + V = A X 
+	.EN
+
+	.EQ
+	X = ( A sup T A ) sup {-1} A sup T L = 
+	left [ matrix{
+		col{ 
+			X above
+			Y above
+			Z above
+			{ delta t } 
+		}
+	} right ]
+	.EN
+
+	$`&sigma; = &plusmn; UERE &sdot; PDOP = 21.7`
+
+
+4. 何謂總和(Total)的使用者等效距離誤差
+	(User Equivalent Range Error, UERE)？
+	又何謂定位精度因子(Positional Dilution of Precision, PDOP)？
+	PDOP與GPS某一時刻接收到之衛星顆數及其分佈幾何有何關係？
+	PDOP值與定位精度的關係為何？若Total UERE為±7.9m，當PDOP=2.5時，
+	則可估計其定位精度為何？(1分)
+
+	UERE
+	: 是接收端的誤差，像接收儀附近的雜訊、
+	  電離層造成的誤差、軌道計算的誤差。
+
+	PDOP
+	: 為衛星定位的精度，是在 XYZ 三個軸的精度的平方和開根號。
+	  衛星的顆數越多，天頂角越小則 PDOP 理應越小。
+
+	定位精度
+	: $`&sigma; = &plusmn; UERE &sdot; PDOP`
+
+
+5.  以地球大氣層的影響而言，會使得GPS衛星訊號化算得之距離 
+	(range) 觀測量含有哪些主要的系統誤差？
+	各項誤差影響量大約為何？哪一項系統誤差可透過雙頻訊號組合
+	或計算方式解算或削減其影響量？（1分）
+
+	GPS 衛星訊號在經過 **電離層** 時會受影響。
+	因電離層的折射率小，光速不同，用時間反推距離會有誤差。
+	而衛星天頂角越大，穿過電離層的時間越長，誤差越大。
+	時錶差可以透過雙頻訊號計算削減。
+
+
+6.  何謂GPS星曆(ephemeris)？星曆中最主要是包含什麼資訊？
+	廣播星曆多久會更新一次？請說明星曆的用途為何。（1分）
+
+	包含時間、克卜勒的六軌道參數、曆書。
+	可以用來計算衛星的位置座標。
+	廣播星曆 2 小時更新一次，
+
+
+## 第十三章 衛星定位測量
 滿分4分 (第6(2)題為額外加分題)
 1. 請說明為何GPS差分定位(Differential GPS, DGPS)可以將定位精度提升到公
 
