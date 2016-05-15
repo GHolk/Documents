@@ -17,10 +17,15 @@
 
 	@page { margin: 2em; }
 	/*a:after { content: " (" attr(href) ") " ; }*/
-	@page:left, @page:right { content: "my cockroch" ; }
+	/*@page:left, @page:right { content: "my cockroch" ; }*/
 	/* h1 { page-break-before: always ; } */
 	h2, h3, h4, h5 { page-break-after: avoid ; }
 	header { page-break-after: always; }
+	ol { 
+	padding: 0; 
+	margin: 0;
+	}
+	main { margin: 0; }
 
 }
 
