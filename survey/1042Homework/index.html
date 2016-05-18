@@ -400,7 +400,7 @@ PDOP值與定位精度的關係為何？若Total UERE為±7.9m，當PDOP=2.5時�
 
 <h2> 第十三章 衛星定位測量 </h2>
 
-<p><em>滿分4分 (第6(2)題為額外加分題)</em>  </p>
+<em>滿分4分 (第6(2)題為額外加分題)</em>
 
 <ol>
 <li><p>請說明為何GPS差分定位(Differential GPS, DGPS)
@@ -553,16 +553,37 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 </ol>
 
 <table>
-<tr><th>Baseline    <th>X (m)       <th>Y (m)       <th>Z (m)
-<tr><th>AC          <td>-6567.231   <td>-5686.293   <td>-6322.392
-<tr><th>CD          <td>10527.785   <td>-994.928    <td>-956.655 
-<tr><th>DA          <td>-3960.522   <td>6681.247    <td>7279.015 
-<tr><th>BC          <td>-3644.223   <td>-1601.216   <td>2199.255 
-<tr><th>BD          <td>6883.550    <td>-2596.161   <td>1242.576 
-</table></li>
-</ol> 
+<tr><th>Baseline    <th>&Delta;X (m)    <th>&Delta;Y (m)    <th>&Delta;Z (m)
+<tr><th>AC  <td>-6567.231   <td>-5686.293   <td>-6322.392
+<tr><th>CD  <td>10527.785   <td>-994.928    <td>-956.655
+<tr><th>DA  <td>-3960.522   <td>6681.247    <td>7279.015
+<tr><th>BC  <td>-3644.223   <td>-1601.216   <td>2199.255
+<tr><th>BD  <td>6883.550    <td>-2596.161   <td>1242.576
+</table>
 
+<table>
+<tr><th>閉合圈   <th>dX  <th>dY  <th>dZ  <th>dL  <th>dr
+<tr><th>ACD <td>0.032   <td>0.026   <td>-0.032  <td>0.052   <td>1.625ppm
+<tr><th>BCD <td>-0.012  <td>-0.017  <td>-0.024  <td>0.032   <td>1.404ppm
+<tr><th>ACBD    <td>0.020   <td>0.009   <td>-0.056  <td>0.060   <td>1.801ppm
+</table>
 
+<pre><code class="math">&Delta;X<sub>AC</sub> + V = &Delta;X<sub>C</sub> - 8086.032 
+&Delta;Y<sub>AC</sub> + V = &Delta;Y<sub>C</sub> + 4642712.847 
+&Delta;Z<sub>AC</sub> + V = &Delta;Z<sub>C</sub> - 4360439.083 
+&Delta;X<sub>CD</sub> + V = &Delta;X<sub>D</sub> - &Delta;X<sub>C</sub> 
+&Delta;Y<sub>CD</sub> + V = &Delta;Y<sub>D</sub> - &Delta;X<sub>C</sub> 
+&Delta;Z<sub>CD</sub> + V = &Delta;Z<sub>D</sub> - &Delta;Z<sub>C</sub> 
+&Delta;X<sub>DA</sub> + V = 8086.032 - &Delta;X<sub>D</sub> 
+&Delta;Y<sub>DA</sub> + V = 8086.032 - &Delta;X<sub>D</sub> 
+&Delta;Z<sub>DA</sub> + V = 4360439.083 - &Delta;Z<sub>D</sub> 
+&Delta;X<sub>BC</sub> + V = &Delta;X<sub>C</sub> - 5163.031 
+&Delta;Y<sub>BC</sub> + V = &Delta;X<sub>C</sub> - 5163.031 
+&Delta;Z<sub>BC</sub> + V = &Delta;Z<sub>C</sub> - 4351917.483 
+&Delta;X<sub>BD</sub> + V = &Delta;X<sub>D</sub> - 5163.031 
+&Delta;Y<sub>BD</sub> + V = &Delta;Y<sub>D</sub> + 4646797.947 
+&Delta;X<sub>BD</sub> + V = &Delta;X<sub>D</sub> - 5163.031</code>    </pre></li>
+</ol>
 
 </main>
 
@@ -1408,13 +1429,37 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 
 
 	<table>
-	<tr><th>Baseline	<th>X (m)	<th>Y (m)	<th>Z (m)
+	<tr><th>Baseline	<th>&Delta;X (m)	<th>&Delta;Y (m)	<th>&Delta;Z (m)
 	<tr><th>AC	<td>-6567.231	<td>-5686.293	<td>-6322.392
 	<tr><th>CD	<td>10527.785	<td>-994.928	<td>-956.655
 	<tr><th>DA	<td>-3960.522	<td>6681.247	<td>7279.015
 	<tr><th>BC	<td>-3644.223	<td>-1601.216	<td>2199.255
 	<tr><th>BD	<td>6883.550	<td>-2596.161	<td>1242.576
 	</table>
+
+	<table>
+	<tr><th>閉合圈	<th>dX	<th>dY	<th>dZ	<th>dL	<th>dr
+	<tr><th>ACD	<td>0.032	<td>0.026	<td>-0.032	<td>0.052	<td>1.625ppm
+	<tr><th>BCD	<td>-0.012	<td>-0.017	<td>-0.024	<td>0.032	<td>1.404ppm
+	<tr><th>ACBD	<td>0.020	<td>0.009	<td>-0.056	<td>0.060	<td>1.801ppm
+	</table>
+
+
+	$`&Delta;X_AC + V = &Delta;X_C - 8086.032   
+	&Delta;Y_AC + V = &Delta;Y_C + 4642712.847   
+	&Delta;Z_AC + V = &Delta;Z_C - 4360439.083   
+	&Delta;X_CD + V = &Delta;X_D - &Delta;X_C   
+	&Delta;Y_CD + V = &Delta;Y_D - &Delta;X_C   
+	&Delta;Z_CD + V = &Delta;Z_D - &Delta;Z_C   
+	&Delta;X_DA + V = 8086.032 - &Delta;X_D   
+	&Delta;Y_DA + V = 8086.032 - &Delta;X_D   
+	&Delta;Z_DA + V = 4360439.083 - &Delta;Z_D   
+	&Delta;X_BC + V = &Delta;X_C - 5163.031   
+	&Delta;Y_BC + V = &Delta;X_C - 5163.031   
+	&Delta;Z_BC + V = &Delta;Z_C - 4351917.483   
+	&Delta;X_BD + V = &Delta;X_D - 5163.031   
+	&Delta;Y_BD + V = &Delta;Y_D + 4646797.947   
+	&Delta;X_BD + V = &Delta;X_D - 5163.031`   
 
 
 

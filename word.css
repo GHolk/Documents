@@ -27,9 +27,12 @@
 	}
 	main { margin: 0; }
 
+	pre code { page-break-inside: avoid ; }
+
+
 }
 
-	
+
 
 /*
 header dt {
@@ -95,16 +98,18 @@ header {
 	font-size:larger;
 }
 
-
-/*	make header looked in center.	
-main h1, h2, h3, h5, h2, h4, h6 { margin-left: 4rem; } 
-main h1 { margin-left: 2rem; margin-top: 2em; }
-main h2 { margin-left: 3rem; margin-top: 2em; }
-main h3 { margin-left: 4rem; margin-top: 2em; }
-main h4 { margin-left: 5rem; margin-top: 2em; }
-main h5 { margin-left: 6rem; margin-top: 2em; }
-main h6 { margin-left: 7rem; margin-top: 2em; }
-*/
+code.term , .term code {
+	display: block;
+	margin: auto;
+	overflow: auto;
+	background: #333333;
+	color: #C0C0C0;
+	font-family: Monospace;
+	padding: 0 0.3ex 0 0.3ex;
+	margin: 0 0.2ex 0 0.2ex;
+	border: 1px solid ; 
+	text-indent: 0;
+}
 
 main { margin: 2em; }
 
