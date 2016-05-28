@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+
+<html lang="zh-TW">
+
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="date" content="2016-05-23">
+<meta name="author" content="c34031328">
+<meta name="copyright" content="Common Creative">
+
+<meta name="generator" content="vim, markdown">
+
+<meta name="distribution" content="taiwan">
+
+<meta name="keywords" content="C語言, 指標, 字串, 傳址, 作業,">
+
+<meta name="discription" content="作業四的操作手冊，有關字串與指標。">
+<link rel="prev" type="text/html" href="../hw3/HW3_C3403128.html">
+
+<link rel="icon" type="image/png" href="/icon.png">
+
+<link rel="stylesheet" type="text/css" href="/word.css">
+
+<title> 計算機程式設計　作業四 </title>
+
+</head>
+<body>
+
+<main>
+
+<h1> 計算機程式設計　作業四 </h1>
+
+<dl class="inline">
+<dt> 課程</dt> <dd>呂學展 計算機程式設計 </dd>
+<dt> 繳交期限</dt> <dd>104/6/5 23:55 </dd>
+<dt> 作者</dt> <dd>王鼎鈞 <a href="&#x6D;&#x61;&#x69;&#x6C;&#x74;&#x6F;:&#99;&#51;&#52;&#x30;&#51;&#49;3&#50;8&#64;&#x6D;&#x61;&#105;&#108;&#x2E;&#x6E;&#99;&#107;&#117;&#46;&#x65;&#100;&#x75;&#x2E;&#116;&#x77;">&#99;&#51;&#52;&#x30;&#51;&#49;3&#50;8&#64;&#x6D;&#x61;&#105;&#108;&#x2E;&#x6E;&#99;&#107;&#117;&#46;&#x65;&#100;&#x75;&#x2E;&#116;&#x77;</a> </dd>
+</dl>
+
+<p>這是一個操作字串的練習。
+我有用 <code>#include &lt;string.h&gt;</code> 標頭檔。
+（我周日寫的，周一上課時才發現老師沒有教 
+string.h ，應該沒關係吧？
+上課作業中我有幾題用到 string.h ，
+忘了有沒有過……。） </p>
+
+<p>unix 在這點比 windows 方便很多。
+幾乎每個安裝的程式在安裝時都會附上 
+ <a href="http://zh.wikipedia.org/wiki/man_page">使用手冊</a>  ，
+包括函式庫和有寫好介面的程式。
+所以只要 <code>man strlen</code> 就可以查到詳細的使用說明。
+像字串的函數我常常要查：會不會把結尾的 <code>\0</code> 吃進來、
+如果長度不夠會不會溢位等有的沒的。 </p>
+
+<p>windows 就只能 google 。
+很難想像 windows 使用者在沒有 man page 
+也沒有 google 的時代是怎麼活過來的。 </p>
+
+<h2> 程式設計 </h2>
+
+<p>宣告一堆子函數，大致來說是一題一個子函數。
+但某些分開寫很麻煩，所以寫在一起。 </p>
+
+<h3> static: 靜態變數 </h3>
+
+<p>寫到這題我才發現我靜態變數沒學好。
+我想回傳陣列，這可以接受。
+但我寫的是 C 語言， C 語言很鳥。
+所以我得要宣告 <strong>靜態變數</strong> 然後傳址，或 <strong>全域變數</strong> 。
+好，所以我宣告： <code>static char s[n]</code> ，不給。
+靜態陣列的長度不能宣告成變數……，必須是指定值。 </p>
+
+<p>於是我只好確定了字串的大小，然後寫死在原始碼裡。
+二字串加上字串結尾 20+1+20+1 ，共 42 。
+google 了一下，在維基百科查到的  <a href="http://zh.wikipedia.org/wiki/C語言#C99">C99 標準</a>  ，
+ <em>才</em>  開始支援陣列的大小為動態指派；但 static 和全域依然不淮。
+ <a href="http://zh.wikipedia.org/wiki/C語言#.E5.86.85.E5.AD.98.E7.AE.A1.E7.90.86">這裡有詳細的原因。</a> 
+ <q>同時也是這一版才開始支援 <code>for (int i=0; ; )</code> ：
+   在 for 開頭宣告 i 。但我在 DevC++ 會 
+   compile error 是怎樣？</q>  </p>
+
+<h3> 指標與陣列 </h3>
+
+<p>所以我為什麼要回傳陣列呢？因為我想要回傳一個字串。
+那標準的 C 作法呢？我後來想想，認為是直接修改傳入的字串。
+ <code>strcat()</code> 、 <code>strcpy()</code> 都是這麼幹的。
+但我一開始不會修改傳入的字串。
+我忘了可以 <em>接收一個陣列</em>  ，我都是用指標接收。
+<em>而指標指向的字串是不能修改的。</em> 
+所以整份作業我都在操作指標……。 </p>
+
+<h3> void 函數與回傳值 </h3>
+
+<p>有時候我必須輸出字串，但回傳字串太麻煩了，
+我就在函數中直接輸出。
+函數就宣告成 void ，沒有回傳值的函數。
+其實沒有回傳值不是好事，
+一般回傳值是用來判斷執行的情況的。
+像 printf 會回傳輸出的字數。
+如果回傳負數代表出錯，對應不同的數值有不同的意義。
+void 只應該使用在不需驗證的情況，
+也就是 <em>不會出錯</em>  或 <em>無法驗證</em>  的操作。
+像指標的操作。 </p>
+
+<h3> map 與 getchar </h3>
+
+<p>我寫了個副程式，回傳一個 128 字元的陣列，
+<em>記錄</em>  該字串有什麼字母。
+所以用 static 宣告了 <code>char map[128]</code> ，好像有點大……。 </p>
+
+<p>另外讀到一個有趣的說明， <code>getchar()</code> <em>不應該</em>  用字元接回傳值；
+因為 getchar() 如果出錯會回傳 <code>EOF</code> ，
+而在 GNU C 中 EOF 是個 Macro ， <code># define EOF -1</code> 。
+是的， EOF = -1 。
+而 char 是無號整數，所以不能接收 EOF 。
+故請使用 int 來接 getchar 。 </p>
+
+<p>在 unix 中按下 <code>^D</code> ，也就是輸出 ascii 字元 
+<code>EOT</code> 等同 <em>關閉 stream</em>  ，和檔案結尾 EOF 有八成像。
+但 EOT 不是 EOF ，無論在 ascii 或 unicode 中都沒有 EOF 這個字元。
+EOF 並不是一個字元，是一個 <strong>概念</strong> ，等同於 <em>stream 的結束</em>  。
+在 unix 中使用 EOT ，在 GNU C 中使用整數的 -1 ，
+在 windows 中使用 <code>^Z</code> 也就是 <code>SUB</code> 。 </p>
+
+<h3> scanf 與 fgets </h3>
+
+<p><strong>不要使用 <code>gets()</code> ！</strong> gets 是不安全的。
+改使用 <code>fgets(str, 10, stdin)</code> ，可以手動指定讀入大小。
+使用 scanf 時也應注意，應手動指定讀入大小 
+<code>scanf("%10s", str)</code> ，防止 overflow 。 </p>
+
+<p>另外 scanf 的 <code>%s</code> 有點特別，他 <strong>不吃空白符</strong> 。
+而他所謂的空白符包括：空白鍵、 tab 、換行符、回車符。
+例如手動指定字串包括換行以外的所有字元 <code>%[^\n]s</code> 。
+所以以下是可以的，因為 %s 會自動被 \n 斷開。 </p>
+
+<pre><code>scanf("%s", str[0]);
+scanf("%s", str[1]);
+</code></pre>
+
+</main>
+
+<pre class="markdown">
+
+# 計算機程式設計　作業四 #
+
+ - 課程：呂學展 計算機程式設計
+ - 繳交期限：104/6/5 23:55
+ - 作者：王鼎鈞 &lt;c34031328@mail.ncku.edu.tw&gt;
+
+這是一個操作字串的練習。
+我有用 `#include &lt;string.h&gt;` 標頭檔。
+（我周日寫的，周一上課時才發現老師沒有教 
+string.h ，應該沒關係吧？
+上課作業中我有幾題用到 string.h ，
+忘了有沒有過……。）
+
+unix 在這點比 windows 方便很多。
+幾乎每個安裝的程式在安裝時都會附上 
+[[man_page|使用手冊]] ，
+包括函式庫和有寫好介面的程式。
+所以只要 `man strlen` 就可以查到詳細的使用說明。
+像字串的函數我常常要查：會不會把結尾的 `\0` 吃進來、
+如果長度不夠會不會溢位等有的沒的。
+
+windows 就只能 google 。
+很難想像 windows 使用者在沒有 man page 
+也沒有 google 的時代是怎麼活過來的。
+
+
+## 程式設計 ##
+
+宣告一堆子函數，大致來說是一題一個子函數。
+但某些分開寫很麻煩，所以寫在一起。
+
+
+### static: 靜態變數 ###
+
+寫到這題我才發現我靜態變數沒學好。
+我想回傳陣列，這可以接受。
+但我寫的是 C 語言， C 語言很鳥。
+所以我得要宣告 **靜態變數** 然後傳址，或 **全域變數** 。
+好，所以我宣告： `static char s[n]` ，不給。
+靜態陣列的長度不能宣告成變數……，必須是指定值。
+
+於是我只好確定了字串的大小，然後寫死在原始碼裡。
+二字串加上字串結尾 20+1+20+1 ，共 42 。
+google 了一下，在維基百科查到的 [[C語言#C99|C99 標準]] ，
+ *才* 開始支援陣列的大小為動態指派；但 static 和全域依然不淮。
+[[C語言#.E5.86.85.E5.AD.98.E7.AE.A1.E7.90.86|這裡有詳細的原因。]]
+ &quot;&quot;同時也是這一版才開始支援 `for (int i=0; ; )` ：
+   在 for 開頭宣告 i 。但我在 DevC++ 會 
+   compile error 是怎樣？&quot;&quot; 
+
+
+### 指標與陣列 ###
+
+所以我為什麼要回傳陣列呢？因為我想要回傳一個字串。
+那標準的 C 作法呢？我後來想想，認為是直接修改傳入的字串。
+ `strcat()` 、 `strcpy()` 都是這麼幹的。
+但我一開始不會修改傳入的字串。
+我忘了可以 *接收一個陣列* ，我都是用指標接收。
+*而指標指向的字串是不能修改的。*
+所以整份作業我都在操作指標……。
+
+
+### void 函數與回傳值 ###
+
+有時候我必須輸出字串，但回傳字串太麻煩了，
+我就在函數中直接輸出。
+函數就宣告成 void ，沒有回傳值的函數。
+其實沒有回傳值不是好事，
+一般回傳值是用來判斷執行的情況的。
+像 printf 會回傳輸出的字數。
+如果回傳負數代表出錯，對應不同的數值有不同的意義。
+void 只應該使用在不需驗證的情況，
+也就是 *不會出錯* 或 *無法驗證* 的操作。
+像指標的操作。
+
+
+### map 與 getchar ###
+
+我寫了個副程式，回傳一個 128 字元的陣列，
+*記錄* 該字串有什麼字母。
+所以用 static 宣告了 `char map[128]` ，好像有點大……。
+
+另外讀到一個有趣的說明， `getchar()` *不應該* 用字元接回傳值；
+因為 getchar() 如果出錯會回傳 `EOF` ，
+而在 GNU C 中 EOF 是個 Macro ， `# define EOF -1` 。
+是的， EOF = -1 。
+而 char 是無號整數，所以不能接收 EOF 。
+故請使用 int 來接 getchar 。
+
+在 unix 中按下 `^D` ，也就是輸出 ascii 字元 
+`EOT` 等同 *關閉 stream* ，和檔案結尾 EOF 有八成像。
+但 EOT 不是 EOF ，無論在 ascii 或 unicode 中都沒有 EOF 這個字元。
+EOF 並不是一個字元，是一個 **概念** ，等同於 *stream 的結束* 。
+在 unix 中使用 EOT ，在 GNU C 中使用整數的 -1 ，
+在 windows 中使用 `^Z` 也就是 `SUB` 。
+
+
+### scanf 與 fgets ###
+
+**不要使用 `gets()` ！** gets 是不安全的。
+改使用 `fgets(str, 10, stdin)` ，可以手動指定讀入大小。
+使用 scanf 時也應注意，應手動指定讀入大小 
+`scanf(&quot;%10s&quot;, str)` ，防止 overflow 。
+
+另外 scanf 的 `%s` 有點特別，他 **不吃空白符** 。
+而他所謂的空白符包括：空白鍵、 tab 、換行符、回車符。
+要 %s 吃空白可以手動指定；
+例如手動指定字串包括換行以外的所有字元 `%[^\n]s` 。
+所以以下是可以的，因為 %s 會自動被 \n 斷開。
+
+	scanf(&quot;%s&quot;, str[0]);
+	scanf(&quot;%s&quot;, str[1]);
+
+
+
+</pre>
+</body>
+</html>
+
