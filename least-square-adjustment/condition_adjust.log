@@ -1,0 +1,41 @@
+# Created by Octave 4.0.1, Tue May 31 22:33:31 2016 CST <c34031328@localhost.localdomain>
+# name: A1
+# type: matrix
+# rows: 1
+# columns: 3
+ 1 -1 1
+
+
+# name: K1
+# type: scalar
+2
+
+
+# name: N1
+# type: scalar
+10
+
+
+# name: PP1
+# type: diagonal matrix
+# rows: 3
+# columns: 3
+4
+2
+4
+
+
+# name: W1
+# type: scalar
+-20
+
+
+# name: ans
+# type: matrix
+# rows: 3
+# columns: 1
+ 8
+ -4
+ 8
+
+

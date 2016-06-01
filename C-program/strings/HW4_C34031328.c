@@ -151,6 +151,7 @@ int main( int argc, char *argv[] )
 			break;
 	}
 
+	puts(P);
 
 	print_num(P);
 	// print num of P	
@@ -161,7 +162,7 @@ int main( int argc, char *argv[] )
 	print_inv(PQ);
 	// print inverted PQ. 
 
-	printf("%d\n",num_count(PQ));
+	printf("%d\n%d\n", num_count(PQ), num_sum(PQ));
 	// print how many number in PQ. 
 
 	same_diff(P,Q);
