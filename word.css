@@ -177,7 +177,7 @@ img {
 	margin: auto; 
 	}
 
-img.inline {
+img.inline, p img {
 	display: inline; 
 	box-shadow: none; 
 	} 
