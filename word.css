@@ -131,10 +131,12 @@ dd {
 	}
 
 q:lang(zh)  { quotes: "「" "」" "『" "』" ; }
+q:lang(zh).me { quotes: "『" "』" "「" "」" ; }
 q { 
 	color: #555;
 	font-style: italic; 
 	}
+q.me { quotes: "\2018" "\2019" "\201C" "\201D" ; }
 
 /* dl inline ***************************************/
 
