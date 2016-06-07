@@ -6,3 +6,6 @@ tmp/*
 *.gif
 *.jpg
 *.exe
+*.DWG
+*.dwg
+*.sdr
