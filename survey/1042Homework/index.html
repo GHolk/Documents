@@ -581,10 +581,6 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 &Delta;X<sub>BD</sub> + V = &Delta;X<sub>D</sub> - 5163.031</code>    </pre></li>
 </ol>
 
-</section>
-
-<main>
-
 <h2> 第十四章 製圖測量 </h2>
 
 <p><em>滿分3分</em>  </p>
@@ -667,6 +663,87 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 <img src="contour_2.png" alt="contour_2" /></li>
 </ol>
 
+</section>
+
+<main>
+
+<h2> 第十五章 工程測量 </h2>
+
+<p><em>滿分2分</em>  </p>
+
+<ol class="cjk">
+<li><p>擬應用一部水準儀放樣某工地施工點工位高程為10.000m之位置，
+若架設此水準儀後視某已知高程點位之水準尺，
+已知高程點位之高程為9.123m，後視水準尺讀數為1.876m，
+請問若要使前視水準尺底端為放樣高程，
+則前視水準尺之讀數應為若干? (1分) </p>
+
+<pre>
+<code class="math">Hf = Hb + &Delta;hbf</code> 
+<code class="math">Hb = 10.000</code> 
+<code class="math">&Delta;hbf = 1.876 - f = Hf - Hb = 10.000 - 9.123 = 0.877</code> 
+<code class="math">f = 1.876 - 0.877 = 0.999</code> 
+</pre>
+</li>
+
+<li><p>設有三個點位A、B及C，三點之間皆可通視，其三維坐標如下表：(1分) </p>
+
+<table>
+<tr><th>點名 <th>E <th>N <th>H
+<tr><th>A <td>175001.24m <td>2540000.91m <td>90.234m
+<tr><th>B <td>175080.62m <td>2540012.74m <td>95.351m
+<tr><th>C <td>174030.86m <td>2540090.18m <td>92.892m
+</table>
+
+<ol>
+<li><p>若C點樁位遺失，擬由A及B樁位點再行測設(放樣)C點樁位，
+ 請說明測設的方法、步驟、應使用的儀器、
+ 及應計算的數據。 </p>
+
+<ol>
+<li><p>使用 <strong>全站儀</strong> 、 <strong>稜鏡</strong> 至少一個。 </p></li>
+<li><p>計算 <code class="math">&ang;<sub>ABC</sub></code> ： </p>
+
+<p><code class="math">&phi;<sub>BX</sub> = arctan[ (X<sub>E</sub> - B<sub>E)</sub> / (X<sub>N</sub> - B<sub>N)</sub> ]</code>   </p>
+
+<p><code class="math">&ang;<sub>ABC</sub> = &phi;BC - &phi;BA</code>   </p></li>
+<li><p>計算 BC 距離： </p>
+
+<p><code class="math">L<sub>BC</sub><sup>2</sup> = (B<sub>N</sub> - X<sub>N)</sub><sup>2</sup> + (B<sub>E</sub> - X<sub>E)</sub><sup>2</sup></code>   </p></li>
+<li><p>在 B 點架全站儀，以 A 點為後視。 </p></li>
+<li><p>順時針轉 <code class="math">&ang;<sub>ABC</sub></code> ，並鎖死角度。 </p></li>
+<li><p>使用全站儀測出此方向水平距為 <code class="math">L<sub>BC</sub></code> 的點。 </p></li>
+</ol></li>
+<li><p>同樣，若擬由A或B樁位點重新測設(放樣)原C點高程位置，
+請說明測設的方法、步驟、應使用的儀器、
+及應計算的數據。 </p>
+
+<ol>
+<li><p>需要 <strong>水準儀</strong> 、 <strong>水準尺</strong> 至少一隻。 </p></li>
+<li><p>架設水準儀於 B 點。 </p></li>
+<li><p>計算 <code class="math">&Delta;h<sub>AC</sub> = H<sub>C</sub> - H<sub>A</sub></code> 。 </p></li>
+<li><p>置水準尺於 A ，若觀測值為 X 。 </p></li>
+<li><p>移水準尺至 C ，調整水準尺至觀測值為 
+<code class="math">X+&Delta;h<sub>AC</sub></code> ，即為高程位置。 </p></li>
+</ol></li>
+</ol></li>
+<li><p>承上題，若點A及B為直線隧道兩端之樁位，兩點之間無法通視，
+假設隧道⼯程已從A點挖掘超過隧道中點，
+如今擬進行隧道中間點樁位之平面位置及高程放樣，
+請說明應如何進行此放樣⼯作，
+並計算出放樣⼯作所需要的數據。(1分) </p>
+
+<ol>
+<li><p>需要全站儀、稜鏡， GPS 至少一台或 A 、 B 點座標。 </p></li>
+<li><p>取得 A 、 B 點座標，也可以 GPS 計算。 </p></li>
+<li><p>計算 AB 中點 C 座標。 </p></li>
+<li><p>計算 AC 方位角 <code class="math">&phi;<sub>AC</sub></code> 。 </p></li>
+<li><p>計算 AC 距離。 </p></li>
+<li><p>以全站儀從 A 點放樣出 C 點。 </p></li>
+</ol></li>
+</ol>
+
+
 </main>
 
 <pre class="markdown">
@@ -680,44 +757,44 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 依序架設全測站儀，觀測後視至前視順鐘向水平角度(Angle to the right) 及水
 平距離如下左表：
 
-	<table>
-	<tr>
-	<td>點位
-	<td>A
-	<td>B
-	<td>C
-	<td>D
-	<tr>
-	<td>E坐標 (m)
-	<td>170108.103
-	<td>170289.273
-	<td>170967.752
-	<td>171078.478
-	<tr>
-	<td>N坐標 (m)
-	<td>2544566.411
-	<td>2544592.347
-	<td>2544756.046
-	<td>2544975.393
-	<tr>
-	<td>測站
-	<td>B
-	<td>1
-	<td>2
-	<td>C
-	<tr>
-	<td>水平角
-	<td>θ<sub>B</sub>= 107°08’25”
-	<td>θ<sub>1</sub>= 257°22’10”
-	<td>θ<sub>2</sub>= 202°49’00”
-	<td>θ<sub>C</sub> = 97°36’38”
-	<tr>
-	<td>水平距離 (m)
-	<td>d<sub>B1</sub>= 259.904
-	<td>d<sub>12</sub>= 313.832
-	<td>d<sub>2C</sub> = 343.748
-	<td>
-	</table>
+	&lt;table&gt;
+	&lt;tr&gt;
+	&lt;td&gt;點位
+	&lt;td&gt;A
+	&lt;td&gt;B
+	&lt;td&gt;C
+	&lt;td&gt;D
+	&lt;tr&gt;
+	&lt;td&gt;E坐標 (m)
+	&lt;td&gt;170108.103
+	&lt;td&gt;170289.273
+	&lt;td&gt;170967.752
+	&lt;td&gt;171078.478
+	&lt;tr&gt;
+	&lt;td&gt;N坐標 (m)
+	&lt;td&gt;2544566.411
+	&lt;td&gt;2544592.347
+	&lt;td&gt;2544756.046
+	&lt;td&gt;2544975.393
+	&lt;tr&gt;
+	&lt;td&gt;測站
+	&lt;td&gt;B
+	&lt;td&gt;1
+	&lt;td&gt;2
+	&lt;td&gt;C
+	&lt;tr&gt;
+	&lt;td&gt;水平角
+	&lt;td&gt;θ&lt;sub&gt;B&lt;/sub&gt;= 107°08’25”
+	&lt;td&gt;θ&lt;sub&gt;1&lt;/sub&gt;= 257°22’10”
+	&lt;td&gt;θ&lt;sub&gt;2&lt;/sub&gt;= 202°49’00”
+	&lt;td&gt;θ&lt;sub&gt;C&lt;/sub&gt; = 97°36’38”
+	&lt;tr&gt;
+	&lt;td&gt;水平距離 (m)
+	&lt;td&gt;d&lt;sub&gt;B1&lt;/sub&gt;= 259.904
+	&lt;td&gt;d&lt;sub&gt;12&lt;/sub&gt;= 313.832
+	&lt;td&gt;d&lt;sub&gt;2C&lt;/sub&gt; = 343.748
+	&lt;td&gt;
+	&lt;/table&gt;
 
 
 	請完成下列導線計算⼯作： (2分)
@@ -729,112 +806,112 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 	
 	2. 計算φ AB 及 φ CD 方位角
 	
-		<pre><code>
-		&phi; = arctan &Delta;N / &Delta;E
-		&phi; <sub>AB</sub> = 81.8530&deg;
-		&phi; <sub>CD</sub> = 26.7900&deg;
-		</code></pre>
+		&lt;pre&gt;&lt;code&gt;
+		&amp;phi; = arctan &amp;Delta;N / &amp;Delta;E
+		&amp;phi; &lt;sub&gt;AB&lt;/sub&gt; = 81.8530&amp;deg;
+		&amp;phi; &lt;sub&gt;CD&lt;/sub&gt; = 26.7900&amp;deg;
+		&lt;/code&gt;&lt;/pre&gt;
 	
 	
 	3. 計算φ B1, φ 12 及 φ 2C 方位角
 	
-		<pre><code>
-		&phi;<sub>B1</sub> = 8.9932&deg;
-		&phi;<sub>12</sub> = 86.3627&deg;
-		&phi;<sub>2C</sub> = 109.1794&deg;
-		</pre></code>
+		&lt;pre&gt;&lt;code&gt;
+		&amp;phi;&lt;sub&gt;B1&lt;/sub&gt; = 8.9932&amp;deg;
+		&amp;phi;&lt;sub&gt;12&lt;/sub&gt; = 86.3627&amp;deg;
+		&amp;phi;&lt;sub&gt;2C&lt;/sub&gt; = 109.1794&amp;deg;
+		&lt;/pre&gt;&lt;/code&gt;
 	
 	4. 計算角度閉合差，並進行角度誤差分配改正
 	
-		<pre><code>
-		W<sub>a</sub> = &phi;<sub>CD</sub> - &phi;&prime;<sub>CD</sub> 
-		&phi;&prime;<sub>CD</sub> = &phi;<sub>2C</sub> + &theta;<sub>C</sub> - 180&deg; = 26.791&deg;
-		W<sub>a</sub> = 26.7900&deg; - 26.7846&deg; = 0.0054&deg; 
+		&lt;pre&gt;&lt;code&gt;
+		W&lt;sub&gt;a&lt;/sub&gt; = &amp;phi;&lt;sub&gt;CD&lt;/sub&gt; - &amp;phi;&amp;prime;&lt;sub&gt;CD&lt;/sub&gt; 
+		&amp;phi;&amp;prime;&lt;sub&gt;CD&lt;/sub&gt; = &amp;phi;&lt;sub&gt;2C&lt;/sub&gt; + &amp;theta;&lt;sub&gt;C&lt;/sub&gt; - 180&amp;deg; = 26.791&amp;deg;
+		W&lt;sub&gt;a&lt;/sub&gt; = 26.7900&amp;deg; - 26.7846&amp;deg; = 0.0054&amp;deg; 
 	
-		&theta;&prime;<sub>i</sub> = &theta;<sub>i</sub> - 0.00135&deg; 
-		&theta;&prime;<sub>B</sub> = 107.1389&deg;
-		&theta;&prime;<sub>1</sub> = 257.3681&deg;
-		&theta;&prime;<sub>2</sub> = 202.8153&deg;
+		&amp;theta;&amp;prime;&lt;sub&gt;i&lt;/sub&gt; = &amp;theta;&lt;sub&gt;i&lt;/sub&gt; - 0.00135&amp;deg; 
+		&amp;theta;&amp;prime;&lt;sub&gt;B&lt;/sub&gt; = 107.1389&amp;deg;
+		&amp;theta;&amp;prime;&lt;sub&gt;1&lt;/sub&gt; = 257.3681&amp;deg;
+		&amp;theta;&amp;prime;&lt;sub&gt;2&lt;/sub&gt; = 202.8153&amp;deg;
 	
-		&phi;&prime;<sub>i</sub> = &phi;<sub>i</sub> + 0.00135&deg; &times; n ;  
-		&phi;&prime;<sub>B1</sub> = 8.9919°
-		&phi;&prime;<sub>12</sub> = 86.3602°
-		&phi;&prime;<sub>2C</sub> = 109.1754°
-		</code></pre>
+		&amp;phi;&amp;prime;&lt;sub&gt;i&lt;/sub&gt; = &amp;phi;&lt;sub&gt;i&lt;/sub&gt; + 0.00135&amp;deg; &amp;times; n ;  
+		&amp;phi;&amp;prime;&lt;sub&gt;B1&lt;/sub&gt; = 8.9919°
+		&amp;phi;&amp;prime;&lt;sub&gt;12&lt;/sub&gt; = 86.3602°
+		&amp;phi;&amp;prime;&lt;sub&gt;2C&lt;/sub&gt; = 109.1754°
+		&lt;/code&gt;&lt;/pre&gt;
 	
 	
-		<!--[dms(107,08,25) dms(257,22,10) dms(202,49,00) dms(97,36,38)]
-		107.140   257.369   202.817    97.611-->
+		&lt;!--[dms(107,08,25) dms(257,22,10) dms(202,49,00) dms(97,36,38)]
+		107.140   257.369   202.817    97.611--&gt;
 	
 	5. 計算縱距 (Departures) 及橫距 (Latitudes)
 	
-		<pre><code>
-		&Delta;N = L<sub>AB</sub> &times; cos &phi;<sub>AB</sub>
-		&Delta;E = L<sub>AB</sub> &times; sin &phi;<sub>AB</sub>
-		N<sub>B</sub> = N<sub>A</sub> + &Delta;N
-		E<sub>B</sub> = E<sub>A</sub> + &Delta;E
-		</pre></code>
+		&lt;pre&gt;&lt;code&gt;
+		&amp;Delta;N = L&lt;sub&gt;AB&lt;/sub&gt; &amp;times; cos &amp;phi;&lt;sub&gt;AB&lt;/sub&gt;
+		&amp;Delta;E = L&lt;sub&gt;AB&lt;/sub&gt; &amp;times; sin &amp;phi;&lt;sub&gt;AB&lt;/sub&gt;
+		N&lt;sub&gt;B&lt;/sub&gt; = N&lt;sub&gt;A&lt;/sub&gt; + &amp;Delta;N
+		E&lt;sub&gt;B&lt;/sub&gt; = E&lt;sub&gt;A&lt;/sub&gt; + &amp;Delta;E
+		&lt;/pre&gt;&lt;/code&gt;
 	
-		<table>
-		<tr> 
-			<th> 點＼縱距｜橫距
-			<th> &Delta;N
-			<th> &Delta;E
+		&lt;table&gt;
+		&lt;tr&gt; 
+			&lt;th&gt; 點＼縱距｜橫距
+			&lt;th&gt; &amp;Delta;N
+			&lt;th&gt; &amp;Delta;E
 		
-		<tr>
-			<th>B1
-			<td>256.6674
-			<td> 40.6217
+		&lt;tr&gt;
+			&lt;th&gt;B1
+			&lt;td&gt;256.6674
+			&lt;td&gt; 40.6217
 		
-		<tr>
-			<th>12
-			<td>19.9241
-			<td>313.1989
+		&lt;tr&gt;
+			&lt;th&gt;12
+			&lt;td&gt;19.9241
+			&lt;td&gt;313.1989
 	
-		<tr>
-			<th>2C
-			<td>-112.9079
-			<td>324.6760
+		&lt;tr&gt;
+			&lt;th&gt;2C
+			&lt;td&gt;-112.9079
+			&lt;td&gt;324.6760
 	
-		</table>
+		&lt;/table&gt;
 	
 	
 	6. 計算縱距及橫距閉合差，並進行縱距及橫距誤差分配改正
 	
-		<pre><code>
-		W<sub>E</sub> = &Delta;E - ( E<sub>n</sub> - E<sub>1</sub> ) = 678.4966 - 678.479 = 0.0176 
-		W<sub>N</sub> = &Delta;N - ( N<sub>n</sub> - N<sub>1</sub> ) = 163.7260 - 163.699 = 0.0270 
-		</code></pre>
+		&lt;pre&gt;&lt;code&gt;
+		W&lt;sub&gt;E&lt;/sub&gt; = &amp;Delta;E - ( E&lt;sub&gt;n&lt;/sub&gt; - E&lt;sub&gt;1&lt;/sub&gt; ) = 678.4966 - 678.479 = 0.0176 
+		W&lt;sub&gt;N&lt;/sub&gt; = &amp;Delta;N - ( N&lt;sub&gt;n&lt;/sub&gt; - N&lt;sub&gt;1&lt;/sub&gt; ) = 163.7260 - 163.699 = 0.0270 
+		&lt;/code&gt;&lt;/pre&gt;
 	
-		<table>
-		<caption>平差後的縱距橫距</caption>
-		<tr>
-			<th>點
-			<th>&Delta;N
-			<th>&Delta;E
+		&lt;table&gt;
+		&lt;caption&gt;平差後的縱距橫距&lt;/caption&gt;
+		&lt;tr&gt;
+			&lt;th&gt;點
+			&lt;th&gt;&amp;Delta;N
+			&lt;th&gt;&amp;Delta;E
 		
-		<tr>
-			<th>B1
-			<td>256.7147
-			<td>40.6207
+		&lt;tr&gt;
+			&lt;th&gt;B1
+			&lt;td&gt;256.7147
+			&lt;td&gt;40.6207
 		
-		<tr>
-			<th>12
-			<td>19.9300
-			<td>313.2079
+		&lt;tr&gt;
+			&lt;th&gt;12
+			&lt;td&gt;19.9300
+			&lt;td&gt;313.2079
 		
-		<tr>
-			<th>2C
-			<td>-112.9138
-			<td>324.6850
+		&lt;tr&gt;
+			&lt;th&gt;2C
+			&lt;td&gt;-112.9138
+			&lt;td&gt;324.6850
 		
-		</table>
+		&lt;/table&gt;
 	
 	7. 計算導線總長及閉合比數（或導線相對精度）
 	
-		W<sub>T</sub> = &sqrt;( W<sub>E</sub><sup>2</sup> + W<sub>N</sub><sup>2</sup> ) = 0.03223
-		&Sigma;S = 1346.220 
-		P = W<sub>T</sub> / &Sigma;S = 0.00002394
+		W&lt;sub&gt;T&lt;/sub&gt; = &amp;sqrt;( W&lt;sub&gt;E&lt;/sub&gt;&lt;sup&gt;2&lt;/sup&gt; + W&lt;sub&gt;N&lt;/sub&gt;&lt;sup&gt;2&lt;/sup&gt; ) = 0.03223
+		&amp;Sigma;S = 1346.220 
+		P = W&lt;sub&gt;T&lt;/sub&gt; / &amp;Sigma;S = 0.00002394
 	
 	8. 計算未知點位1及2之坐標
 	
@@ -859,12 +936,12 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 	 * ![traverse-graph-win](traverse-graph-win.jpg)
 	 * 用 _國土測繪中心_ 的軟體畫的圖。
 
-	<table>
-	<caption> 用國土測繪中心的軟體算的點位。</caption>
-	<tr> <th>點 <th>N <th>E
-	<tr><th>1        <td>2544773.067 <td>170318.177
-	<tr><th>2        <td>2544787.969 <td>170577.654
-	</table>
+	&lt;table&gt;
+	&lt;caption&gt; 用國土測繪中心的軟體算的點位。&lt;/caption&gt;
+	&lt;tr&gt; &lt;th&gt;點 &lt;th&gt;N &lt;th&gt;E
+	&lt;tr&gt;&lt;th&gt;1        &lt;td&gt;2544773.067 &lt;td&gt;170318.177
+	&lt;tr&gt;&lt;th&gt;2        &lt;td&gt;2544787.969 &lt;td&gt;170577.654
+	&lt;/table&gt;
 
 
  3. 承上題，若要以最小二乘方法進行該導線計算，
@@ -935,72 +1012,72 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 
  1. 若某一平面坐標 `(x, y) = (345.64, 2378.15)` ，
 	依序經過旋轉 `(θ = 135°49′36″)` 、 尺度 `(S = 1.00045)` 
-	及平移 `(T<sub>x</sub> , T<sub>y</sub>) = (35.82, 23.21)` 轉換後，
+	及平移 `(T&lt;sub&gt;x&lt;/sub&gt; , T&lt;sub&gt;y&lt;/sub&gt;) = (35.82, 23.21)` 轉換後，
 	得轉換後坐標 `(x', y')` ，請列出此坐標轉換的線性關係如下式，
 	其中a, b, c及d參數請以數字表示，並計算轉換後坐標(x', y')。（1分）
 
-	<math display="block"><mrow><mrow><mo>[</mo><mtable>
-	<mtr><mtd columnalign='center'><mrow><mi>x</mi><mo>
-	&prime;</mo></mrow></mtd></mtr><mtr>
-	<mtd columnalign='center'><mrow><mi>y</mi><mo>
-	&prime;</mo></mrow></mtd></mtr></mtable><mo>]</mo></mrow>
-	<mo>&equals;</mo><mi>S</mi><mtext>&ensp;</mtext>
-	<mrow><mo>[</mo><mtable><mtr>
-	<mtd columnalign='center'><mrow>
-	<mstyle mathvariant='normal'><mtext>cos</mtext>
-	</mstyle><mo>&theta;</mo></mrow></mtd>
-	<mtd columnalign='center'><mrow>
-	<mstyle mathvariant='normal'><mtext>sin</mtext>
-	</mstyle><mo>&theta;</mo></mrow></mtd></mtr><mtr>
-	<mtd columnalign='center'><mrow><mo>&minus;</mo>
-	<mstyle mathvariant='normal'><mtext>sin</mtext>
-	</mstyle><mo>&theta;</mo></mrow></mtd>
-	<mtd columnalign='center'><mrow>
-	<mstyle mathvariant='normal'><mtext>cos</mtext>
-	</mstyle><mo>&theta;</mo></mrow></mtd></mtr>
-	</mtable><mo>]</mo></mrow><mrow><mo>[</mo><mtable>
-	<mtr><mtd columnalign='center'><mi>x</mi></mtd>
-	</mtr><mtr><mtd columnalign='center'><mi>y</mi>
-	</mtd></mtr></mtable><mo>]</mo></mrow><mo>
-	&plus;</mo><mrow><mo>[</mo><mtable><mtr>
-	<mtd columnalign='center'><msub><mi>T</mi><mi>x</mi>
-	</msub></mtd></mtr><mtr><mtd columnalign='center'>
-	<msub><mi>T</mi><mi>y</mi></msub></mtd></mtr>
-	</mtable><mo>]</mo></mrow><mo>&equals;</mo><mn>
-	1</mn><mo>.</mo><mn>0</mn><mn>0</mn><mn>0</mn><mn>
-	4</mn><mn>5</mn><mrow><mo>[</mo><mtable><mtr>
-	<mtd columnalign='center'><mrow><mo>&minus;</mo><mn>
-	0</mn><mo>.</mo><mn>7</mn><mn>1</mn><mn>7</mn><mn>
-	2</mn><mn>4</mn></mrow></mtd>
-	<mtd columnalign='center'><mrow><mn>0</mn><mo>.</mo>
-	<mn>6</mn><mn>9</mn><mn>6</mn><mn>8</mn><mn>3</mn>
-	</mrow></mtd></mtr><mtr><mtd columnalign='center'>
-	<mrow><mo>&minus;</mo><mn>0</mn><mo>.</mo><mn>6</mn>
-	<mn>9</mn><mn>6</mn><mn>8</mn><mn>3</mn></mrow>
-	</mtd><mtd columnalign='center'><mrow><mo>
-	&minus;</mo><mn>0</mn><mo>.</mo><mn>7</mn><mn>1</mn><mn>
-	7</mn><mn>2</mn><mn>4</mn></mrow></mtd></mtr>
-	</mtable><mo>]</mo></mrow><mrow><mo>[</mo><mtable>
-	<mtr><mtd columnalign='center'><mi>x</mi></mtd>
-	</mtr><mtr><mtd columnalign='center'><mi>y</mi>
-	</mtd></mtr></mtable><mo>]</mo></mrow><mo>
-	&plus;</mo><mrow><mo>[</mo><mtable><mtr>
-	<mtd columnalign='center'><mrow><mn>3</mn><mn>5</mn>
-	<mo>.</mo><mn>8</mn><mn>2</mn></mrow></mtd></mtr>
-	<mtr><mtd columnalign='center'><mrow><mn>2</mn><mn>
-	3</mn><mo>.</mo><mn>2</mn><mn>1</mn></mrow></mtd>
-	</mtr></mtable><mo>]</mo></mrow><mo>&equals;</mo>
-	<mrow><mo>[</mo><mtable><mtr>
-	<mtd columnalign='center'><mrow><mn>1</mn><mn>4</mn>
-	<mn>4</mn><mn>5</mn><mo>.</mo><mn>7</mn><mn>1</mn>
-	<mn>8</mn><mn>6</mn></mrow></mtd></mtr><mtr>
-	<mtd columnalign='center'><mrow><mo>&minus;</mo><mn>
-	1</mn><mn>9</mn><mn>2</mn><mn>4</mn><mo>.</mo><mn>
-	2</mn><mn>1</mn><mn>1</mn><mn>2</mn></mrow></mtd>
-	</mtr></mtable><mo>]</mo></mrow></mrow></math>
+	&lt;math display=&quot;block&quot;&gt;&lt;mrow&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;
+	&lt;mtr&gt;&lt;mtd columnalign='center'&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;
+	&amp;prime;&lt;/mo&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;
+	&lt;mtd columnalign='center'&gt;&lt;mrow&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;
+	&amp;prime;&lt;/mo&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;
+	&lt;mo&gt;&amp;equals;&lt;/mo&gt;&lt;mi&gt;S&lt;/mi&gt;&lt;mtext&gt;&amp;ensp;&lt;/mtext&gt;
+	&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;&lt;mtr&gt;
+	&lt;mtd columnalign='center'&gt;&lt;mrow&gt;
+	&lt;mstyle mathvariant='normal'&gt;&lt;mtext&gt;cos&lt;/mtext&gt;
+	&lt;/mstyle&gt;&lt;mo&gt;&amp;theta;&lt;/mo&gt;&lt;/mrow&gt;&lt;/mtd&gt;
+	&lt;mtd columnalign='center'&gt;&lt;mrow&gt;
+	&lt;mstyle mathvariant='normal'&gt;&lt;mtext&gt;sin&lt;/mtext&gt;
+	&lt;/mstyle&gt;&lt;mo&gt;&amp;theta;&lt;/mo&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;
+	&lt;mtd columnalign='center'&gt;&lt;mrow&gt;&lt;mo&gt;&amp;minus;&lt;/mo&gt;
+	&lt;mstyle mathvariant='normal'&gt;&lt;mtext&gt;sin&lt;/mtext&gt;
+	&lt;/mstyle&gt;&lt;mo&gt;&amp;theta;&lt;/mo&gt;&lt;/mrow&gt;&lt;/mtd&gt;
+	&lt;mtd columnalign='center'&gt;&lt;mrow&gt;
+	&lt;mstyle mathvariant='normal'&gt;&lt;mtext&gt;cos&lt;/mtext&gt;
+	&lt;/mstyle&gt;&lt;mo&gt;&amp;theta;&lt;/mo&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;
+	&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;
+	&lt;mtr&gt;&lt;mtd columnalign='center'&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mtd&gt;
+	&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd columnalign='center'&gt;&lt;mi&gt;y&lt;/mi&gt;
+	&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;
+	&amp;plus;&lt;/mo&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;&lt;mtr&gt;
+	&lt;mtd columnalign='center'&gt;&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;x&lt;/mi&gt;
+	&lt;/msub&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd columnalign='center'&gt;
+	&lt;msub&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;/msub&gt;&lt;/mtd&gt;&lt;/mtr&gt;
+	&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;&amp;equals;&lt;/mo&gt;&lt;mn&gt;
+	1&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mn&gt;
+	4&lt;/mn&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;&lt;mtr&gt;
+	&lt;mtd columnalign='center'&gt;&lt;mrow&gt;&lt;mo&gt;&amp;minus;&lt;/mo&gt;&lt;mn&gt;
+	0&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;7&lt;/mn&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;7&lt;/mn&gt;&lt;mn&gt;
+	2&lt;/mn&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/mrow&gt;&lt;/mtd&gt;
+	&lt;mtd columnalign='center'&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;
+	&lt;mn&gt;6&lt;/mn&gt;&lt;mn&gt;9&lt;/mn&gt;&lt;mn&gt;6&lt;/mn&gt;&lt;mn&gt;8&lt;/mn&gt;&lt;mn&gt;3&lt;/mn&gt;
+	&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd columnalign='center'&gt;
+	&lt;mrow&gt;&lt;mo&gt;&amp;minus;&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;6&lt;/mn&gt;
+	&lt;mn&gt;9&lt;/mn&gt;&lt;mn&gt;6&lt;/mn&gt;&lt;mn&gt;8&lt;/mn&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/mrow&gt;
+	&lt;/mtd&gt;&lt;mtd columnalign='center'&gt;&lt;mrow&gt;&lt;mo&gt;
+	&amp;minus;&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;7&lt;/mn&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;
+	7&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;
+	&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;
+	&lt;mtr&gt;&lt;mtd columnalign='center'&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mtd&gt;
+	&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd columnalign='center'&gt;&lt;mi&gt;y&lt;/mi&gt;
+	&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;
+	&amp;plus;&lt;/mo&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;&lt;mtr&gt;
+	&lt;mtd columnalign='center'&gt;&lt;mrow&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mn&gt;5&lt;/mn&gt;
+	&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;8&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;
+	&lt;mtr&gt;&lt;mtd columnalign='center'&gt;&lt;mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mn&gt;
+	3&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/mtd&gt;
+	&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;&amp;equals;&lt;/mo&gt;
+	&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;&lt;mtr&gt;
+	&lt;mtd columnalign='center'&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;4&lt;/mn&gt;
+	&lt;mn&gt;4&lt;/mn&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;7&lt;/mn&gt;&lt;mn&gt;1&lt;/mn&gt;
+	&lt;mn&gt;8&lt;/mn&gt;&lt;mn&gt;6&lt;/mn&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;
+	&lt;mtd columnalign='center'&gt;&lt;mrow&gt;&lt;mo&gt;&amp;minus;&lt;/mo&gt;&lt;mn&gt;
+	1&lt;/mn&gt;&lt;mn&gt;9&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;
+	2&lt;/mn&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;/mtd&gt;
+	&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;/math&gt;
 
 
-	<!--
+	&lt;!--
 	.EQ
 	left [ 
 	matrix{
@@ -1035,7 +1112,7 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 		col{ 1445.7186 above -1924.2112 }
 		} right ]
 	.EN
-	-->
+	--&gt;
 
 
 
@@ -1043,34 +1120,34 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 	請說明此轉換之幾何關係為何，即說明坐標系統之旋轉、
 	尺度及平移的量及順序為何。 （1分）
 
-	<math display="block"><mrow><mrow><mo>[</mo><mtable><mtr>
-	<mtd columnalign='center'><mrow><mi>x</mi><mo>
-	&prime;</mo></mrow></mtd></mtr><mtr>
-	<mtd columnalign='center'><mrow><mi>y</mi><mo>
-	&prime;</mo></mrow></mtd></mtr></mtable><mo>]</mo></mrow>
-	<mo>&equals;</mo><mi>S</mi><mtext>&ensp;</mtext>
-	<mrow><mo>[</mo><mtable><mtr>
-	<mtd columnalign='center'><mrow><mn>1</mn><mo>.</mo>
-	<mn>2</mn><mn>3</mn></mrow></mtd>
-	<mtd columnalign='center'><mrow><mn>0</mn><mo>.</mo>
-	<mn>8</mn><mn>5</mn><mn>8</mn><mn>5</mn></mrow>
-	</mtd></mtr><mtr><mtd columnalign='center'><mrow>
-	<mo>&minus;</mo><mn>0</mn><mo>.</mo><mn>8</mn><mn>
-	5</mn><mn>8</mn><mn>5</mn></mrow></mtd>
-	<mtd columnalign='center'><mrow><mn>1</mn><mo>.</mo>
-	<mn>2</mn><mn>3</mn></mrow></mtd></mtr></mtable><mo>
-	]</mo></mrow><mrow><mo>[</mo><mtable><mtr>
-	<mtd columnalign='center'><mi>x</mi></mtd></mtr>
-	<mtr><mtd columnalign='center'><mi>y</mi></mtd>
-	</mtr></mtable><mo>]</mo></mrow><mo>&plus;</mo>
-	<mrow><mo>[</mo><mtable><mtr>
-	<mtd columnalign='center'><mrow><mn>1</mn><mn>2</mn>
-	<mo>.</mo><mn>3</mn><mn>4</mn></mrow></mtd></mtr>
-	<mtr><mtd columnalign='center'><mrow><mn>4</mn><mn>
-	3</mn><mo>.</mo><mn>2</mn><mn>1</mn></mrow></mtd>
-	</mtr></mtable><mo>]</mo></mrow></mrow></math>
+	&lt;math display=&quot;block&quot;&gt;&lt;mrow&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;&lt;mtr&gt;
+	&lt;mtd columnalign='center'&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;
+	&amp;prime;&lt;/mo&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;
+	&lt;mtd columnalign='center'&gt;&lt;mrow&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;
+	&amp;prime;&lt;/mo&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;
+	&lt;mo&gt;&amp;equals;&lt;/mo&gt;&lt;mi&gt;S&lt;/mi&gt;&lt;mtext&gt;&amp;ensp;&lt;/mtext&gt;
+	&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;&lt;mtr&gt;
+	&lt;mtd columnalign='center'&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;
+	&lt;mn&gt;2&lt;/mn&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/mrow&gt;&lt;/mtd&gt;
+	&lt;mtd columnalign='center'&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;
+	&lt;mn&gt;8&lt;/mn&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;mn&gt;8&lt;/mn&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;/mrow&gt;
+	&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd columnalign='center'&gt;&lt;mrow&gt;
+	&lt;mo&gt;&amp;minus;&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;8&lt;/mn&gt;&lt;mn&gt;
+	5&lt;/mn&gt;&lt;mn&gt;8&lt;/mn&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;/mrow&gt;&lt;/mtd&gt;
+	&lt;mtd columnalign='center'&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;
+	&lt;mn&gt;2&lt;/mn&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;
+	]&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;&lt;mtr&gt;
+	&lt;mtd columnalign='center'&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mtd&gt;&lt;/mtr&gt;
+	&lt;mtr&gt;&lt;mtd columnalign='center'&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;/mtd&gt;
+	&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;&amp;plus;&lt;/mo&gt;
+	&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;&lt;mtr&gt;
+	&lt;mtd columnalign='center'&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;
+	&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;
+	&lt;mtr&gt;&lt;mtd columnalign='center'&gt;&lt;mrow&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;mn&gt;
+	3&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/mtd&gt;
+	&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;/math&gt;
 
-	<!--
+	&lt;!--
 	.EQ
 	left [
 	matrix{
@@ -1094,12 +1171,12 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 	} right ]
 	
 	.EN
-	-->
+	--&gt;
 
 	先旋轉並縮放，再平移。
 	
 	 - 旋轉： `θ = arctan a/b = 0.961436 (rad) `
-	 - 平移： <code> (T<sub>x</sub>, T<sub>y</sub>) = (12.34, 43.21)</code>
+	 - 平移： &lt;code&gt; (T&lt;sub&gt;x&lt;/sub&gt;, T&lt;sub&gt;y&lt;/sub&gt;) = (12.34, 43.21)&lt;/code&gt;
 
 
 
@@ -1128,8 +1205,8 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 	****
 
 	 - h : 該點離橢球面的最短距離。（且該連線會垂直橢球面。）
-	 - &phi; : 該連線延伸與赤道面的交角。
-	 - &lambda; : 該點所在經度。
+	 - &amp;phi; : 該連線延伸與赤道面的交角。
+	 - &amp;lambda; : 該點所在經度。
 
 
  4. 若地球原子採用GRS80 Ellipsoid (長半徑a=6378137 m；
@@ -1140,50 +1217,50 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 	若台北101大樓塔尖之地理坐標為φ=25°02′01″、 λ=121°33′53″ ，
 	及橢球高 h=385.5m，請計算台北101大樓之地心坐標 (X, Y, Z)。 *（1分）* 
 
-	<math display="block"><mrow><mrow><mo>[</mo><mtable><mtr>
-	<mtd columnalign='center'><mi>X</mi></mtd></mtr>
-	<mtr><mtd columnalign='center'><mi>Y</mi></mtd>
-	</mtr><mtr><mtd columnalign='center'><mi>Z</mi>
-	</mtd></mtr></mtable><mo>]</mo></mrow><mo>
-	&equals;</mo><mrow><mo>[</mo><mtable><mtr>
-	<mtd columnalign='center'><mrow><mo>(</mo><mi>N</mi>
-	<mo>&plus;</mo><mi>H</mi><mo>)</mo><mtext>
-	&ensp;</mtext><mstyle mathvariant='normal'><mtext>
-	cos</mtext></mstyle><mo>&phi;</mo><mtext>&ensp;</mtext>
-	<mstyle mathvariant='normal'><mtext>cos</mtext>
-	</mstyle><mo>&lambda;</mo></mrow></mtd></mtr><mtr>
-	<mtd columnalign='center'><mrow><mo>(</mo><mi>N</mi>
-	<mo>&plus;</mo><mi>H</mi><mo>)</mo><mtext>
-	&ensp;</mtext><mstyle mathvariant='normal'><mtext>
-	cos</mtext></mstyle><mo>&phi;</mo><mtext>&ensp;</mtext>
-	<mstyle mathvariant='normal'><mtext>sin</mtext>
-	</mstyle><mo>&lambda;</mo></mrow></mtd></mtr><mtr>
-	<mtd columnalign='center'><mrow><mo>(</mo><mi>N</mi>
-	<mo>(</mo><mn>1</mn><mo>&minus;</mo><msup><mi>e</mi>
-	<mn>2</mn></msup><mo>)</mo><mo>&plus;</mo><mi>h</mi>
-	<mo>)</mo><mtext>&ensp;</mtext>
-	<mstyle mathvariant='normal'><mtext>sin</mtext>
-	</mstyle><mo>&phi;</mo></mrow></mtd></mtr></mtable>
-	<mo>]</mo></mrow></mrow></math>
+	&lt;math display=&quot;block&quot;&gt;&lt;mrow&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;&lt;mtr&gt;
+	&lt;mtd columnalign='center'&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;/mtd&gt;&lt;/mtr&gt;
+	&lt;mtr&gt;&lt;mtd columnalign='center'&gt;&lt;mi&gt;Y&lt;/mi&gt;&lt;/mtd&gt;
+	&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd columnalign='center'&gt;&lt;mi&gt;Z&lt;/mi&gt;
+	&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;
+	&amp;equals;&lt;/mo&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable&gt;&lt;mtr&gt;
+	&lt;mtd columnalign='center'&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;N&lt;/mi&gt;
+	&lt;mo&gt;&amp;plus;&lt;/mo&gt;&lt;mi&gt;H&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;mtext&gt;
+	&amp;ensp;&lt;/mtext&gt;&lt;mstyle mathvariant='normal'&gt;&lt;mtext&gt;
+	cos&lt;/mtext&gt;&lt;/mstyle&gt;&lt;mo&gt;&amp;phi;&lt;/mo&gt;&lt;mtext&gt;&amp;ensp;&lt;/mtext&gt;
+	&lt;mstyle mathvariant='normal'&gt;&lt;mtext&gt;cos&lt;/mtext&gt;
+	&lt;/mstyle&gt;&lt;mo&gt;&amp;lambda;&lt;/mo&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;
+	&lt;mtd columnalign='center'&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;N&lt;/mi&gt;
+	&lt;mo&gt;&amp;plus;&lt;/mo&gt;&lt;mi&gt;H&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;mtext&gt;
+	&amp;ensp;&lt;/mtext&gt;&lt;mstyle mathvariant='normal'&gt;&lt;mtext&gt;
+	cos&lt;/mtext&gt;&lt;/mstyle&gt;&lt;mo&gt;&amp;phi;&lt;/mo&gt;&lt;mtext&gt;&amp;ensp;&lt;/mtext&gt;
+	&lt;mstyle mathvariant='normal'&gt;&lt;mtext&gt;sin&lt;/mtext&gt;
+	&lt;/mstyle&gt;&lt;mo&gt;&amp;lambda;&lt;/mo&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;
+	&lt;mtd columnalign='center'&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;N&lt;/mi&gt;
+	&lt;mo&gt;(&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;&amp;minus;&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;e&lt;/mi&gt;
+	&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;mo&gt;&amp;plus;&lt;/mo&gt;&lt;mi&gt;h&lt;/mi&gt;
+	&lt;mo&gt;)&lt;/mo&gt;&lt;mtext&gt;&amp;ensp;&lt;/mtext&gt;
+	&lt;mstyle mathvariant='normal'&gt;&lt;mtext&gt;sin&lt;/mtext&gt;
+	&lt;/mstyle&gt;&lt;mo&gt;&amp;phi;&lt;/mo&gt;&lt;/mrow&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;
+	&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;/math&gt;
 
 
-	<math display="block"><mrow><mi>N</mi><mo>&equals;</mo><mfrac><mi>
-	a</mi><msqrt><mrow><mn>1</mn><mo>&minus;</mo><msup>
-	<mi>e</mi><mn>2</mn></msup><msup>
-	<mstyle mathvariant='normal'><mtext>sin</mtext>
-	</mstyle><mn>2</mn></msup><mo>&phi;</mo></mrow>
-	</msqrt></mfrac></mrow></math>
+	&lt;math display=&quot;block&quot;&gt;&lt;mrow&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;mo&gt;&amp;equals;&lt;/mo&gt;&lt;mfrac&gt;&lt;mi&gt;
+	a&lt;/mi&gt;&lt;msqrt&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;&amp;minus;&lt;/mo&gt;&lt;msup&gt;
+	&lt;mi&gt;e&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;msup&gt;
+	&lt;mstyle mathvariant='normal'&gt;&lt;mtext&gt;sin&lt;/mtext&gt;
+	&lt;/mstyle&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;&amp;phi;&lt;/mo&gt;&lt;/mrow&gt;
+	&lt;/msqrt&gt;&lt;/mfrac&gt;&lt;/mrow&gt;&lt;/math&gt;
 
-	<math display="block"><mrow><mi>e</mi><mo>&equals;</mo><mfrac>
-	<msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>
-	&minus;</mo><msup><mi>b</mi><mn>2</mn></msup></mrow>
-	</msqrt><mi>a</mi></mfrac><mo>&equals;</mo><mn>
-	0</mn><mo>.</mo><mn>0818198</mn></mrow></math>
+	&lt;math display=&quot;block&quot;&gt;&lt;mrow&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mo&gt;&amp;equals;&lt;/mo&gt;&lt;mfrac&gt;
+	&lt;msqrt&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;
+	&amp;minus;&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;/mrow&gt;
+	&lt;/msqrt&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;/mfrac&gt;&lt;mo&gt;&amp;equals;&lt;/mo&gt;&lt;mn&gt;
+	0&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;0818198&lt;/mn&gt;&lt;/mrow&gt;&lt;/math&gt;
 
 		N = 6381963.1291
 		( X, Y, Z ) = ( 4927221.8563 , -3027066.7331 , 2682611.2565 )
 
-	<!--
+	&lt;!--
 	.EQ
 	left [ matrix{
 		col{ X above Y above Z }
@@ -1209,7 +1286,7 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 	N = 6381963.1291
 
 	( X, Y, Z ) = ( 4927221.8563 , -3027066.7331 , 2682611.2565 )
-	-->
+	--&gt;
 	
 	
 
@@ -1284,7 +1361,7 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 
 	 - $`R^j`: 與衛星 j 的距離，用時差求的。已知數。
 	 - V: 誤差。
-	 - &delta;t: 時間差，未知數。
+	 - &amp;delta;t: 時間差，未知數。
 	 - $`X^j, Y^j, Z^j`: 衛星的 WGS84 座標，
 		已知數。由星曆求得。
 	 - X, Y, Z: 測站的 WGS84 座標，未知數。
@@ -1330,7 +1407,7 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 	} right ]
 	.EN
 
-	$`&sigma; = &plusmn; UERE &sdot; PDOP = 21.7`
+	$`&amp;sigma; = &amp;plusmn; UERE &amp;sdot; PDOP = 21.7`
 
 
 4. 何謂總和(Total)的使用者等效距離誤差
@@ -1349,7 +1426,7 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 	  衛星的顆數越多，天頂角越小則 PDOP 理應越小。
 
 	定位精度
-	: $`&sigma; = &plusmn; UERE &sdot; PDOP`
+	: $`&amp;sigma; = &amp;plusmn; UERE &amp;sdot; PDOP`
 
 
 5.  以地球大氣層的影響而言，會使得GPS衛星訊號化算得之距離 
@@ -1443,13 +1520,13 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 	可以消除時表差，大部份的誤差。
 	（包括軌道誤差、電離層與對流層的延遲。）
 
-	 - &Delta;：第一次差分。
-	 - &nabla;：為梯度，第二次差分。
+	 - &amp;Delta;：第一次差分。
+	 - &amp;nabla;：為梯度，第二次差分。
 	 - j, k：衛星 j, k 。
 	 - A, B：測站 A, B 。
-	 - &rho;：基線。（向量。）
+	 - &amp;rho;：基線。（向量。）
 	 - N：整數未定值。
-	 - &Phi;：相位差。
+	 - &amp;Phi;：相位差。
 
 	六顆位星可以獲得 $`n - 1 = 5` 個二次差分觀測量。
 
@@ -1464,11 +1541,11 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 
 	GPS 靜態測量會在各點收集 20 分鐘以上的衛星數據；
 	以二次差分求解。精度可以到 **公分** 等級。
-	<!--余必裕表示他沒有 Photoshop 了。-->
-	<!--我宣布圖戰開打-->
+	&lt;!--余必裕表示他沒有 Photoshop 了。--&gt;
+	&lt;!--我宣布圖戰開打--&gt;
 
 	基線為兩點之間的向量。（ XYZ 大地座標系統。）
-	若要求橢球高差或平面距離，須先轉換成 &Phi;&Lambda;h 。
+	若要求橢球高差或平面距離，須先轉換成 &amp;Phi;&amp;Lambda;h 。
 	 $`h_1 - h_2` 即為橢球高差。
 
 
@@ -1485,7 +1562,7 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 
 	### session 1 ###
 	
-	 - 基線： $`n (n-1) &divide; 2 = 10` 。
+	 - 基線： $`n (n-1) &amp;divide; 2 = 10` 。
 	 - 獨立基線： $`n - 1 = 4` 。
 	 - 獨立基線組合：（可能的組合之一。） AG, BG, CG, DG 。
 
@@ -1510,38 +1587,38 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 		（式中除了改正數及未知參數外皆須帶入數值）。
 
 
-	<table>
-	<tr><th>Baseline	<th>&Delta;X (m)	<th>&Delta;Y (m)	<th>&Delta;Z (m)
-	<tr><th>AC	<td>-6567.231	<td>-5686.293	<td>-6322.392
-	<tr><th>CD	<td>10527.785	<td>-994.928	<td>-956.655
-	<tr><th>DA	<td>-3960.522	<td>6681.247	<td>7279.015
-	<tr><th>BC	<td>-3644.223	<td>-1601.216	<td>2199.255
-	<tr><th>BD	<td>6883.550	<td>-2596.161	<td>1242.576
-	</table>
+	&lt;table&gt;
+	&lt;tr&gt;&lt;th&gt;Baseline	&lt;th&gt;&amp;Delta;X (m)	&lt;th&gt;&amp;Delta;Y (m)	&lt;th&gt;&amp;Delta;Z (m)
+	&lt;tr&gt;&lt;th&gt;AC	&lt;td&gt;-6567.231	&lt;td&gt;-5686.293	&lt;td&gt;-6322.392
+	&lt;tr&gt;&lt;th&gt;CD	&lt;td&gt;10527.785	&lt;td&gt;-994.928	&lt;td&gt;-956.655
+	&lt;tr&gt;&lt;th&gt;DA	&lt;td&gt;-3960.522	&lt;td&gt;6681.247	&lt;td&gt;7279.015
+	&lt;tr&gt;&lt;th&gt;BC	&lt;td&gt;-3644.223	&lt;td&gt;-1601.216	&lt;td&gt;2199.255
+	&lt;tr&gt;&lt;th&gt;BD	&lt;td&gt;6883.550	&lt;td&gt;-2596.161	&lt;td&gt;1242.576
+	&lt;/table&gt;
 
-	<table>
-	<tr><th>閉合圈	<th>dX	<th>dY	<th>dZ	<th>dL	<th>dr
-	<tr><th>ACD	<td>0.032	<td>0.026	<td>-0.032	<td>0.052	<td>1.625ppm
-	<tr><th>BCD	<td>-0.012	<td>-0.017	<td>-0.024	<td>0.032	<td>1.404ppm
-	<tr><th>ACBD	<td>0.020	<td>0.009	<td>-0.056	<td>0.060	<td>1.801ppm
-	</table>
+	&lt;table&gt;
+	&lt;tr&gt;&lt;th&gt;閉合圈	&lt;th&gt;dX	&lt;th&gt;dY	&lt;th&gt;dZ	&lt;th&gt;dL	&lt;th&gt;dr
+	&lt;tr&gt;&lt;th&gt;ACD	&lt;td&gt;0.032	&lt;td&gt;0.026	&lt;td&gt;-0.032	&lt;td&gt;0.052	&lt;td&gt;1.625ppm
+	&lt;tr&gt;&lt;th&gt;BCD	&lt;td&gt;-0.012	&lt;td&gt;-0.017	&lt;td&gt;-0.024	&lt;td&gt;0.032	&lt;td&gt;1.404ppm
+	&lt;tr&gt;&lt;th&gt;ACBD	&lt;td&gt;0.020	&lt;td&gt;0.009	&lt;td&gt;-0.056	&lt;td&gt;0.060	&lt;td&gt;1.801ppm
+	&lt;/table&gt;
 
 
-	$`&Delta;X_AC + V = &Delta;X_C - 8086.032   
-	&Delta;Y_AC + V = &Delta;Y_C + 4642712.847   
-	&Delta;Z_AC + V = &Delta;Z_C - 4360439.083   
-	&Delta;X_CD + V = &Delta;X_D - &Delta;X_C   
-	&Delta;Y_CD + V = &Delta;Y_D - &Delta;X_C   
-	&Delta;Z_CD + V = &Delta;Z_D - &Delta;Z_C   
-	&Delta;X_DA + V = 8086.032 - &Delta;X_D   
-	&Delta;Y_DA + V = 8086.032 - &Delta;X_D   
-	&Delta;Z_DA + V = 4360439.083 - &Delta;Z_D   
-	&Delta;X_BC + V = &Delta;X_C - 5163.031   
-	&Delta;Y_BC + V = &Delta;X_C - 5163.031   
-	&Delta;Z_BC + V = &Delta;Z_C - 4351917.483   
-	&Delta;X_BD + V = &Delta;X_D - 5163.031   
-	&Delta;Y_BD + V = &Delta;Y_D + 4646797.947   
-	&Delta;X_BD + V = &Delta;X_D - 5163.031`   
+	$`&amp;Delta;X_AC + V = &amp;Delta;X_C - 8086.032   
+	&amp;Delta;Y_AC + V = &amp;Delta;Y_C + 4642712.847   
+	&amp;Delta;Z_AC + V = &amp;Delta;Z_C - 4360439.083   
+	&amp;Delta;X_CD + V = &amp;Delta;X_D - &amp;Delta;X_C   
+	&amp;Delta;Y_CD + V = &amp;Delta;Y_D - &amp;Delta;X_C   
+	&amp;Delta;Z_CD + V = &amp;Delta;Z_D - &amp;Delta;Z_C   
+	&amp;Delta;X_DA + V = 8086.032 - &amp;Delta;X_D   
+	&amp;Delta;Y_DA + V = 8086.032 - &amp;Delta;X_D   
+	&amp;Delta;Z_DA + V = 4360439.083 - &amp;Delta;Z_D   
+	&amp;Delta;X_BC + V = &amp;Delta;X_C - 5163.031   
+	&amp;Delta;Y_BC + V = &amp;Delta;X_C - 5163.031   
+	&amp;Delta;Z_BC + V = &amp;Delta;Z_C - 4351917.483   
+	&amp;Delta;X_BD + V = &amp;Delta;X_D - 5163.031   
+	&amp;Delta;Y_BD + V = &amp;Delta;Y_D + 4646797.947   
+	&amp;Delta;X_BD + V = &amp;Delta;X_D - 5163.031`   
 
 
 
@@ -1559,17 +1636,17 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
     **比例尺** 為地圖上的尺寸與現實中的尺寸的比例。
 
     比例尺為 1/1000 為在圖紙上 10cm 實際距離 100m 。
-    $`10 &times; 10 cm^2 = (10cm&times;1000)^2 = 10000 m^2`
+    $`10 &amp;times; 10 cm^2 = (10cm&amp;times;1000)^2 = 10000 m^2`
     1/5000 為在圖紙上 10cm 實際距離 500m 。
-    $`10 &times; 10 cm^2 = (10cm&times;5000)^2 = 250000 m^2`
+    $`10 &amp;times; 10 cm^2 = (10cm&amp;times;5000)^2 = 250000 m^2`
 
     設定比例尺等同設定了所需的觀測精度。
     比例尺越大，需要觀測得越詳細。
     比例尺越小，則需要觀測的範圍越大。
 
 
- 2. <span id="14.2">我國所發行之國家基本地形圖
-    (National Basic Topographic Maps)</span>
+ 2. &lt;span id=&quot;14.2&quot;&gt;我國所發行之國家基本地形圖
+    (National Basic Topographic Maps)&lt;/span&gt;
     中有哪些比例尺的規格？其中最小及最大的比例尺為何？
     這幾種比例尺規格的圖幅分幅方式為何？
     此種圖幅經台灣2°TM投影後之圖幅形狀為何？
@@ -1578,11 +1655,11 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 
     最小為 1/100000 ，其下再分為 1/50000 、
     1/25000 、 1/5000 。分幅方式為以經緯度劃分。
-    經 2&deg;TM 投影後圖幅形狀為下寬下窄的梯形。
+    經 2&amp;deg;TM 投影後圖幅形狀為下寬下窄的梯形。
 
     9723-III-063 
     十萬分之一中的 9753 號。 **97** 為從中國最西邊 
-    0.5&deg; 數來第 97 號， **53** 號為從中國最南邊數來。
+    0.5&amp;deg; 數來第 97 號， **53** 號為從中國最南邊數來。
     **III** 為 1/100000 再劃為 4 塊 1/50000 ，其中的 *第三象限* 。
     **063** 為 1/50000 再劃為 100 塊，從左上往右往下數第 63 塊。
 
@@ -1641,41 +1718,82 @@ B點坐標為(5163.031, -4646797.947, 4351917.483)，
 	請問若要使前視水準尺底端為放樣高程，
 	則前視水準尺之讀數應為若干? (1分)
 
-2. 設有三個點位A、B及C，三點之間皆可通視，其三維坐標如下表：(1分)
-1.
-2.
+	$`Hf = Hb + &Delta;hbf`  
+	$`Hb = 10.000`  
+	$`&Delta;hbf = 1.876 - f = Hf - Hb = 10.000 - 9.123 = 0.877`  
+	$`f = 1.876 - 0.877 = 1.999`
 
-點名
-A
-B
-C
-3.
 
-若C點樁位遺失，擬由A及B樁位點再行測設(放樣)C點樁位，請說明測
-設的方法、步驟、應使用的儀器、及應計算的數據
-同樣，若擬由A或B樁位點重新測設(放樣)原C點高程位置，請說明測設
-的方法、步驟、應使用的儀器、及應計算的數據
-E (m)
-175001.24
-175080.62
-174030.86
+ 2. 設有三個點位A、B及C，三點之間皆可通視，其三維坐標如下表：(1分)
 
-N (m)
-2540000.91
-2540012.74
-2540090.18
+	<table>
+	<tr><th>點名 <th>E <th>N <th>H
+	<tr><th>A <td>175001.24m <td>2540000.91m <td>90.234m
+	<tr><th>B <td>175080.62m <td>2540012.74m <td>95.351m
+	<tr><th>C <td>174030.86m <td>2540090.18m <td>92.892m
+	</table>
 
-H (m)
-90.234
-95.351
-92.892
+	 1. 若C點樁位遺失，擬由A及B樁位點再行測設(放樣)C點樁位，
+		 請說明測設的方法、步驟、應使用的儀器、
+		 及應計算的數據。
 
-承上題，若點A及B為直線隧道兩端之樁位，兩點之間無法通視，假設隧
-道⼯程已從A點挖掘超過隧道中點，如今擬進行隧道中間點樁位之平面
-位置及高程放樣，請說明應如何進行此放樣⼯作，並計算出放樣⼯作所
-需要的數據。(1分)
+		 0. 使用 **全站儀** 、 **稜鏡** 至少一個。
 
-第十六章 地籍測量
+		 1. 計算 $`&ang;_ABC` ：
+
+			$`&phi;_BX = arctan[ (X_E - B_E) / (X_N - B_N) ]`  
+
+			$`&ang;_ABC = &phi;BC - &phi;BA`  
+
+
+		 2. 計算 BC 距離：
+
+			$`L_BC^2 = (B_N - X_N)^2 + (B_E - X_E)^2`  
+
+		 3. 在 B 點架全站儀，以 A 點為後視。
+
+		 4. 順時針轉 $`&ang;_ABC` ，並鎖死角度。
+
+		 5. 使用全站儀測出此方向水平距為 $`L_BC` 的點。
+
+
+	 2. 同樣，若擬由A或B樁位點重新測設(放樣)原C點高程位置，
+		請說明測設的方法、步驟、應使用的儀器、
+		及應計算的數據。
+
+		 0. 需要 **水準儀** 、 **水準尺** 至少一隻。
+
+		 2. 架設水準儀於 B 點。
+
+		 1. 計算 $`&Delta;h_AC = H_C - H_A` 。
+
+		 3. 置水準尺於 A ，若觀測值為 X 。
+
+		 4. 移水準尺至 C ，調整水準尺至觀測值為 
+			$`X+&Delta;h_AC` ，即為高程位置。
+
+
+
+ 3. 承上題，若點A及B為直線隧道兩端之樁位，兩點之間無法通視，
+	假設隧道⼯程已從A點挖掘超過隧道中點，
+	如今擬進行隧道中間點樁位之平面位置及高程放樣，
+	請說明應如何進行此放樣⼯作，
+	並計算出放樣⼯作所需要的數據。(1分)
+
+	 0. 需要全站儀、稜鏡， GPS 至少一台或 A 、 B 點座標。
+
+	 1. 取得 A 、 B 點座標，也可以 GPS 計算。
+
+	 2. 計算 AB 中點 C 座標。
+
+	 3. 計算 AC 方位角 $`&phi;_AC` 。
+
+	 4. 計算 AC 距離。
+
+	 5. 以全站儀從 A 點放樣出 C 點。
+
+
+第十六章 地籍測量
 
 G
 F
