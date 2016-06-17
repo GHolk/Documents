@@ -1,0 +1,23 @@
+
+閱讀與設計思考:
+建築系, 閱讀, 討論, 習作
+http://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0104&sem=2&co_no=E720500&class_code=
+
+使用者介面與開發:
+html+css+jqury, git, regex
+http://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0104&sem=2&co_no=E236100&class_code=
+
+邏輯設計:
+邏輯迴路, AND OR NOT XOR, 工科系
+http://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0104&sem=2&co_no=E920400&class_code=
+
+設計史:
+http://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0104&sem=2&co_no=F324400&class_code=
+
+商業排版設計:
+inDesign, electronic book, 
+http://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0104&sem=2&co_no=F333400&class_code=
+
+展示設計:
+看不懂……。
+http://class-qry.acad.ncku.edu.tw/syllabus/online_display.php?syear=0104&sem=2&co_no=F346500&class_code=
