@@ -1,0 +1,45 @@
+
+q { color: gray; }
+q:before:lang(zh) { content: "\300E" ; }
+q:after:lang(zh) { content: "\300F" ; }
+
+blockquote {
+	padding: 1em 2em;
+	border: inset 0.2ex;
+	background-color: #EEE ;
+}
+
+blockquote:before {
+	content: "\201C" ;
+	color: #48C ;
+	font-size: 3em;
+	display: block;
+	position: relative;
+	right: 2ex;
+	bottom: 1ex;
+	height: 0.5ex;
+}
+
+/* following is CSS for Terminal kind of text.  *****/
+
+.term { 
+	color: white;
+	background-color: black;
+	font-family: monospace; 
+}
+
+.bold { font-weight: 700 ; }
+
+.red { color: #A00; }
+.bgred { background-color: #B00; }
+.red.bold , .red .bold { color: #F66 ; }
+
+.black { color: black; }
+.bgblack { background-color: black; }
+.black.bold , .black .bold { color: #555; }
+
+.white { color: #AAA; }
+.bgwhite { background-color: white; }
+.white.bold , .white .bold { color: white; }
+
+
