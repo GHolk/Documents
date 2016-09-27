@@ -86,9 +86,7 @@ pre { margin: 1em; }
 
 blockquote, q { color: #666; }
 
-body {
-	font-family: serif Kai "標楷體" "宋體" "明體"; 
-}
+/* body { font-family: serif Kai "標楷體" "宋體" "明體"; } */
 
 /*	make header beheave like document header, as title.
 	and the sub title should. 	*/
@@ -104,7 +102,7 @@ code.term , .term code {
 	overflow: auto;
 	background: #333333;
 	color: #C0C0C0;
-	font-family: Monospace;
+	font-family: "Monospace" ;
 	padding: 0 0.3ex 0 0.3ex;
 	margin: 0 0.2ex 0 0.2ex;
 	border: 1px solid ; 
