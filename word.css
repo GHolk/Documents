@@ -21,10 +21,6 @@
 	/* h1 { page-break-before: always ; } */
 	h2, h3, h4, h5 { page-break-after: avoid ; }
 	header { page-break-after: always; }
-	ol { 
-	margin-left: 1ex; 
-	padding: 0;
-	}
 	main { margin: 0; }
 
 	pre code { page-break-inside: avoid ; }

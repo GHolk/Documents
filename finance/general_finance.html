@@ -26,14 +26,52 @@ body { width: 21cm; }
 
 @media print {
     body { width: auto; }
+    h2, h3, h4 { page-break-after: avoid; }
+    #structure { page-break-after: always; }
+    blockquote {
+        page-break-before: avoid;
+        page-break-after: avoid;
+    }
+
+    header { page-break-after: avoid; }
+
+    hr { display: none; }
 }
 
-#sturcture li {
+#structure li {
     margin: 1em;
+    position: relative;
 }
+
+#structure a {
+    background-color: white;
+}
+
+#structure a:after {
+    display: inline-block;
+    width: 1em;
+    content: ':';
+    color: white;
+}
+
+#structure li u:before {
+    display: inline-block;
+    border-bottom: dashed 3px black;
+    width: 20em;
+    content: '_';
+    color: white;
+    position: relative;
+    bottom: 0.6em;
+    z-index: -1;
+    margin-right: 1em;
+}
+
 
 #structure u {
-    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 10em;
 }
 </style>
 </head>
@@ -51,7 +89,7 @@ body { width: 21cm; }
 
 <h2> 大綱 </h2>
 
-<ol id="structure">
+<ol class="cjk" id="structure">
 <li><p><a href="#preface">前言</a>  <u>王鼎鈞</u>  </p></li>
 <li><p><a href="#stock">股票</a> </p></li>
 <li><p><a href="#debenture">債券</a> </p></li>
@@ -529,7 +567,7 @@ body { width: 21cm; }
 
 </pre>
 
-<script src="../meeta.js" defer></script>
+<!--script src="../meeta.js" defer></script-->
 
 </body>
 </html>
