@@ -191,7 +191,7 @@ var footer = document.createElement('footer');
 
 footer.appendChild(dl);
 footer.setAttribute('lang', 'en');
-
+footer.id = "meeta-js";
 
 (function(links, metas, dl) {
 

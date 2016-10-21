@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html lang="zh-TW" prefix="og: http://ogp.me/ns#">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="author" property="og:article:author" content="c34031328">
+<meta name="copyright" content="Common Creative">
+<meta name="generator" content="vim, markdown">
+<!-- 以上一般不用改，以下才要改。 -->
+
+<!-- 後設資料 -->
+<meta name="date" property="og:article:public_time" content="2016-10-21">
+<meta name="keywords" property="og:article:tag" content="map, qgis, arcgis, gis, software, exercise">
+<meta property="og:description" name="description" content="How I create maps with QGIS and ArcGIS. ">
+
+<!-- 和網頁位置有關 -->
+<meta property="og:url" content="http://gholk.github.io/Documents/gis/gis_software_exercise.html">
+<link rel="canonical" href="http://gholk.github.io/Documents/gis/gis_software_exercise.html">
+<link rel="icon" type="image/png" href="../icon.png">
+<meta property="og:image" content="../icon.png">
+<link rel="stylesheet" type="text/css" href="https://gholk.github.io/Documents/word.css">
+
+<title> GIS 軟體地圖製做練習 </title>
+</head>
+<body>
+
+<main>
+<h1> 使用 QGIS 與 ArcGIS 製做地圖 </h1>
+
+<p>雖然老師教我們用 ArcGIS ，但我懶得去系上的電腦教室，
+我的電腦又只有裝 QGIS ，所以就先用 QGIS 做做看。
+QGIS 和 ArcGIS 都吃 shape 檔，所以格式沒問題；
+結果只差在 QGIS 的專案檔格式和 ArcGIS 的不一樣。 </p>
+
+<h2> 地圖製作 </h2>
+
+<dl class="inline">
+<dt> 目標</dt> <dd>做出台南市東區的小學地圖。 </dd>
+<dt> 設計理念</dt> <dd>提供儘可能詳細的資訊，
+我希望可以把各資料都丟上地圖，同時保持版面整潔不雜亂。 </dd>
+<dt> 資料</dt> <dd>台南市東區面積、台南市東區各里面積、
+台南市東區道路線段、台南市東區小學點位。 </dd>
+</dl>
+
+
+<ol>
+<li><p>根據一般人的習慣，地圖上的道路是有寬度的。
+所以把路的寬度調粗。 </p></li>
+<li><p>一般地圖是綠色的，所以把整個東區弄成綠色。
+而路可能是灰色或白色。 </p></li>
+<li><p>為了區別各里，為里加上細黑色邊界。
+不和道路混淆，固把道路調成白色。 </p></li>
+<li><p>如果里的圖層疊到道路上，面積的部份會把路蓋住，
+但調透明度邊界又會變透明看不到。 </p>
+
+<p>最後用多邊形轉線段的功能，
+把里的圖層轉成線段，再疊到最上層。 </p>
+
+<p>後來想到可以把里的面積顏色選成透明色，
+而不直接調整個圖層的透明度，邊界就不會變透明。 </p></li>
+<li><p>小學的圖片本來想用小學女生的那種帽子，
+但找不到手繪圖片，都只有照片。
+最後用一個女學生漫畫截下來的。 </p>
+
+<img src="d466977.jpg" alt="girl_student_comic" /></li>
+<li><p>放圖例時因為路是白色的，如果背景也是白色的會看不到，
+所以圖例的背景隨便選了個順眼的顏色。 </p></li>
+<li><p>其它就沒什麼，把字調到合適的大小，
+比例尺和圖例、標題位置喬一喬就 OK 。 </p></li>
+<li><p>發現可以輸出成 PDF ，而且檔案明顯小 PNG 很多！
+大概是 PDF 內可以存向量式資料，而 PNG 只能存點陣式。
+作業給的 shape 都是向量式，所以存成 PDF 比較小。 </p></li>
+</ol>
+
+<object data="js_face_3.pdf" type="application/pdf">
+<a href="js_face_3.pdf">台南市東區小學分布圖</a>
+    <embed src="js_face_3.pdf" type="application/pdf" />
+</object>
+
+<h2> 檔案說明 </h2>
+
+<dl lang="en" class="inline">
+<dt> <a href="js_face_3.pdf">js_face_3.pdf</a></dt> <dd>做好的地圖。 </dd>
+<dt> <a href="http://static.ettoday.net/images/466/d466977.jpg">http://static.ettoday.net/images/466/d466977.jpg</a></dt> <dd>小學圖標的圖片來源。 </dd>
+<dt> <a href="face.png">face.png</a></dt> <dd>裁切後的小學圖標。 </dd>
+<dt> <a href="face_project.mxd">face_project.mxd</a></dt> <dd>ArcGIS 的專案檔。 </dd>
+<dt> <a href="js_face.qgs">js_face.qgs</a></dt> <dd>QGIS 的專案檔。 </dd>
+<dt> <code>*.shp</code></dt> <dd>包含 <code>*.dbf</code> 、 <code>*.prj</code> 、 <code>*.qpj</code> 、
+<code>*.shp</code> 、 <code>*.shx</code> ，各圖層檔案。 </dd>
+<dt> <a href="js_face.7z">js_face.7z</a></dt> <dd>以上所有檔案打包的 7z 格式壓縮檔。` </dd>
+</dl>
+</main>
+
+<hr />
+
+<pre class="text markdown">
+
+# 使用 QGIS 與 ArcGIS 製做地圖 #
+
+雖然老師教我們用 ArcGIS ，但我懶得去系上的電腦教室，
+我的電腦又只有裝 QGIS ，所以就先用 QGIS 做做看。
+QGIS 和 ArcGIS 都吃 shape 檔，所以格式沒問題；
+結果只差在 QGIS 的專案檔格式和 ArcGIS 的不一樣。
+
+
+## 地圖製作 ##
+
+  - 目標：做出台南市東區的小學地圖。
+  - 設計理念：提供儘可能詳細的資訊，
+    我希望可以把各資料都丟上地圖，同時保持版面整潔不雜亂。
+  - 資料：台南市東區面積、台南市東區各里面積、
+    台南市東區道路線段、台南市東區小學點位。
+
+****
+
+ 1. 根據一般人的習慣，地圖上的道路是有寬度的。
+    所以把路的寬度調粗。
+
+ 2. 一般地圖是綠色的，所以把整個東區弄成綠色。
+    而路可能是灰色或白色。
+
+ 3. 為了區別各里，為里加上細黑色邊界。
+    不和道路混淆，固把道路調成白色。
+
+
+ 4. 如果里的圖層疊到道路上，面積的部份會把路蓋住，
+    但調透明度邊界又會變透明看不到。
+
+    最後用多邊形轉線段的功能，
+    把里的圖層轉成線段，再疊到最上層。
+
+    後來想到可以把里的面積顏色選成透明色，
+    而不直接調整個圖層的透明度，邊界就不會變透明。
+
+
+ 5. 小學的圖片本來想用小學女生的那種帽子，
+    但找不到手繪圖片，都只有照片。
+    最後用一個女學生漫畫截下來的。
+
+    ![girl_student_comic](d466977.jpg)
+
+
+ 6. 放圖例時因為路是白色的，如果背景也是白色的會看不到，
+    所以圖例的背景隨便選了個順眼的顏色。
+
+ 7. 其它就沒什麼，把字調到合適的大小，
+    比例尺和圖例、標題位置喬一喬就 OK 。
+
+ 8. 發現可以輸出成 PDF ，而且檔案明顯小 PNG 很多！
+    大概是 PDF 內可以存向量式資料，而 PNG 只能存點陣式。
+    作業給的 shape 都是向量式，所以存成 PDF 比較小。
+
+&lt;object data=&quot;js_face_3.pdf&quot; type=&quot;application/pdf&quot;&gt;
+&lt;a href=&quot;js_face_3.pdf&quot;&gt;台南市東區小學分布圖&lt;/a&gt;
+&lt;embed src=&quot;js_face_3.pdf&quot; type=&quot;application/pdf&quot; /&gt;
+&lt;/object&gt;
+
+
+## 檔案說明 ##
+
+  - &lt;js_face_3.pdf&gt;: 做好的地圖。
+  - &lt;http://static.ettoday.net/images/466/d466977.jpg&gt;: 小學圖標的圖片來源。
+  - &lt;face.png&gt;: 裁切後的小學圖標。
+  - &lt;face_project.mxd&gt;: ArcGIS 的專案檔。
+  - &lt;js_face.qgs&gt;: QGIS 的專案檔。
+  - `*.shp`: 包含 `*.dbf` 、 `*.prj` 、 `*.qpj` 、
+    `*.shp` 、 `*.shx` ，各圖層檔案。
+  - &lt;js_face.7z&gt;: 以上所有檔案打包的 7z 格式壓縮檔。`
+
+</pre>
+
+<script src="https://gholk.github.io/Documents/meeta.js" defer></script>
+
+</body>
+</html>
+
