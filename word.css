@@ -25,6 +25,7 @@
 
     pre code { page-break-inside: avoid ; }
 
+    hr.structure { display: none; }
 
 }
 
@@ -197,7 +198,14 @@ figure img , figure pre , figure iframe {
     display: block; 
     margin: auto; 
     box-shadow: 0 0 0.3ex black ;
-    }
+}
+
+iframe {
+    display: block;
+    margin: auto;
+    width: 500pt;
+    height: 300pt;
+}
 
 figcaption { /*    remove box shadow. */
     color: #333;
