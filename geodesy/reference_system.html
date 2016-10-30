@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html lang="zh-TW" prefix="og: http://ogp.me/ns#">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="author" property="og:article:author" content="c34031328">
+<meta name="copyright" content="Common Creative">
+<meta name="generator" content="vim, markdown">
+<!-- 以上一般不用改，以下才要改。 -->
+
+<!-- 後設資料 -->
+<meta name="date" property="og:article:public_time" content="2016-10-30">
+<meta name="keywords" property="og:article:tag" content="geodesy, homework, time, reference, frame, coordinate">
+<meta property="og:description" name="description" content="time and space reference of geodesy. ">
+
+<!-- 和網頁位置有關 -->
+<meta property="og:url" content="https://gholk.github.io/Documents/geodesy/reference_system.html">
+<link rel="canonical" href="https://gholk.github.io/Documents/geodesy/reference_system.html">
+<link rel="icon" type="image/png" href="../icon.png">
+<meta property="og:image" content="../icon.png">
+<link rel="stylesheet" type="text/css" href="../word.css">
+
+<title>  </title>
+</head>
+<body>
+
+<main>
+<h1> 大地測量 作業一 </h1>
+
+<p><em>Due day: 11/09/2016</em>  </p>
+
+<ol>
+<li><p><q>請詳細說明Geodesy的定義，並說明Geodesy要解決的問題。</q> </p>
+
+<p><strong>Geodesy</strong> 為 <em>大地測量</em>  ，
+是一門觀測地球外部甚至內部的學問。
+包括地表的起伏、外部或內部的重力場、
+甚至觀測其它天體上的 <em>大地</em>  。 </p>
+
+<p>大地測量目前最主要的問題是 <em>重力場</em>  ，
+更精確的說是 <em>找 goeid</em>  ， <em>大地水準面</em>  的研究。
+而和 goeid 的研究也會干係到對地球內部重力場的研究。 </p></li>
+<li><p><q>請詳細敘述如何以Arc-measurement method求得地球半徑。</q> </p>
+
+<p><strong>Arc-measurement</strong> 是古希臘人  <u>Eratosthenes</u>  ，
+在 240 BC 用來測量地球半徑的方法，
+原理是假設地球為圓，太陽為平行光，用弧度和弧長求得半徑。 </p>
+
+<ol>
+<li><p>假設太陽光為平行光，也就是在地表任意處，
+接受到的光都是平行的。 </p></li>
+<li><p>假設地球為球，所以表面不同點對平行太陽光會有不同的入射角度。 </p></li>
+<li><p>在夏至前幾天正午，  <u>江曜新</u>  觀測到
+台南成功大學測量系館外的基椿沒有影子，
+固此時此地太陽為直射。 </p></li>
+<li><p>同一時間，在台南北方 100km 處的一座山丘上，
+ <u>林維宣</u>  觀測到另一根基椿高 2m 、影子長 31.252mm 。
+計算得此時此地太陽入射角為 53&prime;42.87&Prime; 。 </p></li>
+<li><p><u>李維哲</u>  知道弧長、角度與半徑有
+2 R &pi; &times; &theta; &divide; 360 = S 
+的關係，計算出若弧長為 100km ，角度 53&prime;42.87&Prime;
+= 0.89524&deg; ，半徑則為 6400031m 。 </p></li>
+</ol></li>
+<li><p><q>請分別定義大地水準面(Geoid)和平均海水面(mean sea surface)，
+並詳細說明兩者之差異。</q> </p></li>
+<li><p><q>比較UT、UTC、TAI、ST等時間系統之異同。</q> </p></li>
+<li><p><q>請分別定義說明CIS和CTS之異同和設置目的，
+並詳細說明兩者間之轉換步驟和意義。</q> </p></li>
+<li><p><q>請詳細說明Figure of the Earth。</q> </p>
+
+<p>大地科學歷經三個階段： </p>
+
+<ol>
+<li> 用平面代表地球。 </li>
+<li> 用一顆球來代表地球。 </li>
+<li> 用一個楕球來代表地球。 </li>
+<li> 用大地水準面來代表地球。 </li>
+</ol>
+
+<p>我們知道球不能代表地球，
+就算是大地水準面也不是真的地球。
+但絕大部份的測量，都是用 <strong>重力</strong> 做為參考，
+而重力就是垂直重力場。
+所以在使用上 goeid 是沒有問題的。 </p></li>
+<li><p><q>加分題: 請利用DE405星曆計算出1990/1-2016/1月亮
+相對於地球的位置和速度，並畫圖。</q> </p>
+
+<p><pre><code>
+[pos. vel] = planetEphemeris(juliandate(1990,12,1),'Earth','Moon')
+</code></pre></li>
+<li><p><q>加分題: 請利用DE421星曆計算出1990/1-2016/1
+地球章動角度和角速度，並畫圖。</q> </p> </p>
+
+<p><pre><code>
+[angles,rates] = earthNutation([2451544.5 0.5],'421')
+</code></pre></li>
+</ol> </p>
+
+</main>
+
+<hr />
+
+<pre class="markdown text">
+# 大地測量 作業一
+
+*Due day: 11/09/2016*
+
+ 1. &quot;&quot;請詳細說明Geodesy的定義，並說明Geodesy要解決的問題。&quot;&quot;
+
+    **Geodesy** 為 *大地測量* ，
+    是一門觀測地球外部甚至內部的學問。
+    包括地表的起伏、外部或內部的重力場、
+    甚至觀測其它天體上的 *大地* 。
+
+    大地測量目前最主要的問題是 *重力場* ，
+    更精確的說是 *找 goeid* ， *大地水準面* 的研究。
+    而和 goeid 的研究也會干係到對地球內部重力場的研究。
+
+
+ 2. &quot;&quot;請詳細敘述如何以Arc-measurement method求得地球半徑。&quot;&quot;
+
+    **Arc-measurement** 是古希臘人 _Eratosthenes_ ，
+    在 240 BC 用來測量地球半徑的方法，
+    原理是假設地球為圓，太陽為平行光，用弧度和弧長求得半徑。
+
+     1. 假設太陽光為平行光，也就是在地表任意處，
+        接受到的光都是平行的。
+
+     2. 假設地球為球，所以表面不同點對平行太陽光會有不同的入射角度。
+
+     3. 在夏至前幾天正午， _江曜新_ 觀測到
+        台南成功大學測量系館外的基椿沒有影子，
+        固此時此地太陽為直射。
+
+     4. 同一時間，在台南北方 100km 處的一座山丘上，
+        _林維宣_ 觀測到另一根基椿高 2m 、影子長 31.252mm 。
+        計算得此時此地太陽入射角為 53&amp;prime;42.87&amp;Prime; 。
+
+     5. _李維哲_ 知道弧長、角度與半徑有
+        2 R &amp;pi; &amp;times; &amp;theta; &amp;divide; 360 = S 
+        的關係，計算出若弧長為 100km ，角度 53&amp;prime;42.87&amp;Prime;
+        = 0.89524&amp;deg; ，半徑則為 6400031m 。
+
+
+ 3. &quot;&quot;請分別定義大地水準面(Geoid)和平均海水面(mean sea surface)，
+    並詳細說明兩者之差異。&quot;&quot;
+
+ 4. &quot;&quot;比較UT、UTC、TAI、ST等時間系統之異同。&quot;&quot;
+
+ 5. &quot;&quot;請分別定義說明CIS和CTS之異同和設置目的，
+    並詳細說明兩者間之轉換步驟和意義。&quot;&quot;
+
+ 6. &quot;&quot;請詳細說明Figure of the Earth。&quot;&quot;
+
+    大地科學歷經三個階段：
+
+     0. 用平面代表地球。
+     1. 用一顆球來代表地球。
+     2. 用一個楕球來代表地球。
+     3. 用大地水準面來代表地球。
+
+    我們知道球不能代表地球，
+    就算是大地水準面也不是真的地球。
+    但絕大部份的測量，都是用 **重力** 做為參考，
+    而重力就是垂直重力場。
+    所以在使用上 goeid 是沒有問題的。
+
+
+ 7. &quot;&quot;加分題: 請利用DE405星曆計算出1990/1-2016/1月亮
+    相對於地球的位置和速度，並畫圖。&quot;&quot;
+
+        [pos. vel] = planetEphemeris(juliandate(1990,12,1),'Earth','Moon')
+
+
+ 8. &quot;&quot;加分題: 請利用DE421星曆計算出1990/1-2016/1
+    地球章動角度和角速度，並畫圖。&quot;&quot;
+    
+        [angles,rates] = earthNutation([2451544.5 0.5],'421')
+
+</pre>
+
+<script src="../meeta.js" defer></script>
+
+</body>
+</html>
+

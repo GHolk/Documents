@@ -1,0 +1,11 @@
+Due day: 11/09/2016
+大地測量 作業一
+	請詳細說明Geodesy的定義，並說明Geodesy要解決的問題。
+	請詳細敘述如何以Arc-measurement method求得地球半徑。
+	請分別定義大地水準面(Geoid)和平均海水面(mean sea surface)，並詳細說明兩者之差異。
+	比較UT、UTC、TAI、ST等時間系統之異同。
+	請分別定義說明CIS和CTS之異同和設置目的，並詳細說明兩者間之轉換步驟和意義。
+	請詳細說明Figure of the Earth。
+	加分題: 請利用DE405星曆計算出1990/1-2016/1月亮相對於地球的位置和速度，並畫圖。
+[pos. vel] = planetEphemeris(juliandate(1990,12,1),'Earth','Moon')
+	加分題: 請利用DE421星曆計算出1990/1-2016/1地球章動角度和角速度，並畫圖。[angles,rates] = earthNutation([2451544.5 0.5],'421')
