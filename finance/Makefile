@@ -1,21 +1,29 @@
 # first Makefile of c34031328.
 # this Makefile use wkhtml to make html to pdf. 
 
+# to see converted pdf file
+open = xdg-open
+
+# use `wkhtmltopdf` , `-n` flag for disable javascript. 
 html2pdf = wkhtmltopdf -n
-stock = stock_market
-general = general_finance
-html_file = $(wildcard *.html)
-file_no_sufix = $(html_file:.html=)
+
+# all html document, without `index.html` and `index_old.html`. 
+html_file = $(filter-out index%.html, $(wildcard *.html))
 pdf_file = $(html_file:.html=.pdf)
 
-.PHONY: default pdf
+.PHONY: default pdf index
 
 
 
 default: pdf index
 
-pdf: $(file_no_sufix)
+index: *
+	index
 
-%: %.html
-	$(html2pdf) $@.html $@.pdf
+pdf: $(pdf_file)
+
+%.pdf: %.html
+	$(html2pdf) $< $@
+	$(open) $@
+
 
