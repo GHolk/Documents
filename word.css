@@ -145,26 +145,27 @@ dt {
     font-weight: 200; 
     /*border: solid; 
     border-width:  1px 0 0 0 ;*/
-    display: table; 
-    }
+}
 
 .inline dt {
     /*border: 0; */
+    line-height: 1.5em;
     float: left; 
-    }
+}
 
 .inline dt:lang(en):after {
+    display: inline;
     content: ': '; 
-    }
+}
 
 .inline dt:lang(zh):after {
+    display: inline;
     content: '：' ; 
-    }
+}
 
 .inline dd {
-    display: table; 
-    clear: right; 
-    }
+    line-height: 1.5em;
+}
 
 
 #markdown { display: none; }
