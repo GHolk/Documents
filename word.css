@@ -97,6 +97,11 @@ code {
     border: 1px solid;
 }
 
+pre code {
+    display: block;
+    padding: 1em;
+}
+
 code.term , .term code {
     display: block;
     margin: auto;
@@ -242,3 +247,30 @@ embed, object {
     width: 100%;
     height: 100em;
 }
+
+
+/** thease code construct a counter for question number *****/
+
+main { 
+    counter-reset: question-number; 
+}
+
+main .question {
+    counter-increment: question-number; 
+}
+
+.question {
+    margin: 2em 0 1em 0;
+    font-size: large;
+    color: grey;
+}
+.question:before {
+    content: counter(question-number) ". ";
+}
+
+.question p {
+    display: inline;
+}
+
+
+

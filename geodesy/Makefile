@@ -21,9 +21,14 @@ pdf: $(pdf_file)
 index.html: $(filter-out index%.html, $(wildcard *))
 	index
 
-.SUFFIXES: .html .pdf
-.html.pdf:
+# 
+# .SUFFIXES: .html .pdf
+# .html.pdf:
+# 	$(html2pdf) $< $@
+# 	$(open) $@
+# 
+
+%.pdf: %.html ../word.css
 	$(html2pdf) $< $@
 	$(open) $@
-
 
