@@ -5,7 +5,9 @@
 open = xdg-open
 
 # use `wkhtmltopdf` , `-n` flag for disable javascript. 
-html2pdf = wkhtmltopdf -n
+html2pdf_program = wkhtmltopdf
+html2pdf_flag = -n --print-media-type
+html2pdf = $(html2pdf_program) $(html2pdf_flag)
 
 # all html document, without `index.html` and `index_old.html`. 
 html_file = $(filter-out index%.html, $(wildcard *.html))
@@ -15,9 +17,9 @@ pdf_file = $(html_file:.html=.pdf)
 
 
 
-default: pdf index
+default: pdf index.html
 
-index: *
+index.html: $(filter-out index.html, $(wildcard *))
 	index
 
 pdf: $(pdf_file)
