@@ -10,3 +10,5 @@ tmp/*
 *.dwg
 *.sdr
 *.mp4
+*.doc
+*.docx

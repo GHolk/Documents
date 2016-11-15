@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="zh-TW" prefix="og: http://ogp.me/ns#">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="author" property="og:article:author" content="c34031328">
+<meta name="copyright" content="Common Creative">
+<meta name="generator" content="vim, markdown">
+<!-- 以上一般不用改，以下才要改。 -->
+
+<!-- 後設資料 -->
+<meta name="date" property="og:article:public_time" content="2016-11-15">
+<meta name="keywords" property="og:article:tag" content="ephemeris, python, gnuplot, octave">
+<meta property="og:description" name="description" content="使用各種工具根據星曆組合出明顯易讀的天體運行軌道圖">
+<link rel="prev" type="text/html" href="reference_system.html">
+
+<!-- 和網頁位置有關 -->
+<meta property="og:url" content="https://gholk.github.io/Documents/myfirst_ephemeris.html">
+<link rel="canonical" href="https://gholk.github.io/Documents/myfirst_ephemeris.html">
+<link rel="icon" type="image/png" href="../icon.png">
+<meta property="og:image" content="../icon.png">
+<link rel="stylesheet" type="text/css" href="../word.css">
+
+<title> 用許多 unix 工具串起來的星曆結果 </title>
+</head>
+<body>
+
+<main>
+</main>
+
+<hr />
+
+<pre class="markdown text">
+
+# 用許多 unix 工具串起來的星曆結果 #
+
+## 加分題: 請利用DE405星曆計算出1990/1-2016/1月亮 相對於地球的位置和速度，並畫圖。
+
+### python
+
+ 1. google 大神說 Python 有模組可以用，先把要用的都裝好。
+
+        # pip install jplephem de405 de421 julian
+
+      - pip: python 的套件管理器。
+      - jplephem: 算星曆的套件。
+      - de405: 這題的星曆。
+      - de421: 下一題的星歷。
+      - julian: 算儒略日的套件。
+
+
+ 2. 不知道為什麼， *julian* 不能用，放棄。
+    隨便 google 找到一個轉換器
+    &lt;http://ssd.jpl.nasa.gov/tc.cgi&gt; 。
+    得出 1990-01-01 和 2016-01-01 
+    的儒略日是 2447893 和 2457389 。
+
+
+ 3. 算 de405 星歷日月位置和速度的 python 腳本內容：
+
+        #!/usr/bin/python2
+        
+        import de405
+        from jplephem import Ephemeris
+        
+        eph = Ephemeris(de405);
+        
+        start_day = 2447893
+        end_day = 2457389
+        
+        for i in range(0,2457389-2447893):
+            print eph.position_and_velocity('earthmoon', i + start_day)
+
+
+ 4. `eph.position_and_velocity` 的輸出是 
+    2x3 矩陣 `{ [x,y,z], [vx,vy,vz] }` ，
+    後來 `print` 成一個超級大文字檔。
+
+
+### gnuplot 畫成圖
+
+隨便用程式處理一下，轉成用空隔分隔，
+GNUplot 可以接受的格式。
+
+    # moon_position.txt
+    
+    #  X               Y                 Z
+    338956.01858261  -159630.16977884  -58608.81832751 
+    366270.19859209  -84587.40279813  -18058.31860944 
+    372899.06618501  -4909.58063255  23447.51209665 
+
+直接畫圖，結果軌道都糊在一起。
+不意外，軌道的變化相對軌道的尺度太小了，
+幾乎看不出來。
+又點數太多了，都糊在一起很正常。
+
+    gnuplot> splot 'moon_position.txt'
+
+
+## 加分題: 請利用DE421星曆計算出1990/1-2016/1 地球章動角度和角速度，並畫圖。
+
+如上題，但改迴圈中的為 
+`eph.position_and_velocity('nutations', i+start_day)` 。
+然後再研究一下章動要怎麼用 X, Y, Z 表示，
+要怎麼轉成角度和角速度。
+ 
+## gnuplot
+
+## octave 
+
+
+</pre>
+
+<script src="../meeta.js" defer></script>
+
+</body>
+</html>
+
+
